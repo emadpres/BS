@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% if allNews %}
+	تعداد خبرها: {{ allNews.count}} خبر یافت شد
+	<br>
+	<hr>
+	{% for newsItem in allNews %}
+		<h3>{{ newsItem.title }} </h3>
+		<p style="margin-right:1em;"> 
+			{{ newsItem.summary }} 
+			&nbsp&nbsp&nbsp <a href="/News/{{newsItem.id}}">بیشتر...</a> </li> <br>
+		</p>
+		<hr>
+		<hr>
+	{% endfor%}
+{% else %}
+خبری یافت نشد
+{% endif %}
+
+{% endblock %}

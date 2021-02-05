@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\impl">
+      <UniqueIdentifier>{93038fe6-10b4-4e5f-9762-dcd2f90609af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\data">
+      <UniqueIdentifier>{b73bae37-2902-4485-ba9d-28e0a762678e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\data">
+      <UniqueIdentifier>{a6977990-7c87-4bea-b310-19979c3e2b7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\sequence">
+      <UniqueIdentifier>{8355e82e-64ba-4a68-b9d7-93b36f6b6ebb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\wrench\config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\stdint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\impl\end_header.hpp">
+      <Filter>Header Files\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\impl\begin_header.hpp">
+      <Filter>Header Files\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\static_ctor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\foreach.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\static_assert.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\fcmp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\stddef.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\auto.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\typeof.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\out.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\stringer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\except.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\sout.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\any.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\pair.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\data\bag.hpp">
+      <Filter>Header Files\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\interface.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\iref.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\sequence\sequence.hpp">
+      <Filter>Header Files\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\sequence\copy.hpp">
+      <Filter>Header Files\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\sequence\container.hpp">
+      <Filter>Header Files\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\sequence\each.hpp">
+      <Filter>Header Files\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\sequence\sort.hpp">
+      <Filter>Header Files\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\type_descriptor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\sequence\filter.hpp">
+      <Filter>Header Files\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\sequence\transform.hpp">
+      <Filter>Header Files\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\wrench\stringin.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fcmp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="except.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data\bag.cpp">
+      <Filter>Source Files\data</Filter>
+    </ClCompile>
+    <ClCompile Include="interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html  lang="fa" style="background:#00ADC6;">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>مرکز تحقیقات بازی های رایانه‌ای</title>
+	<meta name="copyright" content="Copyright © 2013 Emad Aghajani">
+	<meta name="author" content="Emad Aghajani">
+	<link rel="stylesheet" type="text/css" href="/static/CSS/base_style.css" media="screen" />
+	<!-- <style type="text/css" media="screen, print, projection">  .... </style> -->
+</head>
+
+<body>
+	
+    <div id="wrap">
+	
+		<div id="header">
+			<img src="/static/img/title.png" height="205px" width="500px"/>
+		</div>
+		
+		<div id="nav">
+			<ul>
+				<li><a href="/" STYLE="TEXT-DECORATION: NONE">خانه</a></li>			<!-- 127.0.0.1/ -->
+				<li><a href="/News" STYLE="TEXT-DECORATION: NONE">اخبار</a></li>		<!-- 127.0.0.1/News -->
+				<li><a href="/Outputs" STYLE="TEXT-DECORATION: NONE">دستاوردها</a></li>		<!-- 127.0.0.1/Outputs -->
+				<li><a href="/Papers" STYLE="TEXT-DECORATION: NONE">مقالات و پایان نامه ها</a></li>		<!-- 127.0.0.1/Papers -->
+				<!--<li><a href="/#">پایان نامه ها</a></li>		 127.0.0.1/? -->
+				<li><a href="/Achievements" STYLE="TEXT-DECORATION: NONE">موفقیت ها</a></li>		<!-- 127.0.0.1/Achievements -->
+
+				</ul>
+		</div>
+		
+		
+		<div id="main">
+			{% block content %}مطلبی یافت نشد{% endblock %}
+		</div>
+		
+		
+		<div id="sidebar">
+			{% block sidebar %}
+			<h2>حاشیه ها</h2>
+			مطلبی یافت نشد
+			
+			<br/>
+			<br/>
+			<h2>لینک ها</h2>	
+			<img src="/static/img/ce.jpg" height="100px" width="150px"/>
+			<br/> <a href="http://ce.iust.ac.ir/" style="font-size:18px;TEXT-DECORATION: NONE"> دانشکده مهندسی کامپیوتر </a>
+			<br/><br/>
+			<hr>
+			<br/> <img src="/static/img/iust.jpg" height="100px" width="150px"/>
+			<br/> <a href="http://iust.ac.ir/" style="font-size:18px;TEXT-DECORATION: NONE"> دانشگاه علم و صنعت ایران </a>
+			<br/><br/>
+			<hr>
+			<br/> <img src="/static/img/ircg.png" height="150px" width="150px"/>
+			<br/> <a href="http://iust.ac.ir/" style="font-size:18px;TEXT-DECORATION: NONE">بنیاد ملی بازی های رایانه ای</a>
+			{% endblock %}
+		</div>
+		
+		
+		<div id="footer">
+			<p>تمامی حقوق مادی و معنوی این سایت متعلق به دانشگاه علم و صنعت ایران می باشد </p>
+		</div>
+		
+		
+    </div>
+</body>

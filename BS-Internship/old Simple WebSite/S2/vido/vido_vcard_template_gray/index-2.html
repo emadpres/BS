@@ -1,0 +1,624 @@
+﻿<!DOCTYPE html>
+<html lang="en"> 
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Vido - Responsive vCard/Portfolio Template</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <!-- qTip CSS file -->
+    <link rel="stylesheet" href="stylesheets/jquery.qtip.css">
+	<!-- Lightbox2 CSS file -->
+	<link href="stylesheets/lightbox.css" rel="stylesheet" />
+	<!-- Main Styles -->
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!-- Styles for Preview -->
+	<link rel="stylesheet" href="preview/jquery.slidePanel.css">	
+	
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="images/favicon.html">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	
+    <!-- JavaScript
+    ================================================== -->
+    <!-- jQuery library (served from Google) -->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <!-- Modernizr -->
+    <script src="js/modernizr.custom.js" type="text/javascript"></script> 	
+	<!-- Stellar Javascript file -->
+    <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+    <!-- qTip -->
+	<script src="js/jquery.qtip.min.js" type="text/javascript"></script>
+	<!-- Lightbox2 -->
+	<script src="js/lightbox.js"></script>
+		
+	<!-- QTRotator -->
+	<script src="js/jquery.cbpQTRotator.min.js"></script>
+		<script>
+			$( function() {
+				/*
+				- how to call the plugin:
+				$( selector ).cbpQTRotator( [options] );
+				- options:
+				{
+					// default transition speed (ms)
+					speed : 700,
+					// default transition easing
+					easing : 'ease',
+					// rotator interval (ms)
+					interval : 8000
+				}
+				- destroy:
+				$( selector ).cbpQTRotator( 'destroy' );
+				*/
+
+				$( '#cbp-qtrotator' ).cbpQTRotator();
+
+			} );
+		</script>
+	
+    <!-- jQuery mobile gmaps -->
+    <script src="js/jquery.mobilegmap.min.js" type="text/javascript"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script> 		
+	<!-- Contact Form -->
+    <script src="js/contact_form.js" type="text/javascript"></script>
+
+    <!-- JS Settings -->
+    <script src="js/main.js"></script>  
+	
+    <!-- js for Preview -->
+    <script src="preview/jquery.slidePanel.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function(){		
+		   $('#style_switcher_panel').slidePanel({
+			   triggerName: '#trigger',
+			   triggerTopPos: '100px',
+			   panelTopPos: '100px'
+		   });
+		
+		   $('.precy').click(function (){
+			   var bg = $(this).attr('title');
+			   $('body').css("background-image",bg)
+		   });		
+	    });
+    </script>
+	
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- preview -->
+	<a href="#" id="trigger" class="trigger left"></a>
+	<div id="style_switcher_panel" class="panel left">
+    
+        <h4>Color Schemes</h4>
+        <a href="../vido_vcard_template_blue/index-2.html"><div class="preview" id="color1">&nbsp;</div></a>
+		<a href="../vido_vcard_template_orange/index-2.html"><div class="preview" id="color2">&nbsp;</div></a>
+    	<a href="../vido_vcard_template_yellow/index-2.html"><div class="preview" id="color3">&nbsp;</div></a>
+        <a href="index-2.html"><div class="preview" id="color4">&nbsp;</div></a>
+        <div class="row"></div>       
+    </div>
+
+<header>
+    
+<section class="menu">	        
+        <div class="container">
+            <div class="sixteen columns">
+		        <!-- Navigation Menu -->
+		        <div id="nav">
+			        <ul class="navigation">
+                       <li data-slide="1">
+				          <h5>Home</h5>
+				       </li>
+				
+                       <li data-slide="2" >
+				          <h5>About Me</h5>
+				       </li>
+				
+                       <li data-slide="3">
+				          <h5>Resume</h5>
+				       </li>
+				
+				       <li data-slide="4">
+				          <h5>Portfolio</h5>
+				       </li>
+					   <li data-slide="5">
+				          <h5>Contact</h5>
+				       </li>
+			        </ul>
+		        </div>
+		        <!-- Navigation Menu / End -->
+            </div> 
+        </div>
+</section>        
+</header>
+   
+<div class="wrapper">
+<!-- Home Subpage	   	  
+=========================================== -->	
+<section class="slide" id="home" data-slide="1">
+	<div class="container">	
+	    <div class="sixteen columns">
+
+			<!-- Main Photo -->
+		    <div class="portrait">
+                <img src="images/my_photo.jpg" alt="" class="tframe_1"/>	
+            </div>
+			<!-- End Main Photo -->
+			
+			<!-- Main Title. Your Name or Company, Profession -->
+            <div class="main_title">
+                <h1>John Doe</h1>
+				<h4>Web Designer/Developer</h4>
+            </div> 	
+			<!-- End Main Title -->
+
+	            <!-- Social Icons. Just add your link to href="your_link" -->
+                <div class="social_icons">
+                    <ul class="social">
+                       <li><a class="tip" href="#" title="Twitter"><img src="images/social/twitter.png" alt="" /></a></li>
+                       <li><a class="tip" href="#" title="Dribbble"><img src="images/social/dribbble.png" alt="" /></a></li> 
+                       <li><a class="tip" href="#" title="last.fm"><img src="images/social/lastfm.png" alt="" /></a></li>
+                       <li><a class="tip" href="#" title="Google Plus"><img src="images/social/googleplus.png" alt="" /></a></li>
+                       <li><a class="tip" href="#" title="Skype"><img src="images/social/skype.png" alt="" /></a></li>
+                    </ul> 
+                </div> 
+                <!-- End Social Icons --> 
+				
+        </div>
+
+	</div>
+</section>
+<!-- End Home Subpage -->
+
+<!-- About Me Subpage	   	  
+=========================================== -->	 
+<section class="slide" id="about_me" data-slide="2">
+	<div class="container">
+	        
+		<!-- Subpage Title -->
+        <div class="sixteen columns">
+            <div class="subpage_title">
+				<h2><span>About Me</span></h2>
+			</div>
+        </div>
+		<!-- End Subpage Title -->
+		
+			
+			<div class="eight columns">
+			    <!-- About Me Main Ifotmation -->
+			    <div class="block">
+			        <h4>I'm Web Designer/Developer from California.</h4>
+			        <p>Donec lobortis suscipit rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi vel nibh nunc, varius cursus ligula. In tristique dictum leo, consequat mollis metus luctus ac. Nulla interdum mollis massa ac ornare.</p>
+				</div>
+				<!-- End About Me Main Information -->
+
+			    <!-- My Skills Information -->
+			    <div class="block">
+				    <div class="skill_info clearfix">
+					    <div class="block_title">
+			                <h4><span>My Skills</span></h4>
+						</div>
+				           <ul id="chart">
+					          <li class="skill ui_design"><span>UI Design</span></li>
+					          <li class="skill graphic"><span>Graphic Design</span></li>
+					          <li class="skill flash"><span>Flash Design</span></li>
+					          <li class="skill html"><span>HTML5 / CSS3</span></li>
+					          <li class="skill jquery"><span>jQuery</span></li>
+							  <li class="skill php"><span>PHP</span></li>
+				           </ul> 
+                    </div>						   
+				</div>
+				<!-- End My Skills Information -->
+			</div>
+						
+			<div class="eight columns">
+			    <!-- Personal info -->
+				<div class="block">
+				    <div class="block_title">
+			            <h4><span>Personal Info</span></h4>
+					</div>
+                                <ul class="personal-info">
+                             	   <li><span class="title">Name</span><span class="value">John Doe</span></li>
+                                   <li><span class="title">Age</span><span class="value">30</span></li>
+                                   <li><span class="title">Address</span><span class="value">88 Street - State, Town</span></li>
+                                   <li><span class="title">e-mail</span><span class="value"><a href="mailto:email@addres.com">email@addres.com</a></span></li>
+                                   <li><span class="title">Phone</span><span class="value">+0123 123 456 789</span></li>
+                                   <li><span class="title">Freelance</span><span class="value available">Available</span></li> <!-- if Freelance not available: change class to not_available (then color text = Red) -->
+                                </ul>                                                   			   
+				</div>
+				<!-- End Personal Info -->
+				
+			    <!-- Testimonials info -->
+				<div class="block">
+				    <div class="block_title">
+			            <h4><span>Testimonials</span></h4>
+					</div>
+				<div id="cbp-qtrotator" class="cbp-qtrotator">
+					<div class="cbp-qtcontent">
+						<img src="images/testimonials/1.jpg" alt="img01" />
+						<blockquote>
+						  <p>Aliquam erat volutpat. Aliquam elementum molestie ipsum, ut eleifend nulla pretium vitae.</p>
+						  <footer>John Smith</footer>
+						</blockquote>
+					</div>
+					<div class="cbp-qtcontent">
+						<img src="images/testimonials/2.jpg" alt="img02" />
+						<blockquote>
+						  <p>Sed augue purus, suscipit id tincidunt id, tempor at velit. Nam feugiat nibh eget libero aliquet interdum.</p>
+						  <footer>Jane Roe</footer>
+						</blockquote>
+					</div>
+					<div class="cbp-qtcontent">
+						<img src="images/testimonials/1.jpg" alt="img03" />
+						<blockquote>
+						  <p>Suspendisse lobortis auctor ipsum, vitae rutrum est adipiscing et. Maecenas vestibulum tempor mattis.</p>
+						  <footer>Jackie Joe</footer>
+						</blockquote>
+					</div>
+					<div class="cbp-qtcontent">
+						<img src="images/testimonials/1.jpg" alt="img04" />
+						<blockquote>
+						  <p>Aliquam erat volutpat. Nulla a lacus nec nisi fermentum fringilla nec faucibus ipsum.</p>
+						  <footer>John Doe</footer>
+						</blockquote>
+					</div>
+				</div>                                                			   
+				</div>
+				<!-- End Testimonials Info -->
+				
+            </div>
+				
+			<div class="sixteen columns row">
+				<!--Services Information -->				
+				<div class="block clearfix">
+				    <div class="block_title">
+			            <h4><span>Services</span></h4>
+					</div>
+
+                    <div class="service">
+					
+                        <div class="four columns omega">
+                            <img src="images/services/service_1.png" alt="" />
+				            <h5>Marketing</h5>
+                               <ul class="service_items">
+                                  <li><p>Pay-Per-Click</p></li>
+						          <li><p>Social Media</p></li>
+                                  <li><p>Email Marketing</p></li>
+                               </ul>
+                        </div>
+						
+                        <div class="four columns omega">
+                            <img src="images/services/service_2.png" alt="" />
+				            <h5>Graphic Design</h5>
+                               <ul class="service_items">
+                                  <li><p>Logos</p></li>
+						          <li><p>User Interface Design</p></li>
+                                  <li><p>Graphical Design</p></li>
+                               </ul>
+                        </div>
+						
+                        <div class="four columns omega">
+                            <img src="images/services/service_3.png" alt="" />
+				            <h5>Web Design</h5>
+                               <ul class="service_items">
+                                  <li><p>Web Development</p></li>
+						          <li><p>eCommerce</p></li>
+                                  <li><p>CMS Development</p></li>
+                               </ul>
+                        </div>
+						
+                        <div class="four columns omega">
+                            <img src="images/services/service_4.png" alt="" />
+				            <h5>Analytics</h5>
+                               <ul class="service_items">
+                                  <li><p>Digital Analytics</p></li>
+						          <li><p>Better Planning</p></li>
+                                  <li><p>Start-up Firms</p></li>
+                               </ul>
+                        </div>
+					
+                    </div>					
+				</div>
+				<!-- End Services Information -->
+			</div>
+	</div>
+</section>
+
+<!-- Resume Subpage	   	  
+=========================================== -->	
+<section class="slide" id="resume" data-slide="3">
+    <div class="container">
+        <div class="sixteen columns">
+            <div class="subpage_title">
+				<h2><span>Resume</span></h2>
+			</div>
+		</div>
+			
+			<!-- Employment Info -->
+			<div class="eight columns row">
+				<div class="block">
+				    <div class="block_title">
+					    <h4><span>Employment</span></h4>
+					</div>
+					
+					<!-- Timeline Employment Info Container -->
+                    <div class="eventsContainer clearfix">
+					
+                        <div class="eventsContent">					    
+                            <h5><span>2010 - Present</span></h5>
+	                        <div class="event">
+                                <h5>Frontend Designer/Developer</h5>
+                                <div class="eventDetail">
+                                    <p>
+                                       Aliquam a mi nulla. Integer rutrum porta lobortis. Etiam porttitor feugiat ligula sit amet molestie. Sed porta tortor ac erat rhoncus euismod. Vivamus pulvinar sem tristique dolor varius accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ut ipsum est.</p>
+                                    <h6>Google</h6>
+                                </div>  
+                            </div> 
+                        </div>	
+
+                        <div class="eventsContent">
+                            <h5><span>2007 - 2010</span></h5>
+	                        <div class="event">
+                                <h5>Web Designer</h5>
+                                <div class="eventDetail">
+                                    <p>
+                                       Aliquam a mi nulla. Integer rutrum porta lobortis. Etiam porttitor feugiat ligula sit amet molestie. Sed porta tortor ac erat rhoncus euismod. Vivamus pulvinar sem tristique dolor varius accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ut ipsum est.</p>
+                                    <h6>Google</h6>
+                                </div> 
+                            </div> 
+                        </div>	
+						
+                        <div class="eventsContent">
+                            <h5><span>2003 - 2007</span></h5>
+	                        <div class="event">
+                                <h5>Web Developer</h5>
+                                <div class="eventDetail">
+                                    <p>
+                                       Aliquam a mi nulla. Integer rutrum porta lobortis. Etiam porttitor feugiat ligula sit amet molestie. Sed porta tortor ac erat rhoncus euismod. Vivamus pulvinar sem tristique dolor varius accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ut ipsum est.</p>
+                                    <h6>Google</h6>
+                                </div> 
+                            </div> 
+                        </div>	
+						
+                    </div>
+                    <!-- End Timeline Employment Info Container -->					
+				</div>
+            </div>
+			<!-- End Employment Info -->
+			
+			<!-- Education Info -->
+			<div class="eight columns row">
+				<div class="block">
+				    <div class="block_title">
+					    <h4><span>Education</span></h4>
+					</div>
+					
+					<!-- Timeline Education Info Container -->
+                    <div class="eventsContainer clearfix">
+					
+                        <div class="eventsContent">
+                            <h5><span>2003 - 2005</span></h5>
+	                        <div class="event">
+                                <h5>Web Designer</h5>
+                                <div class="eventDetail">
+                                    <p>
+                                       Aliquam a mi nulla. Integer rutrum porta lobortis. Etiam porttitor feugiat ligula sit amet molestie. Sed porta tortor ac erat rhoncus euismod. Vivamus pulvinar sem tristique dolor varius accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ut ipsum est.</p>
+                                    <h6>School of Art and Design</h6>
+                                </div> 
+                            </div> 
+                        </div>	
+
+                        <div class="eventsContent">
+                            <h5><span>2001 - 2003</span></h5>
+	                        <div class="event">
+                                <h5>Frontend Developer</h5>
+                                <div class="eventDetail">
+                                    <p>
+                                       Aliquam a mi nulla. Integer rutrum porta lobortis. Etiam porttitor feugiat ligula sit amet molestie. Sed porta tortor ac erat rhoncus euismod. Vivamus pulvinar sem tristique dolor varius accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ut ipsum est.</p>
+                                    <h6>School of Art and Design</h6>
+                                </div> 
+                            </div> 
+                        </div>	
+						
+                        <div class="eventsContent">
+                            <h5><span>1995 - 2001</span></h5>
+	                        <div class="event">
+                                <h5>Web Developer</h5>
+                                <div class="eventDetail">
+                                    <p>
+                                       Aliquam a mi nulla. Integer rutrum porta lobortis. Etiam porttitor feugiat ligula sit amet molestie. Sed porta tortor ac erat rhoncus euismod. Vivamus pulvinar sem tristique dolor varius accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ut ipsum est.</p>
+                                    <h6>School of Art and Design</h6>
+                                </div> 
+                            </div> 
+                        </div>							
+                    </div>
+                    <!-- Timeline Education Info Container -->					
+				</div>
+            </div>
+			<!-- End Education Info -->
+    </div>
+</section>
+
+<!-- Portfolio Subpage	   	  
+=========================================== -->	
+<section class="slide" id="portfolio" data-slide="4">
+	<div class="container">
+        <div class="sixteen columns">
+            <div class="subpage_title">
+				<h2><span>Portfolio</span></h2>
+			</div>
+		</div>
+			
+			<div class="container sixteen columns row">
+				<!-- Portfolio -->
+	            <div class="block">				
+				<ul id="og-grid" class="og-grid">
+					<li>
+						<a href="#" data-largesrc="images/portfolio/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="images/portfolio/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="images/portfolio/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="images/portfolio/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/4.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="images/portfolio/thumbs/4.jpg" alt="img04"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/5.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="images/portfolio/thumbs/5.jpg" alt="img05"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/6.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="images/portfolio/thumbs/6.jpg" alt="img06"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/7.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="images/portfolio/thumbs/7.jpg" alt="img07"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/8.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="images/portfolio/thumbs/8.jpg" alt="img08"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/9.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="images/portfolio/thumbs/9.jpg" alt="img09"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/10.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="images/portfolio/thumbs/10.jpg" alt="img10"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/11.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="images/portfolio/thumbs/11.jpg" alt="img11"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/12.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="images/portfolio/thumbs/12.jpg" alt="img12"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/13.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="images/portfolio/thumbs/13.jpg" alt="img13"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/14.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="images/portfolio/thumbs/14.jpg" alt="img14"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/15.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="images/portfolio/thumbs/15.jpg" alt="img15"/>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-largesrc="images/portfolio/16.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="images/portfolio/thumbs/16.jpg" alt="img16"/>
+						</a>
+					</li>
+				</ul>
+                </div>	
+				<!-- End Portfolio -->
+				
+            </div>     
+	</div>	
+</section>
+
+<!-- Contact Subpage	   	  
+=========================================== -->	
+<section class="slide" id="contacts" data-slide="5">
+	<div class="container"> 
+	    <div class="sixteen columns">
+            <div class="subpage_title">
+				<h2><span>Contacts</span></h2>
+			</div>
+		</div>
+        
+	    <div class="nine columns">
+		    <div class="block">
+			    <div class="block_title">
+				    <h4><span>My Location</span></h4>
+				</div>
+                    <div class="gmap" id="map" data-center="98 Norman Grove, London, United Kingdom" data-zoom="15"> <!-- data-center is address, change it to your address -->
+                        <address>
+                                <strong>98 Norman Grove</strong><br />
+                                London, United Kingdom<br /> 
+                        </address>
+                    </div>				
+		    </div>
+	    </div>
+		
+	    <div class="seven columns">
+		    <div class="block">
+			    <div class="block_title">
+				    <h4><span>Send Me a Message:</span></h4>
+				</div>
+
+                <!-- Contact Form -->
+                <form id="contactform" class="clearfix">
+	             <fieldset class="info_fieldset">
+			      <div id="note"></div>
+                 </fieldset> 
+                 <label>Name</label>
+			           <input class="textbox" type="text" name="name" value="" /><br />
+                 <label>e-mail</label>
+			           <input class="textbox" type="text" name="email" value="" /><br />
+                 <label>Your Message</label>
+			           <textarea class="textbox" name="message" rows="5" cols="25" ></textarea><br />
+		               <input type="submit" value="Send Message" />
+                </form>
+                <!-- End Contact Form -->
+		    </div>
+	    </div>
+	</div>
+</section>
+</div>
+<!-- End Wrapper -->
+
+	<!-- Portfolio Grid -->
+	<script src="js/grid.js"></script>
+	<script>
+		$(function() {
+			Grid.init();
+		});
+	</script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+  padding: 0px;
+  background: #404040;
+  width: 600px;
+  /*text-align: justify;*/
+  font-family: monospace, sans-serif;
+  color: gray;
+  border: solid 4px gray;
+}
+
+p, ul, ol {
+  font-size: 10pt;
+  font-family: monospace, sans-serif;
+}
+
+h3 {
+  color: #5c9eb9;
+  font-style: italic;
+  font-family: serif;
+}
+
+h5 {
+  color: white;
+  font-style: normal;
+  font-size: 12pt;
+  font-family: monospace;
+}
+
+a, a:visited {
+  color: #5c9eb9;
+}
+
+a:active, a:hover {
+  color: red;
+}
+
+pre {
+  color: #5c9eb9;
+  border-left: 1px solid;
+  padding: 10px;
+}
+
+code {
+  color: gray;
+  font-size: 10pt;
+}
+
+quote {
+  text-align: right;
+  font-style: italic;
+  font-size: 11pt;
+  font-family: serif;
+}
+
+#header{
+  background: url("img/bg_top_pattern.gif");
+  background-repeat: repeat-x;
+  background-position: top left;
+  height: 100px;
+  padding: 0px;
+  margin: 0px;
+  color: #5c9eb9;
+  font: italic 36px, serif;
+  text-align: left;
+}
+
+#header h1 {
+  padding: 0px;
+  margin: 0px;
+  color: #5c9eb9;
+  font: italic 36px, serif;
+  text-align: left;
+}
+
+#content {
+  padding : 30px;
+  clear: both;
+  background-color: #202020;
+}
+
+#content img {
+  float: right;
+  padding: 0px;
+}
+
+#column {
+  float: left;
+  margin-right: 20px;
+  padding: 0px 10px 0px 10px;
+  border: solid 1px gray;
+}
+
+#header img {
+  float: left;
+}
+
+#footer {
+  clear: both;
+  text-align: right;
+  font-size: 8pt;
+  border-top: solid 1px #555555;
+  /*background: url("img/grad.png");*/
+  height: 32px;
+  color: gray;
+}

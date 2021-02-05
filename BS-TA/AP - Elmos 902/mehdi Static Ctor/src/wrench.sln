@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wrench", "wrench\wrench.vcxproj", "{07EB86E0-767E-459E-A4EF-BBB74C57511A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wrench_test", "wrench_test\wrench_test.vcxproj", "{5ADD4865-B365-4918-9348-DBE00ED3BE3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07EB86E0-767E-459E-A4EF-BBB74C57511A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{07EB86E0-767E-459E-A4EF-BBB74C57511A}.Debug|Win32.Build.0 = Debug|Win32
+		{07EB86E0-767E-459E-A4EF-BBB74C57511A}.Release|Win32.ActiveCfg = Release|Win32
+		{07EB86E0-767E-459E-A4EF-BBB74C57511A}.Release|Win32.Build.0 = Release|Win32
+		{5ADD4865-B365-4918-9348-DBE00ED3BE3C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5ADD4865-B365-4918-9348-DBE00ED3BE3C}.Debug|Win32.Build.0 = Debug|Win32
+		{5ADD4865-B365-4918-9348-DBE00ED3BE3C}.Release|Win32.ActiveCfg = Release|Win32
+		{5ADD4865-B365-4918-9348-DBE00ED3BE3C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

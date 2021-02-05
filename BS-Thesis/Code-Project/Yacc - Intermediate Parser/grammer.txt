@@ -1,0 +1,63 @@
+Program -> DeclarationList 
+DeclarationList -> Declaration DeclarationList | ε
+Declaration -> FunctionDeclaration | TypeDeclaration | VariableDeclaration
+
+------------------------------ + Type ----------------------------
+TypeDeclaration -> TYPE ID OptionalSuperclass { MemberDeclarationList } ;
+OptionalSuperclass -> : ID | ε
+MemberDeclarationList -> MemberDeclaration MemberDeclarationList | ε
+MemberDeclaration -> VariableDeclaration | FunctionDeclaration
+------------------------------ - Type ----------------------------
+
+------------------------------ + Function -------------------------
+FunctionDeclaration -> FUNC FunctionType ID ( OptionalParameterList ) Block 
+FunctionType ->  void | TypeName 
+OptionalParameterList -> Parameter MoreParameters | ε
+Parameter -> TypeName Variable
+MoreParameters ->  ,Parameter MoreParameters | ε
+
+Block ->  { DeclarationOrStatementList }
+DeclarationOrStatementList -> DeclarationOrStatement DeclarationOrStatementList | ε
+------------------------------ - Function -------------------------
+
+
+------------------------------ + Variable -------------------------
+TypeName -> PrimitiveType | ID
+PrimitiveType ->  bool | int | float | string
+VariableDeclaration -> VAR TypeName RestOfVariableDeclaration
+RestOfVariableDeclaration -> Variable MoreVariables ;
+OptionalPointer -> * | ε
+Dimensions -> [ NUM ] Dimensions | ε
+Variable -> OptionalPointer ID Dimensions
+MoreVariables -> ,Variable MoreVariables | ε
+------------------------------ - Variable -------------------------
+
+------------------------------ + Expression -------------------------
+MoreExpressions -> , Expression MoreExpressions | ε
+OptionalExpression -> Expression | ε
+Expression -> Primary MoreOperand
+MoreOperand -> * Primary | ε
+
+Primary  -> ID MorePrimary | NUM | TRUE | FALSE | TEXT
+MorePrimary  -> ArrayAccess | FieldAccess | FunctionCall | ε
+
+ArrayAccess  ->  [Expression] MorePrimary 
+FieldAccess  ->  .ID MorePrimary 
+FunctionCall  ->  (OptionalArgumentList) MorePrimary
+OptionalArgumentList -> Expression MoreExpressions | ε
+------------------------------ - Expression -------------------------
+
+
+------------------------------ + Statement -------------------------
+DeclarationOrStatement -> VariableDeclaration | KeywordStatement | OtherStatement 
+KeywordStatement ->	Jump | Asserts
+Jump -> 			return OptionalExpression ;
+Asserts ->			DataTypeAssert
+DataTypeAssert ->	Assert ( ID , TypeName ) ;
+
+OtherStatement -> ID RestOfExpressionStatement
+RestOfExpressionStatement -> OptionalAssignment ';'
+OptionalAssignment -> = Expression | ε
+------------------------------ - Statement -------------------------
+
+

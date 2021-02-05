@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% if theAchievement %}
+	
+	<h2> {{theAchievement.title}} </h2>
+
+	<p style="margin-right:1em;"> 
+			{{ theAchievement.text }} 
+	</p>
+
+	 {# <p align="left"> {{theNews.date}} </p> #}
+	
+	<br>
+	<a href="/Achievements">بازگشت به موفقیت ها</a>
+{% else %}
+	موفقیتی یافت نشد
+{% endif %}
+
+{% endblock %}

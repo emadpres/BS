@@ -1,0 +1,31 @@
+Objectives: The aim of this course is to acquaint students with the principles and the design and implementation issues of uni-processor operating systems so that they can understand and argue about such issues in existing operating systems and consider them alongside their own possible innovations in the design and implementation of new operating systems.
+
+Syllabus:
+
+1.Introduction to Operating Systems, History, Concepts and Structure
+
+2.Processes and Threads, Inter-Process Communication, IPC problems and Scheduling
+
+3.Resource Deadlocks, Issues and Algorithms
+
+4.Memory Management, Strategies, Virtual Memory, Design and Implementation Issues
+
+5.Principles of I/O Hardware and Software, Exemplar I/O Management
+
+6.Multimedia, Storage and Process Scheduling
+
+7.Security and Protection
+
+8.Operating Systems Design Problems, Interface design, Implementation, Performance, and Trends
+
+References:
+
+1. Andrew S. Tanenbaum and Albert S. Woodhull, Operating Systems Design and Implementation, Third Edition, Prentice Hall, 2006.
+
+2. Abraham Silberschatz, Peter B. Galvin and Greg Gagne, Operating System Concepts, Sixth Edition, John-Wiley, 2002.
+
+3. Jean Bacon, Tim Harris, Operating Systems: Concurrent and Distributed Software Design, Addison Wesley, 2003.
+
+4. List of Operating Systems in www.wikipedia.com
+
+5. ACM SIGOPS 

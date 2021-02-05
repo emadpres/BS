@@ -1,0 +1,28 @@
+#! /bin/bash
+# Emad Aghajani
+# 88521344
+if [ -n "$1" ]
+then
+	echo "YOU NEED INFO ABOUT : $1 ..." 
+else
+	echo "NO PROGRAM NAME SPECIFIED AS PARAMETER !!! "
+	exit -1
+fi
+
+
+##### process existence check
+#procPID=`pidof $1`
+#if [ -z "$procPID" ];
+#then
+#  echo "Process: $1 doesn't exists !"
+ # exit -1
+#fi
+
+while [ 1 ]
+do
+clear
+#ps -eo pid,pmem,pcpu | grep "PID"
+ps -eo pmem,pcpu,cmd | head -1
+ps -eo pmem,pcpu,cmd | grep $1
+sleep 1
+done

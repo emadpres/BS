@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+
+<title>Zebra</title>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+<link rev="made" href="mailto:gunnar@radagast.se">
+<!-- base -->
+</head><body bgcolor="#ffffcc">
+
+
+<h2 align="center">Zebra</h2>
+
+<hr>
+
+<p>
+
+Being a computer freak, I decided to start working seriously
+on an Othello playing program in June 1997.
+I decided to give the program the name "Zebra".
+I already had created such a program two years earlier,
+but its weak play made it necessary to discard almost all the old code.
+The program has since then improved a lot, and the only hopes
+I have of winning against it now is that I will discover some obscure
+search bug in the code... so when I do win against it, I know that
+there is some debugging to be done.
+Except for terribly buggy versions, I have <b>never</b> beaten Zebra.
+The closest I have come is a drawn position with 21 empty...
+which I (of course) failed to convert and lost 29-35 instead... bummer.
+Zebra is now strong enough that it is extremely unlikely that I get
+this close again; not that this is an overly strong statement - I get
+crushed by all strong human players as well...
+
+</p><p>
+
+A Windows version of Zebra can be downloaded from the
+<a href="http://www.radagast.se/othello/download.html" target="display">download page</a>.
+This is a joint project with Lars Ivansson who has created the GUI.
+
+</p><p>
+
+The Zebra source code is released under the GPL:
+<a href="http://www.radagast.se/othello/zebra.tar.gz">Download</a> (last updated on October 2, 2006)
+
+
+</p><p>
+
+
+</p><h3>Short facts</h3>
+
+<ul>
+
+<li>
+Opening book based on games between top players and
+self-play games, currently more than 500'000 positions.
+Learns from each game it plays.
+</li>
+
+<li>
+Uses the search algorithms <i>NegaScout</i> and
+<i>Multi Prob-Cut</i>.
+A hash table of 2'000'000 entries (or more) is used during
+tournaments.
+Hash table information, move statistics and shallow searches are used
+for move ordering.
+</li>
+
+<li>
+Evaluates positions using a pattern-based evaluation scheme.
+Each configuration of every
+<ul>
+<li>
+row
+</li>
+
+<li>
+column
+</li>
+
+<li>
+diagonal of length 4-8
+</li>
+<li>
+edge + adjacent X-squares
+</li>
+
+<li>
+3x3-corner
+</li>
+
+<li>
+5x2-corner
+</li>
+</ul>
+has a value associated with it for each of 12 game stages.
+Linear interpolation is used between game stages.
+The pattern values are added together with a parity measure and
+estimates the final disk difference.
+To tune the values for the patterns (about 1'000'000 different when
+taking symmetries into account),
+a large over-determined linear system of equations was solved
+approximately using Fletcher-Reeves' conjugate gradient method.
+</li>
+
+<li>
+Searches 18-27 moves in the midgame and 24-31 moves in the endgame
+in a normal game (2x15 minutes).
+</li>
+
+<li>
+Usually runs on a Thunderbird / 1.33GHz / 1024MB under Windows 2000.
+On this hardware, Zebra typically searches 1'300'000-1'500'000 positions/second
+in the midgame and 4'000'000-7'000'000 positions/second in the endgame.
+</li>
+
+<li>
+Consists of about 50'000 lines of C code and 1'000 lines of x86 assembly code
+(which can be replaced by equivalent C code on other platforms).
+Usually compiled with
+<a href="http://www.mingw.org/">MinGW</a>
+<a href="http://www.gnu.org/software/gcc/gcc.html">GCC</a>
+.
+</li>
+
+</ul>
+
+
+<p>
+
+
+</p><h3>History</h3>
+
+<ul>
+
+<li>
+June 3rd 1997: Created<br>
+IOS rating of 1500 after three weeks.
+</li>
+
+<li>
+August 1997: Crude evaluation function and search algorithm working.<br>
+IOS rating: 1700
+</li>
+
+<li>
+September 1997: All major program components working
+(opening book, hash table, endgame solver).<br>
+IOS rating: 1900
+</li>
+
+<li>
+January 1998: New pattern-based evaluation function.<br>
+IOS rating: 2300
+</li>
+
+<li>
+February 1998: Multi Prob-Cut and an improved opening book working.<br>
+IOS rating: 2400
+</li>
+
+<li>
+March 1998: Selective endgame solver working; general speedup.
+</li>
+
+<li>
+May 1998: Beat Hannibal, the strongest active program in
+the world, for the first time.<br>
+IOS rating: 2600
+</li>
+
+<li>
+June 1998: Available as freeware for Windows 95.<br>
+IOS rating: 2650
+</li>
+
+<li>
+October 1998: Finished 3rd in the "Princeton II" tournament.
+</li>
+
+<li>
+Spring 1999: Search speed up, especially in the endgame.
+</li>
+
+<li>
+Summer 1999: More knowledge added.
+</li>
+
+<li>
+Fall 1999: Endgame speedup.
+</li>
+
+<li>
+Spring 2001: Midgame speedup.
+</li>
+
+</ul>
+
+
+<h3>Performance</h3>
+
+
+Zebra has played in some tournaments for computer programs.
+Here is how it has performed.
+
+<p>
+
+<table border="1">
+<tbody><tr><td>GGS open (April 2003)</td><td>3rd/12</td></tr>
+<tr><td>GGS rand open (March 2003)</td><td>5th/16</td></tr>
+<tr><td>GGS open (January 2003)</td><td>3rd/16</td></tr>
+<tr><td>GGS rand open (December 2002)</td><td>3rd/19</td></tr>
+<tr><td>GGS open (May 2002)</td><td>5th/10</td></tr>
+<tr><td>GGS Tamenori theme (March 2002)</td><td>3rd-6th/13</td></tr>
+<tr><td>GGS rand open (January 2002)</td><td>4th/15</td></tr>
+<tr><td>IOS rand open (August 1999)</td><td>2nd-3rd/5</td></tr>
+<tr><td>IOS open (May 1999)</td><td>3rd/8</td></tr>
+<tr><td>Princeton II (October 1998)</td><td>3rd/13</td></tr>
+<tr><td>IOS open (April 1998)</td><td>3rd/15</td></tr>
+<tr><td>IOS open (February 1998)</td><td>2nd/15</td></tr>
+<tr><td>Princeton I (October 1997)</td><td>13th/15</td></tr>
+</tbody></table>
+
+</p><p>
+
+</p><h3>Things to work on</h3>
+
+<menu>
+
+<li>
+Rare board configurations in some cases are not evaluated
+correctly due to lack of example positions in the game
+database which was used for creating Zebra's knowledge.
+This problem can in part be solved by developing an
+interpolation scheme to fill the knowledge gaps,
+Mark Brockington solved this problem in his program Keyano
+by using a neural net.
+</li>
+
+</menu>
+
+
+<p>
+
+
+</p><h3>Credits</h3>
+
+<menu>
+<li>
+<a href="http://www.cs.ualberta.ca/%7Emburo/">Michael Buro</a>: For raising computer Othello to swindling heights.
+</li>
+
+<li>
+Jan C. de Graaf: For giving me lots of computer time and inspiration.
+
+</li><li>
+Igor Durdanovic: For writing the Internet Othello Server.
+</li>
+
+<li>
+Lars Ivansson: For much feedback and many interesting games.
+</li>
+
+<li>
+<a href="http://www.w3.org/People/Lafon/">Yves Lafon</a>: For providing a rival program to keep up with when I started working on Zebra.
+</li>
+
+Fabien Letouzey: For many exciting games between Zebra and Turtle.
+
+
+<li>
+David John Summers: For letting me incorporate his stability code
+(which improved performance in lopsided endgames) and many weird ideas.
+</li><li>
+<a href="http://www.acse.shef.ac.uk/%7Eieuan/">Ieuan Willis</a>:or sharing many of his ideas.
+</li>
+</menu>
+Not to forget the numerous people who have played Zebra and its kid
+brothers and/or given comments and suggestions
+(OO1, zardoz, reveil, kenta and several others).
+
+<p>
+
+</p><hr>
+
+<p>
+
+Last modified October 2, 2006 by
+<a href="http://radagast.se/">
+Gunnar Andersson
+</a>
+</p><address>
+<a href="mailto:gunnar@radagast.se">gunnar@radagast.se</a>
+</address>
+
+ 
+</body></html>

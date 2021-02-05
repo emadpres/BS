@@ -1,0 +1,300 @@
+<Root>
+    <ProductGroups>
+        <ProductGroup id="3" widthCount="3">
+            <Product size="1" name="Wood"/>
+            <Product size="2" name="Paper"/>
+            <Product size="3" name="Book"/>
+        </ProductGroup>
+        <ProductGroup id="2" widthCount="1">
+            <Product size="1" name="string"/>
+        </ProductGroup>
+        <ProductGroup id="1" widthCount="3">
+            <Product size="1" name="bool"/>
+            <Product size="2" name="int"/>
+            <Product size="3" name="float"/>
+        </ProductGroup>
+    </ProductGroups>
+    <Level name="swap" levelNumber="1">
+        <Conveyor id="0" ref_lineNumber="7" name="a" productID="1" size="2" initial="1"/>
+        <Conveyor id="1" ref_lineNumber="7" name="b" productID="1" size="2" initial="0"/>
+        <Conveyor id="2" ref_lineNumber="7" name="c" productID="1" size="2" initial="0"/>
+        <Conveyor id="3" ref_lineNumber="8" name="d" productID="3" size="3" initial="1"/>
+        <Restriction id="3" restrictedSize="3"/>
+        <Merger inputCount="1" ref_lineNumber="10">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="11">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+            <Input from="conveyor">
+                <ID>2</ID>
+            </Input>
+        </Merger>
+        <Factory targetLevel="0" inputCount="0"/>
+        <Merger inputCount="1" ref_lineNumber="12">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="factory"/>
+        </Merger>
+        <Factory targetLevel="0" inputCount="2">
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>1</Size>
+            </Input>
+        </Factory>
+        <Merger inputCount="1" ref_lineNumber="13">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="factory"/>
+        </Merger>
+        <Factory targetLevel="0" inputCount="1" ref_lineNumber="14">
+            <Input from="producer">
+                <ProductID>2</ProductID>
+                <Size>1</Size>
+            </Input>
+        </Factory>
+    </Level>
+    <Level name="proc1" levelNumber="2">
+        <Conveyor id="0" ref_lineNumber="-1" name="pr" productID="1" size="2" initial="0"/>
+        <Conveyor id="1" ref_lineNumber="37" name="s1" productID="1" size="2" initial="1"/>
+        <Conveyor id="2" ref_lineNumber="37" name="s2" productID="1" size="2" initial="0"/>
+        <Conveyor id="3" ref_lineNumber="38" name="s3" productID="1" size="3" initial="0"/>
+        <Conveyor id="4" ref_lineNumber="38" name="s4" productID="1" size="3" initial="0"/>
+        <Restriction id="3" restrictedSize="1"/>
+        <Merger inputCount="2" ref_lineNumber="40">
+            <outputConveyorID>1</outputConveyorID>
+            <Input from="conveyor">
+                <ID>3</ID>
+            </Input>
+            <Input from="conveyor">
+                <ID>2</ID>
+            </Input>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="41">
+            <outputConveyorID>3</outputConveyorID>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+            <Input from="conveyor">
+                <ID>2</ID>
+            </Input>
+        </Merger>
+    </Level>
+    <Level name="fib" levelNumber="3">
+        <Conveyor id="0" ref_lineNumber="-1" name="n" productID="1" size="2" initial="0"/>
+        <Conveyor id="1" ref_lineNumber="49" name="__fib" productID="1" size="2" initial="0"/>
+        <Merger inputCount="2" ref_lineNumber="50">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+            <Input from="producer">
+                <ProductID>2</ProductID>
+                <Size>1</Size>
+            </Input>
+        </Merger>
+        <Merger inputCount="1" ref_lineNumber="51">
+            <outputConveyorID>1</outputConveyorID>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>3</Size>
+            </Input>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="52">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+            <Input from="producer">
+                <ProductID>3</ProductID>
+                <Size>3</Size>
+            </Input>
+        </Merger>
+        <Conveyor id="2" ref_lineNumber="53" name="k" productID="1" size="3" initial="0"/>
+        <Factory targetLevel="0" inputCount="1">
+            <Input from="conveyor">
+                <ID>0</ID>
+            </Input>
+        </Factory>
+        <Merger inputCount="1" ref_lineNumber="54">
+            <outputConveyorID>2</outputConveyorID>
+            <Input from="factory"/>
+        </Merger>
+        <Factory targetLevel="0" inputCount="2" ref_lineNumber="55">
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+            <Input from="conveyor">
+                <ID>2</ID>
+            </Input>
+        </Factory>
+        <Factory targetLevel="0" inputCount="1">
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+        </Factory>
+        <Merger inputCount="1" ref_lineNumber="56">
+            <outputConveyorID>1</outputConveyorID>
+            <Input from="factory"/>
+        </Merger>
+        <Merger inputCount="1" ref_lineNumber="57">
+            <outputConveyorID>1</outputConveyorID>
+            <Input from="conveyor">
+                <ID>0</ID>
+            </Input>
+        </Merger>
+    </Level>
+    <Level name="func1" levelNumber="4">
+        <Conveyor id="0" ref_lineNumber="-1" name="x" productID="1" size="2" initial="0"/>
+        <Conveyor id="1" ref_lineNumber="-1" name="y" productID="1" size="2" initial="0"/>
+        <Conveyor id="2" ref_lineNumber="-1" name="z" productID="1" size="3" initial="0"/>
+        <Conveyor id="3" ref_lineNumber="64" name="__func1" productID="1" size="2" initial="0"/>
+        <Merger inputCount="2" ref_lineNumber="67">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="conveyor">
+                <ID>2</ID>
+            </Input>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+        </Merger>
+        <Merger inputCount="1" ref_lineNumber="68">
+            <outputConveyorID>2</outputConveyorID>
+            <Input from="conveyor">
+                <ID>0</ID>
+            </Input>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="69">
+            <outputConveyorID>2</outputConveyorID>
+            <Input from="conveyor">
+                <ID>0</ID>
+            </Input>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+        </Merger>
+    </Level>
+    <Level name="func2" levelNumber="5">
+        <Conveyor id="0" ref_lineNumber="-1" name="a" productID="1" size="2" initial="0"/>
+        <Conveyor id="1" ref_lineNumber="78" name="__func2" productID="1" size="3" initial="0"/>
+        <Conveyor id="2" ref_lineNumber="79" name="n" productID="1" size="2" initial="0"/>
+        <Conveyor id="3" ref_lineNumber="79" name="o" productID="1" size="2" initial="0"/>
+        <Conveyor id="4" ref_lineNumber="80" name="p" productID="1" size="3" initial="0"/>
+        <Conveyor id="5" ref_lineNumber="80" name="q" productID="1" size="3" initial="0"/>
+        <Merger inputCount="2" ref_lineNumber="83">
+            <outputConveyorID>4</outputConveyorID>
+            <Input from="conveyor">
+                <ID>0</ID>
+            </Input>
+            <Input from="conveyor">
+                <ID>5</ID>
+            </Input>
+        </Merger>
+    </Level>
+    <Level name="main" levelNumber="6">
+        <Conveyor id="0" ref_lineNumber="90" name="a" productID="1" size="2" initial="0"/>
+        <Conveyor id="1" ref_lineNumber="90" name="b" productID="1" size="2" initial="0"/>
+        <Conveyor id="2" ref_lineNumber="90" name="c" productID="1" size="2" initial="0"/>
+        <Conveyor id="3" ref_lineNumber="90" name="d" productID="1" size="2" initial="0"/>
+        <Factory targetLevel="4" inputCount="2">
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>3</Size>
+            </Input>
+        </Factory>
+        <Merger inputCount="1" ref_lineNumber="91">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="factory"/>
+        </Merger>
+        <Factory targetLevel="2" inputCount="1" ref_lineNumber="92">
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+        </Factory>
+        <Factory targetLevel="2" inputCount="1">
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+        </Factory>
+        <Merger inputCount="1" ref_lineNumber="94">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="factory"/>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="95">
+            <outputConveyorID>1</outputConveyorID>
+            <Input from="conveyor">
+                <ID>0</ID>
+            </Input>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="96">
+            <outputConveyorID>2</outputConveyorID>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="97">
+            <outputConveyorID>1</outputConveyorID>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>3</Size>
+            </Input>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>2</Size>
+            </Input>
+        </Merger>
+        <Factory targetLevel="2" inputCount="1" ref_lineNumber="98">
+            <Input from="conveyor">
+                <ID>0</ID>
+            </Input>
+        </Factory>
+        <Merger inputCount="1" ref_lineNumber="100">
+            <outputConveyorID>2</outputConveyorID>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="102">
+            <outputConveyorID>0</outputConveyorID>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+            <Input from="producer">
+                <ProductID>1</ProductID>
+                <Size>3</Size>
+            </Input>
+        </Merger>
+        <Merger inputCount="2" ref_lineNumber="103">
+            <outputConveyorID>3</outputConveyorID>
+            <Input from="conveyor">
+                <ID>2</ID>
+            </Input>
+            <Input from="conveyor">
+                <ID>1</ID>
+            </Input>
+        </Merger>
+    </Level>
+</Root>

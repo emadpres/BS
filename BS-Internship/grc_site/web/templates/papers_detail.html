@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% if thePaper %}
+	
+	<h2> {{thePaper.title}} </h2>
+	نگارندگان: {{thePaper.authors}}
+
+	<p style="margin-right:1em;"> 
+			{{ thePaper.abstract }} 
+	</p>
+	
+	{% if thePaper.pdf %}
+			<a href="{{thePaper.pdf.url}}">دانلود</a>
+	{% endif %}
+	 {# <p align="left"> {{thePaper.date}} </p> #}
+	
+	<br><br><br>
+	<a href="/News"> بازگشت به مقالات</a>
+{% else %}
+خبر یافت نشد
+{% endif %}
+
+{% endblock %}

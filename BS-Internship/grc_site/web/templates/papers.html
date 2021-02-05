@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% if allPapers %}
+	تعداد مقالات: {{ allPapers.count}} مقاله یافت شد
+	<br>
+	<hr>
+	{% for allPapers in allPapers %}
+		<h3>{{ allPapers.title }} </h3>
+		<p style="margin-right:1em;"> 
+			{{ allPapers.summary }} 
+			&nbsp&nbsp&nbsp <a href="/Papers/{{allPapers.id}}">بیشتر...</a> </li> <br>
+		</p>
+		<hr>
+		<hr>
+	{% endfor%}
+{% else %}
+	مقاله ای یافت نشد
+{% endif %}
+
+{% endblock %}

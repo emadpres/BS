@@ -1,0 +1,778 @@
+@import "reset.css";/*----Reset css----*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);/*----WebFont import----*/
+html, body {
+    background: url("../images/blackwood.jpg") repeat scroll 0 0 #DF0C0C;
+    color: #ffffff;
+    font-family: 'Open sans';
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+	font-weight:bolder;
+}
+.metro-wrap {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.container {
+    left: 50%;
+    margin: -225px auto auto -415px;
+    position: fixed;
+    top: 50%;
+    width: 830px;
+
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.right span{
+    color: #ffffff;
+    margin: 0;
+    font-size: 16px;
+}
+.center {
+    text-align: center;
+}
+.divider {
+    display: inline-block;
+    margin: 0;
+    min-height: 1px;
+    width: 100%;
+}
+.divider-m {
+	border-bottom: 1px dotted #FFA500;
+    display: inline-block;
+    margin: 0;
+    min-height: 1px;
+    width: 100%;
+}
+.no-float {
+    float: none;
+}
+a, img, button {
+    outline: medium none;
+}
+ul {
+    overflow: hidden;
+}
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner {
+    border: 0 none;
+}
+button:focus, input[type="reset"]:focus, input[type="button"]:focus, input[type="submit"]:focus {
+    border: 0 none;
+}
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
+    font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-size: 14px;
+    height: auto;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+.image-left {
+    float: left;
+    margin: 5px 20px 10px 0;
+}
+.image-right {
+    float: right;
+    margin: 5px 0 10px 20px;
+}
+/*----Header----*/
+header {
+    height: 60px;
+    margin: 0 auto 30px 0;
+    width: 830px;
+}
+header h1 {
+	color: #ffffff;
+    float: right;
+    font-family: 'Open sans';
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 0;
+    padding: 6px;
+}
+
+header h5 {
+    color: #ffffff;
+	margin: 0;
+    font-family: 'Open sans';
+    font-size: 30px;
+    font-weight: lighter;
+
+}
+
+a.vcard {
+    background: url("../images/vcard.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    width: 48px;
+}
+a.vcard:hover {
+    background-position: 0 -48px;
+}
+section {
+    height: 350px;
+    margin: 0 auto;
+    padding: 20px 20px 30px;
+    position: relative;
+    width: 790px;
+}
+section#about, section#resume, section#portfolio, section#contact {
+    display: none;
+}
+section#about a {
+    color: #ffffff;
+}
+section#resume a {
+    color: #ffffff;
+}
+section#portfolio a {
+    color: #ffffff;
+}
+section#contact a {
+    color: #ffffff;
+}
+/*----Menu----*/
+section.menu {
+    background: none repeat scroll 0 0 transparent;
+    height: 230px;
+    margin: 0 auto;
+    padding: 0;
+    width: 830px;
+	color: #ffffff;
+    font-family: 'Open sans';
+    font-size: 30px;
+    font-weight: lighter;
+}
+a.close {
+	background: url("../images/cancel.png") no-repeat scroll right top transparent;
+    display: block;
+    height: 64px;
+    position: absolute;
+    right: -28px;
+    top: 4px;
+    width: 48px;
+    z-index: 999;
+}
+.main-menu {
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    width: 830px;
+	
+}
+.main-menu a {
+    color: #ffffff;
+    font-family: 'Open sans';
+    font-size: 30px;
+    font-weight: lighter;
+    height: 138px;
+    left: 0;
+	text-decoration:none;
+    padding: 90px 0 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 200px;
+    z-index: 4;
+}
+.main-menu img{
+    margin-top: -70px;
+}
+.main-menu a span {
+    display: block;
+    height: 230px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 230px;
+    z-index: 5;
+}
+.main-menu a.about {
+    left: 1px;
+    z-index: 4;
+	top: 1px !important;
+}
+.main-menu a.resume {
+    left: 205px;
+    z-index: 3;
+	top: 1px !important;
+}
+.main-menu a.portfolio {
+    left: 410px;
+    z-index: 2;
+	top: 1px !important;
+}
+.main-menu a.contact {
+    left: 615px;
+    z-index: 1;
+	top: 1px !important;
+}
+
+.main-menu a:hover {
+    z-index: 100;
+    color: #ffffff;
+
+}
+.block {
+    height: 350px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 20px 0 10px;
+    width: 760px;
+}
+.block-12 {
+    margin: 0 30px 0 0;
+    width: 362px;
+}
+.block-12.last {
+    margin: 0;
+}
+.block h1 {
+    line-height: 35px;
+    margin: 0 0 20px;
+    font-family: 'Open sans';
+    font-weight: lighter;
+	color: #ffffff;
+    text-transform: capitalize;
+}
+.block h1.about {
+	color: #ffffff;
+	border-bottom: 1px dotted;
+}
+.block h1.resume {
+     color: #ffffff;
+	 border-bottom: 1px dotted;
+}
+.block h1.portfolio {
+     color: #ffffff;
+	 border-bottom: 1px dotted;
+}
+.block h1.contact {
+     color: #ffffff;
+	 border-bottom: 1px dotted;
+}
+.block h3 {
+    font-family: 'Open sans';
+    font-weight: lighter;
+	color: #ffffff;
+    margin: 0 0 10px;
+    
+}
+.block p {
+    font-family: 'Arial';
+	font-weight: lighter;
+    margin: 0 0 15px;
+}
+
+.jspVerticalBar {
+    background: none repeat scroll 0 0 transparent;
+    width: 10px;
+}
+.jspTrack {
+    background: none repeat scroll 0 0 #E5E9EA;
+    width: 1px;
+}
+.jspDrag {
+    background: none repeat scroll 0 0 #E5E9EA;
+    border-radius: 15px 15px 15px 15px;
+    left: -4px;
+    width: 10px;
+}
+/*Service*/
+.service{
+	float:left;
+	padding-bottom: 10px;
+}
+.service > img {
+    float: left;
+    padding-right: 10px;
+    padding-top: 0;
+}
+
+
+h6{
+	color:#ffffff;
+    font-family:open sans;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+@-moz-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+@-ms-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+.progress {
+  overflow: hidden;
+  height: 18px;
+  margin-bottom: 18px;
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.progress .bar {
+  width: 0%;
+  height: 18px;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #0e90d2;
+  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+  background-image: -ms-linear-gradient(top, #149bdf, #0480be);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+  background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+  background-image: -o-linear-gradient(top, #149bdf, #0480be);
+  background-image: linear-gradient(top, #149bdf, #0480be);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#149bdf', endColorstr='#0480be', GradientType=0);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: width 0.6s ease;
+  -moz-transition: width 0.6s ease;
+  -ms-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+.progress-striped .bar {
+  background-color: #149bdf;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+  -moz-background-size: 40px 40px;
+  -o-background-size: 40px 40px;
+  background-size: 40px 40px;
+}
+.progress.active .bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -moz-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+.progress-danger .bar {
+  background-color: #dd514c;
+  background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: -ms-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: linear-gradient(top, #ee5f5b, #c43c35);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0);
+}
+.progress-danger.progress-striped .bar {
+  background-color: #ee5f5b;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-success .bar {
+  background-color: #659a22;
+  background-image: -moz-linear-gradient(top, #62c462, #57a957);
+  background-image: -ms-linear-gradient(top, #62c462, #57a957);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#57a957));
+  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
+  background-image: -o-linear-gradient(top, #62c462, #57a957);
+  background-image: linear-gradient(top, #62c462, #57a957);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
+}
+.progress-success.progress-striped .bar {
+  background-color: #659a22;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-info .bar {
+  background-color: #4bb1cf;
+  background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);
+  background-image: -ms-linear-gradient(top, #5bc0de, #339bb9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#339bb9));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #339bb9);
+  background-image: -o-linear-gradient(top, #5bc0de, #339bb9);
+  background-image: linear-gradient(top, #5bc0de, #339bb9);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#339bb9', GradientType=0);
+}
+.progress-info.progress-striped .bar {
+  background-color: #5bc0de;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-warning .bar {
+  background-color: #faa732;
+  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+  background-image: linear-gradient(top, #fbb450, #f89406);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+}
+.progress-warning.progress-striped .bar {
+  background-color: #fbb450;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+
+/*----Portfolio----*/
+ul.portfolio {
+    margin: 10px 0 20px;
+    padding: 0;
+    width: 755px;
+}
+ul.portfolio li {
+    float: left;
+    height: 150px;
+    margin: 0 3px 3px 0;
+    width: 249px;
+}
+ul.portfolio li a {
+    display: block;
+    height: 150px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 249px;
+}
+ul.portfolio li a span {
+    background: url("../images/tr-png.png") repeat scroll 0 0 transparent;
+    bottom: 0;
+    color: #F8F8F8;
+    font-family: 'Open sans';
+    font-size: 14px;
+    left: 0;
+    line-height: 1.2em;
+    padding: 10px;
+    position: absolute;
+    width: 249px;
+}
+ul.portfolio li.last {
+    margin-right: 0;
+}
+#style-form {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.wrapper-block label {
+    color: #ffffff;
+    display: block;
+    float: left;
+    font-family: 'Open sans';
+    font-size: 17px;
+    padding: 0;
+    text-align: left;
+    width: 70px;
+}
+.small-label {
+    color: #fff;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 10px;
+    text-align: left;
+    width: 70px;
+}
+.wrapper-block [type="text"] {
+    border: 1px solid #D9DCE1;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 12px;
+    margin: 2px 0 20px 10px;
+    padding: 8px 4px;
+    width: 272px;
+}
+.wrapper-block textarea {
+    border: 1px solid #D9DCE1;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 12px;
+    margin: 2px 0 20px 10px;
+    overflow: hidden;
+    padding: 8px 4px;
+    width: 272px;
+}
+input:focus, textarea:focus {
+    box-shadow: 0 0 5px #CADCE4;
+}
+a.btn-form, input.btn-form {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    margin: 0 0 5px 80px;
+    padding: 6px 20px;
+    width: 136px;
+}
+#form .error-input {
+    border-color: #D01F3C;
+}
+.sending {
+    bottom: 30px;
+    display: none;
+    font-size: 12px;
+    margin: 0;
+    padding: 3px;
+    position: absolute;
+    right: 10px;
+}
+.mess {
+    display: none;
+    padding: 40px 0;
+}
+.mess h5 {
+    font-weight: 400;
+    padding: 10px;
+}
+
+/*----Contact----*/
+
+ul.contact {
+    margin: 0;
+}
+ul.contact li {
+    font-family: 'Open sans';
+    font-size: 17px;
+    line-height: 28px;
+    margin: 6px 0 5px;
+    padding: 0;
+}
+ul.contact li span {
+    font-size: 17px;
+}
+ul.contact li span a {
+    color: #657089;
+    font-weight: normal;
+}
+ul.contact li a.vcard {
+    background: url("../images/vcard.png") no-repeat scroll left top transparent;
+    height: 48px;
+    margin: 0 0 13px;
+    padding: 12px 0 0 70px;
+    width: 200px;
+}
+ul.contact li img {
+    float: left;
+    height: 24px;
+    padding-right: 10px;
+    width: 24px;
+
+}
+
+/*----Footer----*/
+
+footer {
+    background: url("../images/footer-bg.png") no-repeat scroll center top transparent;
+    height: 50px;
+    margin: 40px auto 0;
+    padding: 10px 0 0;
+    width: 830px;
+}
+
+/*----SocialIcon----*/
+ul.socialcon {
+    margin-top: 10px;
+}
+ul.socialcon li {
+    display: block;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+ul.socialcon li a {
+    display: block;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    width: 48px;
+}
+
+ul.socialcon li a.twitter {
+    background: url("../images/social/twitter.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.wordpress {
+    background: url("../images/social/wordpress.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.youtube {
+    background: url("../images/social/youtube.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.blogger {
+    background: url("../images/social/blogger.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.delicious {
+    background: url("../images/social/delicious.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.digg {
+    background: url("../images/social/digg.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.facebook {
+    background: url("../images/social/facebook.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.flickr {
+    background: url("../images/social/flickr.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.googlep{
+    background: url("../images/social/googlep.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a.myspace{
+    background: url("../images/social/myspace.png") no-repeat scroll 0 0 transparent;
+}
+ul.socialcon li a:hover {
+
+}
+ul.socialcon li.last {
+    margin-right: 0;
+}
+/*----Tipsy----*/
+.tipsy {
+    background-image: url("../images/tipsy.gif");
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    padding: 5px;
+}
+.tipsy-inner {
+    background-color: #ffffff;
+    color: #E12026;
+    font-size: 13px;
+    line-height: 1.3em;
+    max-width: 170px;
+    padding: 5px;
+    text-align: center;
+}
+.tipsy-inner {
+    border-radius: 3px 3px 3px 3px;
+}
+.tipsy-north {
+    background-position: center top;
+}
+.tipsy-south {
+    background-position: center bottom;
+}
+.tipsy-east {
+    background-position: right center;
+}
+.tipsy-west {
+    background-position: left center;
+}

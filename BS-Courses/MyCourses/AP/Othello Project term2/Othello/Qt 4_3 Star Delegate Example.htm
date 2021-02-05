@@ -1,0 +1,520 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://doc.trolltech.com/4.3/itemviews-stardelegate.html -->
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Qt 4.3: Star Delegate Example</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><!-- /fasttmp/mkdist-qt-4.3.5-1211792730/qt-x11-opensource-src-4.3.5/doc/src/examples/stardelegate.qdoc --><LINK 
+rel=stylesheet type=text/css 
+href="Qt%204_3%20Star%20Delegate%20Example_files/classic.css">
+<META name=GENERATOR content="MSHTML 8.00.7600.16385"></HEAD>
+<BODY>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=32 align=left><A 
+      href="http://www.trolltech.com/products/qt"><IMG border=0 align=left 
+      src="Qt%204_3%20Star%20Delegate%20Example_files/qt-logo.png" width=32 
+      height=32></A></TD>
+    <TD width=1>&nbsp;&nbsp;</TD>
+    <TD class=postheader vAlign=center><A 
+      href="http://doc.trolltech.com/4.3/index.html"><FONT 
+      color=#004faf>Home</FONT></A>&nbsp;· <A 
+      href="http://doc.trolltech.com/4.3/classes.html"><FONT 
+      color=#004faf>All&nbsp;Classes</FONT></A>&nbsp;· <A 
+      href="http://doc.trolltech.com/4.3/mainclasses.html"><FONT 
+      color=#004faf>Main&nbsp;Classes</FONT></A>&nbsp;· <A 
+      href="http://doc.trolltech.com/4.3/groups.html"><FONT 
+      color=#004faf>Grouped&nbsp;Classes</FONT></A>&nbsp;· <A 
+      href="http://doc.trolltech.com/4.3/modules.html"><FONT 
+      color=#004faf>Modules</FONT></A>&nbsp;· <A 
+      href="http://doc.trolltech.com/4.3/functions.html"><FONT 
+      color=#004faf>Functions</FONT></A></TD>
+    <TD vAlign=top width=230 align=right><A 
+      href="http://www.trolltech.com/"><IMG border=0 align=right 
+      src="Qt%204_3%20Star%20Delegate%20Example_files/trolltech-logo.png" 
+      width=203 height=32></A></TD></TR></TBODY></TABLE>
+<H1 align=center>Star Delegate Example<BR><SMALL></SMALL></H1>
+<P>Files:</P>
+<UL>
+  <LI><A 
+  href="http://doc.trolltech.com/4.3/itemviews-stardelegate-stardelegate-cpp.html">itemviews/stardelegate/stardelegate.cpp</A></LI>
+  <LI><A 
+  href="http://doc.trolltech.com/4.3/itemviews-stardelegate-stardelegate-h.html">itemviews/stardelegate/stardelegate.h</A></LI>
+  <LI><A 
+  href="http://doc.trolltech.com/4.3/itemviews-stardelegate-stareditor-cpp.html">itemviews/stardelegate/stareditor.cpp</A></LI>
+  <LI><A 
+  href="http://doc.trolltech.com/4.3/itemviews-stardelegate-stareditor-h.html">itemviews/stardelegate/stareditor.h</A></LI>
+  <LI><A 
+  href="http://doc.trolltech.com/4.3/itemviews-stardelegate-starrating-cpp.html">itemviews/stardelegate/starrating.cpp</A></LI>
+  <LI><A 
+  href="http://doc.trolltech.com/4.3/itemviews-stardelegate-starrating-h.html">itemviews/stardelegate/starrating.h</A></LI>
+  <LI><A 
+  href="http://doc.trolltech.com/4.3/itemviews-stardelegate-main-cpp.html">itemviews/stardelegate/main.cpp</A></LI></UL>
+<P>The Star Delegate example shows how to create a delegate that can paint 
+itself and that supports editing.</P>
+<P align=center><IMG alt="The Star Delegate Example" 
+src="Qt%204_3%20Star%20Delegate%20Example_files/stardelegate.png"></P>
+<P>When displaying data in a <A 
+href="http://doc.trolltech.com/4.3/qlistview.html">QListView</A>, <A 
+href="http://doc.trolltech.com/4.3/qtableview.html">QTableView</A>, or <A 
+href="http://doc.trolltech.com/4.3/qtreeview.html">QTreeView</A>, the individual 
+items are drawn by a <A 
+href="http://doc.trolltech.com/4.3/model-view-delegate.html">delegate</A>. Also, 
+when the user starts editing an item (e.g., by double-clicking the item), the 
+delegate provides an editor widget that is placed on top of the item while 
+editing takes place.</P>
+<P>Delegates are subclasses of <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html">QAbstractItemDelegate</A>. 
+Qt provides <A 
+href="http://doc.trolltech.com/4.3/qitemdelegate.html">QItemDelegate</A>, which 
+inherits <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html">QAbstractItemDelegate</A> 
+and handles the most common data types (notably <TT>int</TT> and <A 
+href="http://doc.trolltech.com/4.3/qstring.html">QString</A>). If we need to 
+support custom data types, or want to customize the rendering or the editing for 
+existing data types, we can subclass <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html">QAbstractItemDelegate</A> 
+or <A href="http://doc.trolltech.com/4.3/qitemdelegate.html">QItemDelegate</A>. 
+See <A href="http://doc.trolltech.com/4.3/model-view-delegate.html">Delegate 
+Classes</A> for more information about delegates, and <A 
+href="http://doc.trolltech.com/4.3/model-view-programming.html">Model/View 
+Programming</A> if you need a high-level introduction to Qt's model/view 
+architecture (including delegates).</P>
+<P>In this example, we will see how to implement a custom delegate to render and 
+edit a "star rating" data type, which can store values such as "1 out of 5 
+stars".</P>
+<P>The example consists of the following classes:</P>
+<UL>
+  <LI><TT>StarRating</TT> is the custom data type. It stores a rating expressed 
+  as stars, such as "2 out of 5 stars" or "5 out of 6 stars".</LI>
+  <LI><TT>StarDelegate</TT> inherits <A 
+  href="http://doc.trolltech.com/4.3/qitemdelegate.html">QItemDelegate</A> and 
+  provides support for <TT>StarRating</TT> (in addition to the data types 
+  already handled by <A 
+  href="http://doc.trolltech.com/4.3/qitemdelegate.html">QItemDelegate</A>).</LI>
+  <LI><TT>StarEditor</TT> inherits <A 
+  href="http://doc.trolltech.com/4.3/qwidget.html">QWidget</A> and is used by 
+  <TT>StarDelegate</TT> to let the user edit a star rating using the 
+mouse.</LI></UL>
+<P>To show the <TT>StarDelegate</TT> in action, we will fill a <A 
+href="http://doc.trolltech.com/4.3/qtablewidget.html">QTableWidget</A> with some 
+data and install the delegate on it.</P><A 
+name=stardelegate-class-definition></A>
+<H2>StarDelegate Class Definition</H2>
+<P>Here's the definition of the <TT>StarDelegate</TT> class:</P><PRE> class StarDelegate : public QItemDelegate
+ {
+     Q_OBJECT
+
+ public:
+     StarDelegate(QWidget *parent = 0) : QItemDelegate(parent) {}
+
+     void paint(QPainter *painter, const QStyleOptionViewItem &amp;option,
+                const QModelIndex &amp;index) const;
+     QSize sizeHint(const QStyleOptionViewItem &amp;option,
+                    const QModelIndex &amp;index) const;
+     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &amp;option,
+                           const QModelIndex &amp;index) const;
+     void setEditorData(QWidget *editor, const QModelIndex &amp;index) const;
+     void setModelData(QWidget *editor, QAbstractItemModel *model,
+                       const QModelIndex &amp;index) const;
+
+ private slots:
+     void commitAndCloseEditor();
+ };</PRE>
+<P>All public functions are reimplemented virtual functions from <A 
+href="http://doc.trolltech.com/4.3/qitemdelegate.html">QItemDelegate</A> to 
+provide custom rendering and editing.</P><A 
+name=stardelegate-class-implementation></A>
+<H2>StarDelegate Class Implementation</H2>
+<P>The <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html#paint">paint()</A> 
+function is reimplemented from <A 
+href="http://doc.trolltech.com/4.3/qitemdelegate.html">QItemDelegate</A> and is 
+called whenever the view needs to repaint an item:</P><PRE> void StarDelegate::paint(QPainter *painter, const QStyleOptionViewItem &amp;option,
+                          const QModelIndex &amp;index) const
+ {
+     if (qVariantCanConvert&lt;StarRating&gt;(index.data())) {
+         StarRating starRating = qVariantValue&lt;StarRating&gt;(index.data());
+
+         if (option.state &amp; QStyle::State_Selected)
+             painter-&gt;fillRect(option.rect, option.palette.highlight());
+
+         starRating.paint(painter, option.rect, option.palette,
+                          StarRating::ReadOnly);
+     } else {
+         QItemDelegate::paint(painter, option, index);
+     }</PRE>
+<P>The function is invoked once for each item, represented by a <A 
+href="http://doc.trolltech.com/4.3/qmodelindex.html">QModelIndex</A> object from 
+the model. If the data stored in the item is a <TT>StarRating</TT>, we paint it 
+ourselves; otherwise, we let <A 
+href="http://doc.trolltech.com/4.3/qitemdelegate.html">QItemDelegate</A> paint 
+it for us. This ensures that the <TT>StarDelegate</TT> can handle the most 
+common data types.</P>
+<P>In the case where the item is a <TT>StarRating</TT>, we draw the background 
+if the item is selected, and we draw the item using 
+<TT>StarRating::paint()</TT>, which we will review later.</P>
+<P><TT>StartRating</TT>s can be stored in a <A 
+href="http://doc.trolltech.com/4.3/qvariant.html">QVariant</A> thanks to the <A 
+href="http://doc.trolltech.com/4.3/qmetatype.html#Q_DECLARE_METATYPE">Q_DECLARE_METATYPE</A>() 
+macro appearing in <TT>starrating.h</TT>. More on this later.</P>
+<P>The <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html#createEditor">createEditor()</A> 
+function is called when the user starts editing an item:</P><PRE> QWidget *StarDelegate::createEditor(QWidget *parent,
+                                     const QStyleOptionViewItem &amp;option,
+                                     const QModelIndex &amp;index) const
+
+ {
+     if (qVariantCanConvert&lt;StarRating&gt;(index.data())) {
+         StarEditor *editor = new StarEditor(parent);
+         connect(editor, SIGNAL(editingFinished()),
+                 this, SLOT(commitAndCloseEditor()));
+         return editor;
+     } else {
+         return QItemDelegate::createEditor(parent, option, index);
+     }
+ }</PRE>
+<P>If the item is a <TT>StarRating</TT>, we create a <TT>StarEditor</TT> and 
+connect its <TT>editingFinished()</TT> signal to our 
+<TT>commitAndCloseEditor()</TT> slot, so we can update the model when the editor 
+closes.</P>
+<P>Here's the implementation of <TT>commitAndCloseEditor()</TT>:</P><PRE> void StarDelegate::commitAndCloseEditor()
+ {
+     StarEditor *editor = qobject_cast&lt;StarEditor *&gt;(sender());
+     emit commitData(editor);
+     emit closeEditor(editor);
+ }</PRE>
+<P>When the user is done editing, we emit <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html#commitData">commitData()</A> 
+and <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html#closeEditor">closeEditor()</A> 
+(both declared in <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html">QAbstractItemDelegate</A>), 
+to tell the model that there is edited data and to inform the view that the 
+editor is no longer needed.</P>
+<P>The <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html#setEditorData">setEditorData()</A> 
+function is called when an editor is created to initialize it with data from the 
+model:</P><PRE> void StarDelegate::setEditorData(QWidget *editor,
+                                  const QModelIndex &amp;index) const
+ {
+     if (qVariantCanConvert&lt;StarRating&gt;(index.data())) {
+         StarRating starRating = qVariantValue&lt;StarRating&gt;(index.data());
+         StarEditor *starEditor = qobject_cast&lt;StarEditor *&gt;(editor);
+         starEditor-&gt;setStarRating(starRating);
+     } else {
+         QItemDelegate::setEditorData(editor, index);
+     }
+ }</PRE>
+<P>We simply call <TT>setStarRating()</TT> on the editor.</P>
+<P>The <A 
+href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html#setModelData">setModelData()</A> 
+function is called when editing is finished, to commit data from the editor to 
+the model:</P><PRE> void StarDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
+                                 const QModelIndex &amp;index) const
+ {
+     if (qVariantCanConvert&lt;StarRating&gt;(index.data())) {
+         StarEditor *starEditor = qobject_cast&lt;StarEditor *&gt;(editor);
+         model-&gt;setData(index, qVariantFromValue(starEditor-&gt;starRating()));
+     } else {
+         QItemDelegate::setModelData(editor, model, index);
+     }
+ }</PRE>
+<P>The <TT>sizeHint()</TT> function returns an item's preferred size:</P><PRE> QSize StarDelegate::sizeHint(const QStyleOptionViewItem &amp;option,
+                              const QModelIndex &amp;index) const
+ {
+     if (qVariantCanConvert&lt;StarRating&gt;(index.data())) {
+         StarRating starRating = qVariantValue&lt;StarRating&gt;(index.data());
+         return starRating.sizeHint();
+     } else {
+         return QItemDelegate::sizeHint(option, index);
+     }
+ }</PRE>
+<P>We simply forward the call to <TT>StarRating</TT>.</P><A 
+name=stareditor-class-definition></A>
+<H2>StarEditor Class Definition</H2>
+<P>The <TT>StarEditor</TT> class was used when implementing 
+<TT>StarDelegate</TT>. Here's the class definition:</P><PRE> class StarEditor : public QWidget
+ {
+     Q_OBJECT
+
+ public:
+     StarEditor(QWidget *parent = 0);
+
+     QSize sizeHint() const;
+     void setStarRating(const StarRating &amp;starRating) {
+         myStarRating = starRating;
+     }
+     StarRating starRating() { return myStarRating; }
+
+ signals:
+     void editingFinished();
+
+ protected:
+     void paintEvent(QPaintEvent *event);
+     void mouseMoveEvent(QMouseEvent *event);
+     void mouseReleaseEvent(QMouseEvent *event);
+
+ private:
+     int starAtPosition(int x);
+
+     StarRating myStarRating;
+ };</PRE>
+<P>The class lets the user edit a <TT>StarRating</TT> by moving the mouse over 
+the editor. It emits the <TT>editingFinished()</TT> signal when the user clicks 
+on the editor.</P>
+<P>The protected functions are reimplemented from <A 
+href="http://doc.trolltech.com/4.3/qwidget.html">QWidget</A> to handle mouse and 
+paint events. The private function <TT>starAtPosition()</TT> is a helper 
+function that returns the number of the star under the mouse pointer.</P><A 
+name=stareditor-class-implementation></A>
+<H2>StarEditor Class Implementation</H2>
+<P>Let's start with the constructor:</P><PRE> StarEditor::StarEditor(QWidget *parent)
+     : QWidget(parent)
+ {
+     setMouseTracking(true);
+     setAutoFillBackground(true);
+ }</PRE>
+<P>We enable <A 
+href="http://doc.trolltech.com/4.3/qwidget.html#mouseTracking-prop">mouse 
+tracking</A> on the widget so we can follow the cursor even when the user 
+doesn't hold down any mouse button. We also turn on <A 
+href="http://doc.trolltech.com/4.3/qwidget.html">QWidget</A>'s <A 
+href="http://doc.trolltech.com/4.3/qwidget.html#autoFillBackground-prop">auto-fill 
+background</A> feature to obtain an opaque background. (Without the call, the 
+view's background would shine through the editor.)</P>
+<P>The <A 
+href="http://doc.trolltech.com/4.3/qwidget.html#paintEvent">paintEvent()</A> 
+function is reimplemented from <A 
+href="http://doc.trolltech.com/4.3/qwidget.html">QWidget</A>:</P><PRE> void StarEditor::paintEvent(QPaintEvent *)
+ {
+     QPainter painter(this);
+     myStarRating.paint(&amp;painter, rect(), this-&gt;palette(),
+                        StarRating::Editable);
+ }</PRE>
+<P>We simply call <TT>StarRating::paint()</TT> to draw the stars, just like we 
+did when implementing <TT>StarDelegate</TT>.</P><PRE> void StarEditor::mouseMoveEvent(QMouseEvent *event)
+ {
+     int star = starAtPosition(event-&gt;x());
+
+     if (star != myStarRating.starCount() &amp;&amp; star != -1) {
+         myStarRating.setStarCount(star);
+         update();
+     }
+ }</PRE>
+<P>In the mouse event handler, we call <TT>setStarCount()</TT> on the private 
+data member <TT>myStarRating</TT> to reflect the current cursor position, and we 
+call <A 
+href="http://doc.trolltech.com/4.3/qwidget.html#update">QWidget::update</A>() to 
+force a repaint.</P><PRE> void StarEditor::mouseReleaseEvent(QMouseEvent * <SPAN class=comment>/* event */</SPAN>)
+ {
+     emit editingFinished();
+ }</PRE>
+<P>When the user releases a mouse button, we simply emit the 
+<TT>editingFinished()</TT> signal.</P><PRE> int StarEditor::starAtPosition(int x)
+ {
+     int star = (x / (myStarRating.sizeHint().width()
+                      / myStarRating.maxStarCount())) + 1;
+     if (star &lt;= 0 || star &gt; myStarRating.maxStarCount())
+         return -1;
+
+     return star;
+ }</PRE>
+<P>The <TT>starAtPosition()</TT> function uses basic linear algebra to find out 
+which star is under the cursor.</P><A name=starrating-class-definition></A>
+<H2>StarRating Class Definition</H2><PRE> class StarRating
+ {
+ public:
+     enum EditMode { Editable, ReadOnly };
+
+     StarRating(int starCount = 1, int maxStarCount = 5);
+
+     void paint(QPainter *painter, const QRect &amp;rect,
+                const QPalette &amp;palette, EditMode mode) const;
+     QSize sizeHint() const;
+     int starCount() const { return myStarCount; }
+     int maxStarCount() const { return myMaxStarCount; }
+     void setStarCount(int starCount) { myStarCount = starCount; }
+     void setMaxStarCount(int maxStarCount) { myMaxStarCount = maxStarCount; }
+
+ private:
+     QPolygonF starPolygon;
+     QPolygonF diamondPolygon;
+     int myStarCount;
+     int myMaxStarCount;
+ };
+
+ Q_DECLARE_METATYPE(StarRating)</PRE>
+<P>The <TT>StarRating</TT> class represents a rating as a number of stars. In 
+addition to holding the data, it is also capable of painting the stars on a <A 
+href="http://doc.trolltech.com/4.3/qpaintdevice.html">QPaintDevice</A>, which in 
+this example is either a view or an editor. The <TT>myStarCount</TT> member 
+variable stores the current rating, and <TT>myMaxStarCount</TT> stores the 
+highest possible rating (typically 5).</P>
+<P>The <A 
+href="http://doc.trolltech.com/4.3/qmetatype.html#Q_DECLARE_METATYPE">Q_DECLARE_METATYPE</A>() 
+macro makes the type <TT>StarRating</TT> known to <A 
+href="http://doc.trolltech.com/4.3/qvariant.html">QVariant</A>, making it 
+possible to store <TT>StarRating</TT> values in <A 
+href="http://doc.trolltech.com/4.3/qvariant.html">QVariant</A>.</P><A 
+name=starrating-class-implementation></A>
+<H2>StarRating Class Implementation</H2>
+<P>The constructor initializes <TT>myStarCount</TT> and <TT>myMaxStarCount</TT>, 
+and sets up the polygons used to draw stars and diamonds:</P><PRE> StarRating::StarRating(int starCount, int maxStarCount)
+ {
+     myStarCount = starCount;
+     myMaxStarCount = maxStarCount;
+
+     starPolygon &lt;&lt; QPointF(1.0, 0.5);
+     for (int i = 1; i &lt; 5; ++i)
+         starPolygon &lt;&lt; QPointF(0.5 + 0.5 * cos(0.8 * i * 3.14),
+                                0.5 + 0.5 * sin(0.8 * i * 3.14));
+
+     diamondPolygon &lt;&lt; QPointF(0.4, 0.5) &lt;&lt; QPointF(0.5, 0.4)
+                    &lt;&lt; QPointF(0.6, 0.5) &lt;&lt; QPointF(0.5, 0.6)
+                    &lt;&lt; QPointF(0.4, 0.5);
+ }</PRE>
+<P>The <TT>paint()</TT> function paints the stars in this <TT>StarRating</TT> 
+object on a paint device:</P><PRE> void StarRating::paint(QPainter *painter, const QRect &amp;rect,
+                        const QPalette &amp;palette, EditMode mode) const
+ {
+     painter-&gt;save();
+
+     painter-&gt;setRenderHint(QPainter::Antialiasing, true);
+     painter-&gt;setPen(Qt::NoPen);
+
+     if (mode == Editable) {
+         painter-&gt;setBrush(palette.highlight());
+     } else {
+         painter-&gt;setBrush(palette.foreground());
+     }
+
+     int yOffset = (rect.height() - PaintingScaleFactor) / 2;
+     painter-&gt;translate(rect.x(), rect.y() + yOffset);
+     painter-&gt;scale(PaintingScaleFactor, PaintingScaleFactor);
+
+     for (int i = 0; i &lt; myMaxStarCount; ++i) {
+         if (i &lt; myStarCount) {
+             painter-&gt;drawPolygon(starPolygon, Qt::WindingFill);
+         } else if (mode == Editable) {
+             painter-&gt;drawPolygon(diamondPolygon, Qt::WindingFill);
+         }
+         painter-&gt;translate(1.0, 0.0);
+     }
+
+     painter-&gt;restore();
+ }</PRE>
+<P>We first set the pen and brush we will use for painting. The <TT>mode</TT> 
+parameter can be either <TT>Editable</TT> or <TT>ReadOnly</TT>. If <TT>mode</TT> 
+is editable, we use the <A 
+href="http://doc.trolltech.com/4.3/qpalette.html#ColorRole-enum">Highlight</A> 
+color instead of the <A 
+href="http://doc.trolltech.com/4.3/qpalette.html#ColorRole-enum">Foreground</A> 
+color to draw the stars.</P>
+<P>Then we draw the stars. If we are in <TT>Edit</TT> mode, we paint diamonds in 
+place of stars if the rating is less than the highest rating.</P>
+<P>The <TT>sizeHint()</TT> function returns the preferred size for an area to 
+paint the stars on:</P><PRE> QSize StarRating::sizeHint() const
+ {
+     return PaintingScaleFactor * QSize(myMaxStarCount, 1);
+ }</PRE>
+<P>The preferred size is just enough to paint the maximum number of stars. The 
+function is called by both <TT>StarDelegate::sizeHint()</TT> and 
+<TT>StarEditor::sizeHint()</TT>.</P><A name=the-function></A>
+<H2>The <TT>main()</TT> Function</H2>
+<P>Here's the program's <TT>main()</TT> function:</P><PRE> int main(int argc, char *argv[])
+ {
+     QApplication app(argc, argv);
+
+     QTableWidget tableWidget(4, 4);
+     tableWidget.setItemDelegate(new StarDelegate);
+     tableWidget.setEditTriggers(QAbstractItemView::DoubleClicked
+                                 | QAbstractItemView::SelectedClicked);
+     tableWidget.setSelectionBehavior(QAbstractItemView::SelectRows);
+
+     QStringList headerLabels;
+     headerLabels &lt;&lt; "Title" &lt;&lt; "Genre" &lt;&lt; "Artist" &lt;&lt; "Rating";
+     tableWidget.setHorizontalHeaderLabels(headerLabels);
+
+     populateTableWidget(&amp;tableWidget);
+
+     tableWidget.resizeColumnsToContents();
+     tableWidget.resize(500, 300);
+     tableWidget.show();
+
+     return app.exec();
+ }</PRE>
+<P>The <TT>main()</TT> function creates a <A 
+href="http://doc.trolltech.com/4.3/qtablewidget.html">QTableWidget</A> and sets 
+a <TT>StarDelegate</TT> on it. <A 
+href="http://doc.trolltech.com/4.3/qabstractitemview.html#EditTrigger-enum">DoubleClicked</A> 
+and <A 
+href="http://doc.trolltech.com/4.3/qabstractitemview.html#EditTrigger-enum">SelectedClicked</A> 
+are set as <A 
+href="http://doc.trolltech.com/4.3/qabstractitemview.html#editTriggers-prop">edit 
+triggers</A>, so that the editor is opened with a single click when the star 
+rating item is selected.</P>
+<P>The <TT>populateTableWidget()</TT> function fills the <A 
+href="http://doc.trolltech.com/4.3/qtablewidget.html">QTableWidget</A> with 
+data:</P><PRE> void populateTableWidget(QTableWidget *tableWidget)
+ {
+     static const struct {
+         const char *title;
+         const char *genre;
+         const char *artist;
+         int rating;
+     } staticData[] = {
+         { "Mass in B-Minor", "Baroque", "J.S. Bach", 5 },
+     ...
+         { 0, 0, 0, 0 }
+     };
+
+     for (int row = 0; staticData[row].title != 0; ++row) {
+         QTableWidgetItem *item0 = new QTableWidgetItem(staticData[row].title);
+         QTableWidgetItem *item1 = new QTableWidgetItem(staticData[row].genre);
+         QTableWidgetItem *item2 = new QTableWidgetItem(staticData[row].artist);
+         QTableWidgetItem *item3 = new QTableWidgetItem;
+         item3-&gt;setData(0,
+                        qVariantFromValue(StarRating(staticData[row].rating)));
+
+         tableWidget-&gt;setItem(row, 0, item0);
+         tableWidget-&gt;setItem(row, 1, item1);
+         tableWidget-&gt;setItem(row, 2, item2);
+         tableWidget-&gt;setItem(row, 3, item3);
+     }
+ }</PRE>
+<P>Notice the call to qVariantFromValue to convert a <TT>StarRating</TT> to a <A 
+href="http://doc.trolltech.com/4.3/qvariant.html">QVariant</A>.</P><A 
+name=possible-extensions-and-suggestions></A>
+<H2>Possible Extensions and Suggestions</H2>
+<P>There are many ways to customize Qt's <A 
+href="http://doc.trolltech.com/4.3/model-view-programming.html">model/view 
+framework</A>. The approach used in this example is appropriate for most custom 
+delegates and editors. Examples of possibilities not used by the star delegate 
+and star editor are:</P>
+<UL>
+  <LI>It is possible to open editors programmatically by calling <A 
+  href="http://doc.trolltech.com/4.3/qabstractitemview.html#edit">QAbstractItemView::edit</A>(), 
+  instead of relying on edit triggers. This could be use to support other edit 
+  triggers than those offered by the <A 
+  href="http://doc.trolltech.com/4.3/qabstractitemview.html#EditTrigger-enum">QAbstractItemView::EditTrigger</A> 
+  enum. For example, in the Star Delegate example, hovering over an item with 
+  the mouse might make sense as a way to pop up an editor.</LI>
+  <LI>By reimplementing <A 
+  href="http://doc.trolltech.com/4.3/qabstractitemdelegate.html#editorEvent">QAbstractItemDelegate::editorEvent</A>(), 
+  it is possible to implement the editor directly in the delegate, instead of 
+  creating a separate <A 
+  href="http://doc.trolltech.com/4.3/qwidget.html">QWidget</A> subclass.</LI></UL>
+<P>
+<ADDRESS>
+<HR>
+
+<DIV align=center>
+<TABLE border=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR class=address>
+    <TD width="30%">Copyright © 2008 <A 
+      href="http://doc.trolltech.com/4.3/trolltech.html">Trolltech</A></TD>
+    <TD width="40%" align=middle><A 
+      href="http://doc.trolltech.com/4.3/trademarks.html">Trademarks</A></TD>
+    <TD width="30%" align=right>
+      <DIV align=right>Qt 
+4.3.5</DIV></TD></TR></TBODY></TABLE></DIV></ADDRESS></BODY></HTML>

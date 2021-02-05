@@ -1,0 +1,490 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0033)http://www.fierz.ch/strategy2.htm -->
+<HTML><HEAD><TITLE>basics of strategy game programming: part II</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.16385">
+<META name=FORMATTER content="Arachnophilia 3.2"></HEAD>
+<BODY leftMargin=0 topMargin=0 bgColor=#ffffff text=#000000>
+<TABLE border=0 cellSpacing=0 cellPadding=20 width="100%" bgColor=#000000>
+  <TBODY>
+  <TR>
+    <TD><FONT color=#bbbbbb size=6 face=Ventura><B>Strategy Game 
+      Programming</B> </FONT></TD>
+    <TD align=right><FONT color=#ff0000 size=6 face=Ventura><B>Advanced 
+      Techniques</B> </FONT></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=20 width="100%" bgColor=#ffffff>
+  <TBODY>
+  <TR>
+    <TD>
+      <H4>Advanced Techniques</H4>
+      <UL>
+        <LI><A href="http://www.fierz.ch/strategy2.htm#moveorder"><B>Move 
+        ordering</B></A> - general 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#hashtable">Hashtables</A> 
+
+        <LI><A href="http://www.fierz.ch/strategy2.htm#killer">Killer moves</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#history">History 
+        heuristics</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#static">Static 
+        ordering</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#searchenhance"><B>Search 
+        enhancements</B></A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#window">Windowing</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#pvs">Principal variation 
+        search (PVS)</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#mtd">MTD(f)</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#etc">Enhanced 
+        transposition cutoffs (ETC)</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#se">Singular 
+        extensions</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#quiescence">Quiescence 
+        search</A> 
+        <LI><A href="http://www.fierz.ch/strategy2.htm#depthreduction">Depth 
+        reductions</A> 
+        <LI><A 
+        href="http://www.fierz.ch/strategy2.htm#gamespecific">Game-specific 
+        enhancements</A> </LI></UL><A name=moveorder></A>
+      <H3>Move ordering</H3>Move ordering is very important for the AlphaBeta 
+      algorithm to perform well. To understand why, recall the loop over all 
+      moves in AlphaBeta: <PRE>	for(i=0;i&lt;n;i++)
+		{
+		domove(&amp;list[i],&amp;p);
+		value=-alphabeta(p,depth-1,-beta,-localalpha);
+		undomove(&amp;list[i],&amp;p);
+		bestvalue=max(value,bestvalue);
+		<B>if(bestvalue&gt;=beta) 
+			break;
+		if(bestvalue&gt;localalpha) 
+			localalpha=bestvalue;</B>
+		}
+</PRE>The 'if(bestvalue&gt;=beta) break;' - statement is the one thing 
+      which distinguishes AlphaBeta from NegaMax. Whenever this condition is 
+      true, the search can be stopped, and the node is said to have ended in a 
+      <B>beta cutoff</B> or <B>fail high</B>. Now it is easy to understand why 
+      move ordering is so important: if there is only one move which will cause 
+      a beta cutoff, we will have to search until we find it. If this move is at 
+      the top of the movelist, we can return after searching only one move, if 
+      it is at the end, we have to search all moves. If our game has a branching 
+      factor (average number of possible moves) N and we wish to search to depth 
+      D, we will have to search N^D nodes with MiniMax (or NegaMax), but with 
+      perfectly ordered AlphaBeta only N^(D/2). With perfectly reverse-ordered 
+      AlphaBeta we would have to search the same number of nodes as MiniMax, if 
+      the evaluation function was continuous. Evaluation functions are usually 
+      rather coarse, e.g. in chess they usually have 1 centipawn as smallest 
+      unit, and so you get lots of cutoffs even in perfectly reverse-ordered 
+      AlphaBeta. All of this means that well-ordered AlphaBeta search can look 
+      <EM>twice as far ahead</EM> as MiniMax. With random move ordering our 
+      AlphaBeta algorithm will be somewhere in between. Obviously there is no 
+      way to generate moves in the order of their merit; if we had a function 
+      which could already generate moves in the correct order, we would not have 
+      to make a search at all... 
+      <P>Still, there are quite a few approaches to improve move ordering - they 
+      all take up some time, but the benefit is usually much greater. All these 
+      techniques to improve the move ordering need a constant amount of time, 
+      that means, our program will just be able to calculate a few percent less 
+      nodes per second. On the other hand, the benefit is <EM>exponential</EM>. 
+      The deeper we search, the larger our benefit will be. Move ordering 
+      techniques can be divided in three classes: results of a previous search, 
+      dynamic move ordering and static move ordering. I'll examine them in this 
+      order. <A name=hashtable></A>
+      <H4>Hashtables</H4>The hashtable is a very important component of a 
+      strategy game program for two reasons: it recognizes transpositions in the 
+      move order, and it improves move ordering. The basic idea of the hashtable 
+      is to store intermediate results of the search and to probe the table for 
+      these results. As an example for the usefulness of the hashtable imagine a 
+      game where white starts with move A, black responds with B and white goes 
+      on to move C. If the game had gone C,B,A instead, we would have the same 
+      position again, and there would be no point in searching it again, if we 
+      still remembered what we had calculated in the A,B,C position. This shows 
+      us how the hashtable must work: At the end of every AlphaBeta function we 
+      must store our calculation, and at the beginning of every AlphaBeta 
+      function we must first probe the hashtable to find out if we need to 
+      calculate anything at all. We need to store the position, the value of the 
+      position, the remaining search depth with which we arrived at this value, 
+      and the value type. The value type tells us if the value we have stored is 
+      an exact MiniMax value or rather an upper or lower bound for the true 
+      MiniMax value. Remember that if the return value of AlphaBeta is not 
+      between alpha and beta, it is not an exact value. If value &gt; beta it is 
+      a lower bound for the true value, if value &lt; alpha it is an upper bound 
+      for the true value. This is important, as we might arrive at the same 
+      position with different alpha and beta values. 
+      <P>Let's modify our AlphaBeta code to use a hashtable: For this, I use two 
+      functions called lookup() and store(). lookup has the following fuction 
+      prototype:
+      <P><PRE>int lookup(POSITION *p, int depth, int *alpha, int *beta, int *hashvalue);</PRE>
+      <P>The lookup function returns true if it finds the position in the 
+      hashtable and the value in the hashtable can be returned immediately. 
+      Lookup() might also encounter a lower value in the hashtable that is 
+      larger than alpha. In this case, the current alpha can immediately be set 
+      to the hashvalue. For this reason, I pass alpha and beta by reference to 
+      lookup(), so lookup() can modify their values. <BR>The store() function 
+      has the following prototype: 
+      <P><PRE>void store(POSITION *p, int depth, int bestvalue, int alpha, int beta);
+</PRE>
+      <P>Together this gives the new AlphaBeta function with hashtable:
+      <P><PRE>int alphabeta(POSITION *p, int depth, int alpha, int beta)
+	{
+	MOVE list[MAXMOVES];
+	int i,n,value,localalpha=alpha,bestvalue=-INFINITY;
+	int hashvalue;
+
+	if(lookup(p, depth, &amp;alpha, &amp;beta, &amp;hashvalue))
+		return hashvalue;
+	
+	if(checkwin(p)) 
+		return -INFINITY;
+
+	if(depth == 0)	
+		return evaluation(p);
+
+	n = makemovelist(p,list);
+	if(n==0) 
+		return handlenomove(p);
+	
+	for(i=0;i&lt;n;i++)
+		{
+		domove(list[i],&amp;p);
+		value = -alphabeta(p,depth-1,-beta,-localalpha);
+		undomove(list[i],&amp;p);
+		bestvalue = max(value,bestvalue);
+		if(bestvalue &gt;= beta) 
+			break;
+		if(bestvalue&gt;localalpha) 
+			localalpha = bestvalue;
+		}
+
+	store(p, depth, bestvalue, alpha, beta);
+	
+	return bestvalue;
+	}
+</PRE>
+      <P>As you can see, the first thing AlphaBeta does now is to check in the 
+      table if the position has already been calculated. If lookup() returns a 
+      nonzero value, we have some information available on the position. 
+      However, we must check if the information is useful, for instance, it 
+      might be from a previous iteration, and the stored result would have been 
+      calculated with a smaller search depth. In this case, we cannot use the 
+      information. Otherwise, we can use it. If it is an exact value, we can 
+      return it directly. If it is an upper bound on the value of the position, 
+      we know that the true value of the position is less or equal than the 
+      stored value. If this stored value is smaller or equal to alpha, we can 
+      return it again, because we are only interested in values between alpha 
+      and beta. If the value is greater than alpha, but smaller than beta, we 
+      can adjust beta to save time in the next call to AlphaBeta. For lower 
+      bounds a similar reasoning applies.
+      <P>For the hashtable to be efficient, we must be able to store as many 
+      entries as possible, and the time to store and look up the entries must be 
+      very short. At first, these two requirements seem contradictory: The more 
+      entries we have in the table, the longer it should take to find the right 
+      one?! Luckily, this is just not true, thanks to a technique called 
+      <B>hashing</B>, which is why the hashtable has this name. Another name for 
+      it is <B>transposition table</B>. Hashing works like this: we have a 
+      position and we generate two numbers with it, which I call the 
+      <B>key</B>and the <B>lock</B>. The hashtable is typically an array with H 
+      entries. The key is mapped onto this array by taking key modulo H. This is 
+      the array element which we use for storage. Obviously, there will be many 
+      more possible positions than H. This means that many different positions 
+      map to the same array index. It is very important that the hash number(s) 
+      we generate from the position is very different even for similar positions 
+      - our search will generate many similar positions, and, if the hash 
+      numbers are also similar, there is a danger that they all go to similar 
+      entries in the hash array, and the rest of the array remainst pretty much 
+      unused. To check whether to different positions map to the same entry in 
+      the hashtable, we us the lock. It is also a number generated from the 
+      position, which is also not unique - again, many positions may map to the 
+      same lock. The point is that it is VERY improbable that two different 
+      positions will generate the same index and lock value. This makes hash 
+      errors very improbable. Of course it would be possible to store the whole 
+      position in the hashtable, but this would violate the first requirement, 
+      that we must be able to store as many positions as possible - typically, 
+      the lock is just a 32-bit number, whereas the position would need much 
+      more space. The most common implementation of a hash function is 
+      <B>Zobrist hashing</B>. Remember that we want our hashing function to 
+      produce numbers which are wildly different for even slightly different 
+      positions, but identical for the same positions - and we would like to 
+      generate these numbers fast. Here's how it works: Assume you have a board 
+      with S squares and P different types of pieces. You allocate an array <PRE>int zobristnumbers[S][2*P];
+</PRE>and fill it with random numbers. The hash number is now calculated 
+      as an XOR over the occupied squares of the entire board: <PRE>key = 0;
+for(i=0; i&lt;S; i++)
+	{
+	if(board[i] != EMPTY)
+		key ^= zobristnumbers[i][piece[i]];
+	}
+</PRE>This function fulfills our requirements - put one piece on another 
+      square and your entire number is XOR'ed with two random numbers and is 
+      wildly different. It isn't very fast though, you have to scan over the 
+      entire board. However, for a typical game, you can compute it 
+      <B>incrementally</B>: if you move a piece from square S1 to square S2 then 
+      all you need to do is XOR the current hash number with the zobrist numbers 
+      for that piece corresponding to the two squares for your move. If you 
+      capture other pieces in the process, you'll have to add a bit more 
+      computation. For example, for chess you typically only need two XORs 
+      instead of 64. In general, it is worth thinking about things you might be 
+      able to compute incrementally - a lot of things are much faster that way 
+      (material balance would be another thing you would want to compute 
+      incrementally). However, when you start out adding a hashtable to your 
+      program, it is probably a good idea to first use a position_to_hashnumber 
+      function instead of an incrementally computed hash number to make sure 
+      that your hashtable implementation is bugfree, without having to worry 
+      whether your hash number is bugfree too. A final remark: the above hash 
+      function doesn't recognize which side is to move. For some games that is 
+      implicit from the number of pieces on the board (Reversi/Othello or 
+      Connect 4), for others it is not. For those games you'll have to XOR in 
+      another random number for the side to move. 
+      <P>The above just describes the use of the hashtable in recognizing 
+      transpositions. A very important point about the hashtable is another one 
+      though: The hashtable helps in move ordering. Since we are using iterative 
+      deepening, we will have information in the hashtable from the last search 
+      with less search depth. If we also record the best move in the hashtable, 
+      we can use this best move to order our movelist - the best move first. The 
+      hash move is a very good guess for the best move! <A name=killer></A>
+      <H4>Killer moves</H4>Killer moves are another heuristic to help in move 
+      ordering. The basic idea behind killer moves is this: Imagine a position 
+      with white to move. After white's first move we go into the next recursion 
+      of AlphaBeta and find a move K for black which causes a beta cutoff for 
+      black. The reasoning is then that move K is a good move for black, a 
+      'killer'. So when we try the next white move it seems reasonable to try 
+      move K first, before all others. In a game like chess, the above situation 
+      would fit to a position where black is threatening a mate in one, and 
+      white should do something about it. Killer moves are a very simple 
+      heuristic, but for their simplicity they work quite well. Some people use 
+      multiple killer moves. Others try to avoid the killer move being a move 
+      that they would search early anyway, e.g. a capture in chess. YMMV as 
+      always, test to see what works best for you! <A name=history></A>
+      <H4>History heuristics</H4>History heuristics are in some way an extension 
+      of killer moves. With killer moves, the problem is that we forget them 
+      again immediately. You can think of killer moves as some kind of 
+      short-term memory, while history heuristics is long-term memory. In 
+      history heuristics we keep track of all good moves. For a game like chess 
+      or checkers, we take a double-indexed counter array, history[][], which we 
+      index with the from and to squares of the move. Every time we find a move 
+      from a-to-b to be good, we increment the value of history[a][b]. When we 
+      generate the movelist, we can then order it according to the values of the 
+      history array. You might want to experiment with the history heuristic 
+      too, e.g. you could decide only to increment the counter for moves which 
+      caused a fail-high (after all, in all other nodes you will have to search 
+      all moves anyway, so it doesn't matter as much in which order you search 
+      them). <A name=static></A>
+      <H4>Static ordering</H4>Static move ordering is inherently a 
+      game-dependent heuristic, unlike the three others above, which are 
+      game-independent. From a theoretical point of view, game-independent 
+      heuristics are much more satisfactory, but for a 'real-world' program we 
+      just want the best possible performance. I can just give a few examples 
+      about static move ordering: In chess, capture moves are often ordered by 
+      the values of the 'agressor' and the 'victim'. In checkers, you might want 
+      to order promotions to the top of the list. When capture moves are 
+      possible in checkers, you might order them according to the number of 
+      stones they capture. In connect 4, you can order the moves so that moves 
+      close to the center of the board are at the top of the list. These are 
+      just a few ideas, and many more might be useful - it's a trial-and-error 
+      thing. <A name=searchenhance></A>
+      <H3>Search enhancements</H3>All techniques above aimed at reducing the 
+      number of nodes to search by better move ordering. There is another class 
+      of enhancements with the same goal, but with different means. These 
+      enhancements try to exploit the nature of the AlphaBeta algorithm, which 
+      has to search fewer nodes when the alpha-beta window is smaller. <A 
+      name=window></A>
+      <H4>Windowing</H4>Windowing is the simplest of the following techniques. 
+      In an iterative deepening framework, we always have a value of the 
+      previous iteration. Therefore, we try to reduce the search effort by using 
+      a smaller alpha-beta window. Instead of using -INFINITY...+INFINITY we can 
+      use an interval lastvalue-WINDOW...lastvalue+WINDOW. If the true MiniMax 
+      value at this iteration is really inside this window, we will just need to 
+      search fewer nodes than with the larger window. On the other hand, our 
+      guess that the true value is inside this window might also be wrong. In 
+      this case, we will get a fail-high or a fail-low. In this case, we will 
+      have to do a re-search with a larger window. <A name=pvs></A>
+      <H4>Principal variation search (PVS)</H4>Windowing is simple and it is 
+      quite good. However, windowing is restricted to the root node. PVS tries 
+      to go a bit further by making assumptions on the alpha-beta window at 
+      <B>every</B> node. Here's the basic idea: Since we have gone to a lot of 
+      trouble with our move ordering schemes above, we can be pretty confident 
+      that we will find the best move early on. Therefore, our localalpha will 
+      be at its maximal value after the first few moves. PVS tries to exploit 
+      this by calling the next recursion of AlphaBeta with different parameters 
+      than standard-AlphaBeta. AlphaBeta would use alpha and beta. In PVS 
+      however, we already guess that our current localalpha will be better than 
+      what we will get with the remaining moves. Therefore we set alpha to 
+      localalpha and beta to localalpha+1, that is, we use a call 
+      <P><PRE>value=-alphabeta(p,d-1,-(localalpha+1),-localalpha);
+</PRE>
+      <P>We expect this call to fail low, because we believe that we have 
+      already found the best move. If this call does not fail low, we need to 
+      revise our assumption and call AlphaBeta again with the normal alpha and 
+      beta bounds. PVS is also often called <B>NegaScout</B>. It gets its name 
+      from the scout search which a minimal window, which sort of probes the 
+      territory to see whether a real search is necessary. <A name=mtd></A>
+      <H4>MTD(f)</H4>MTD(f) is another clever trick which uses AlphaBeta's 
+      property of returning boundaries on the true MiniMax value. MTD(f) makes a 
+      few calls to AlphaBeta with changing windows to get the true value of the 
+      position. Each time it gets either a lower or an upper bound on the 
+      current position's value. These bounds converge toward the true MiniMax 
+      value. Here's the code for MTD(f): 
+      <P><PRE>int mtdf(struct position p, int firstguess,int depth)
+	{
+	int g,lowerbound, upperbound,beta;
+
+	g=firstguess;
+	upperbound=INFINITY;
+	lowerbound=-INFINITY;
+	while(lowerbound&lt;upperbound)
+		{
+		if(g==lowerbound)
+			beta=g+1;
+		else beta=g;
+		g=alphabeta(p,depth,beta-1,beta);
+		if(g&lt;beta)
+			upperbound=g;
+		else
+			lowerbound=g;
+		}
+	return g;
+	}
+</PRE>
+      <P>MTD(f) gets a 'firstguess' value from the last iterative deepening 
+      stage. By zooming in on the true MiniMax value with its minimal window 
+      calls, it arrives at the same result as a normal AlphaBeta search, but 
+      generally uses less nodes to find this value. I read that for MTD to work, 
+      you have to store both upper and lower bounds in your hashtable instead of 
+      just one value and bound type. The idea is that MTD will often re-search a 
+      position with a different alpha-beta window, and it would be a shame to 
+      forget results of earlier searches - which would happen if you were to 
+      overwrite the stored information that a position has a upper bound of 100 
+      with the information that it also has a lower bound of 90. <A 
+name=etc></A>
+      <H4>Enhanced transposition cutoffs (ETC)</H4>ETC is a cute idea: in a 
+      normal AlphaBeta search with a hashtable, you will be searching through 
+      all possible moves, and for every move you make, you do a hashtable lookup 
+      to see if you can return immediately. ETC takes this idea one step 
+      further: <EM>Before</EM> doing your recursive AlphaBeta call, you look up 
+      all possible successor positions of the current position. If you get a 
+      hashtable hit on one of these calls which gives you a return value &gt; 
+      beta, you can immediately return without a search. The reason ETC helps is 
+      that in the normal AlphaBeta case, you generate a movelist, and let's 
+      assume that move number 5 would lead to a hashtable hit leading to a 
+      cutoff. Nevertheless, in the normal AlphaBeta framework, you will have to 
+      search through moves number 1 - 4, and only then do you find that move 
+      number 5 gives you a cutoff. This search is made unnecessary with the ETC 
+      lookup. <BR>ETC is a nice idea in theory, but it is expensive. In my 
+      checkers program, I use ETC, but I only use it if there is "enough" depth 
+      left in the search. The point is that ETC will give you cutoffs with a 
+      constant probability, and if you use it close to the leaf nodes, the 
+      amount of the tree that you cutoff is small. If you only use ETC further 
+      away from the leafs, you will get a big enough cutoff to compensate for 
+      the speed loss. The question is of course: what is "enough" depth? This 
+      has to be decided separately for every game engine - I use it and find it 
+      improves my checkers program, Bob Hyatt has found it to be ineffective in 
+      his strong chess program "Crafty". One thing to keep in mind is that 
+      hashtables are getting slower and slower compared to the rest of the 
+      game-playing program, because they need to access the main memory. Today's 
+      processors run at full speed only if they can run out of their large 
+      caches. <A name=se></A>
+      <H4>Singular extensions</H4>Singular extensions (SE) got their 15 minutes 
+      of fame when they were used by the Deep Blue team which won it's chess 
+      match against world champion Garry Kasparov. Since then, SE seems to have 
+      been abandoned by most. The idea of singular extensions is appealing, and 
+      what makes it so appealing is that it is game-independent: Many ideas on 
+      how to improve tree search depend heavily on the game, and therefore lack 
+      generality. Singular extensions in theory work for all games. As the name 
+      says, SE is about extensions. Up to now, I have avoided this topic, but it 
+      is important: The AlphaBeta function I have shown searches a game tree to 
+      a fixed depth. However, many lines of play are just stupid, while others 
+      are more interesting. The aim of SE is to catch some of the more 
+      interesting lines, and to search them deeper than the rest. It relies on 
+      detecting forced moves for one side, and on extending the search depth in 
+      the case of forced moves. Humans play chess like this, and can solve long 
+      variations which are forced easily. SE tries to emulate this behavior. 
+      Here's how it works: <BR>In the AlphaBeta routine above, we try to find 
+      out if one of the successor moves is vastly superior than all others. If 
+      this is the case, we re-search this move with a larger depth. The problem 
+      with SE is that it is not easy to find out if the best move is vastly 
+      superior! To begin with, it may not be an exact value. Continuing, the 
+      other moves will certainly not be exact values, since once they fell short 
+      of beta, they were not searched further, i.e. no attempt was made to prove 
+      that the move was worse than beta-SINGULAR. This means, that SE needs a 
+      lot of changes: first, we have to find the best move - this works as 
+      before. Once we have found it, we could search all other moves with a 
+      minimal window of (beta-SINGULAR, beta-SINGULAR+1). If they all fail low, 
+      great, we have a singular move and re-search the best move with a higher 
+      depth. But what if the best move was a fail high? then we do not know it's 
+      exact value, and maybe it is a singular move even though it is not 
+      according to the above definition. I tried implementing some SE in my 
+      checkers program, and it never really worked. It usually works fine in 
+      some test positions, but overall, no go. People always say: but it worked 
+      in Deep Blue! Yes, it did. Then again, with the amount of computing power 
+      they had at the time, they could have implemented nearly anything and 
+      would have had a strong program... <A name=quiescence></A>
+      <H4>Quiescence search</H4>As I just said above, the basic search algorithm 
+      I presented always goes to a fixed depth. However, it may often not be a 
+      good idea to evaluate a position if it is too chaotic. Exactly what too 
+      chaotic might mean depends on the game. A simple example in chess is a 
+      position where white to move is a rook down but can promote a pawn to a 
+      queen, winning the game. If we were to call our static evaluation function 
+      in this position, it would (unless it was smart, which evaluation 
+      functions usually aren't) conclude that white is dead lost, a rook down. 
+      Therefore, a technique called quiescence search is often used: Once you 
+      want to call your evaluation function, you take a look at <B>very few</B> 
+      select moves that need to be checked further. You have to make sure that 
+      you are very restrictive in your quiescence search, otherwise your search 
+      tree will explode completely. <A name=depthreduction></A>
+      <H4>Depth reductions</H4>Pruning in general is a way of deciding to reduce 
+      the search depth of the current line. There are many ways in which you can 
+      do this, and some of them are game specific (see below). Others are of a 
+      more general nature. The whole idea comes from the fact that most of the 
+      lines your program is looking at are absolutely ridiculous. Now, if we 
+      could only get rid of these ridiculous lines and look at the important 
+      ones instead... One very general pruning technique that is nearly 
+      guaranteed to work in most games is Michael Buro's ProbCut algorithm (and 
+      variants thereof): In ProbCut, you decide to search less deeply at some 
+      fixed remaining depth, e.g. when there are 8 ply remaining. Instead, you 
+      decide to search only 4 ply. Now, if this search returns a value far 
+      outside of your alpha-beta window you decide to believe the shallow search 
+      and return the result. If it's not too far outside of the alpha-beta 
+      window, or even inside it, you have to re-search to the full depth. There 
+      are a lot of constants you can tune in this algorithm, and you will have 
+      to experiment with it to get it up to full strength. It was used by Buro 
+      himself in his world-class Othello program Logistello, and I once 
+      implemented a version of Multi-ProbCut in my checkers program Cake. It 
+      worked much better than plain alphabeta, but not as well as my 
+      game-specific pruning algorithm. Nevertheless, ProbCut is highly 
+      interesting since it doesn't depend on the game you are playing. To me 
+      it's no surprise that it is outperformed by reduction algorithms which 
+      know something about the game - after all, these have some knowledge 
+      advantage! <A name=gamespecific></A>
+      <H4>Game-specific enhancements</H4>Many games allow enhancements which are 
+      only possible due to the game's nature. Some examples include 9 men's 
+      morris, which has a load of symmetries you can exploit, which was done by 
+      Ralph Gasser to solve the game. Another example is the Null Move, which 
+      works well in chess, but not at all in checkers. The null move is based on 
+      the idea that every move improves your position. Null move lets your 
+      opponent make a move when it's actually your turn. If even after this 
+      move, your position's value is &gt; beta, you say: look, I can even afford 
+      to give him two turns, surely I don't have to search this line to the full 
+      depth, and return. The reason this works is that there are relatively few 
+      positions where having to move actually hurts. In chess, the term 
+      <B>Zugzwang</B> is used for such a position. There are many examples of 
+      Null-Move chess programs failing spectacularly in these positions, because 
+      their Null-Move heuristic fools them. Checkers is a game of zugzwang, 
+      unlike chess. This means that the Null Move heuristic cannot work in this 
+      game. In checkers, you can do something different: Since checkers is a 
+      very positional game compared to chess (there is no king to checkmate), a 
+      single checker advantage is usually enough to win. Therefore, checkers 
+      programs usually reduce the search depth of lines where one side has 
+      sacrificed (or blundered) material. Chess programs cannot afford to do 
+      this, because successful attacks on the king often involve sacrifices. 
+      <P>Comments and questions are welcome!
+      <HR color=#888888>
+
+      <CENTER>[ <A href="http://www.fierz.ch/">Author homepage</A> | <A 
+      href="http://www.fierz.ch/strategy.htm">Introduction</A> | <A 
+      href="http://www.fierz.ch/strategy1.htm">Part I</A> | <A 
+      href="http://www.fierz.ch/strategy2.htm">Part II</A> | <A 
+      href="http://www.fierz.ch/strategy3.htm">Part III</A> | <A 
+      href="http://www.fierz.ch/strategy4.htm">Part IV</A> | <A 
+      href="http://www.fierz.ch/strategy5.htm">Part V</A> ] 
+      <P>This page was updated by Martin Fierz on Monday, February 11, 2002 
+      using <A href="http://www.arachnoid.com/"><IMG border=0 alt=arachnoid 
+      align=middle 
+      src="basics%20of%20strategy%20game%20programming%20part%20II_files/arachno.gif"></A> 
+      </CENTER></P></TD></TR></TBODY></TABLE></BODY></HTML>

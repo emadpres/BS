@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1334607898 source:c:\users\ramin\desktop\codeblock\minefinal\main.cpp
+	<graphics.h>
+	<iostream>
+	<time.h>
+	<cstdlib>
+

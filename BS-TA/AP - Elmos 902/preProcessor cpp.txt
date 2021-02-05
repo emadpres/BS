@@ -1,0 +1,17 @@
+Preprocessor
+#include <stdio.h> 	includes contents of stdio.h
+#error text 	display text as compile time error
+#warning text 	display text as compile time warning
+#pragma 	compiler specific options
+#define M 	define M
+#undef M 	undefine M
+#if (condition) 	conditional compiling
+#ifdef M 	compiled if M is defined
+#ifndef M 	compiled if M is not defined
+#elif (condition) 	conditional compiling
+#else 	conditional compiling
+#endif 	end conditional section
+defined() 	is macro defined.
+ !defined() 	is macro not defined
+M ## D 	combines M and D into MD
+#M 	treat M as string "M"

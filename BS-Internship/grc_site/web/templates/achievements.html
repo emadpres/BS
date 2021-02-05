@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h2> موفقیت ها </h2>
+
+{%if allAchievements %}
+	تعداد موفقیت های یافت شده: {{ allAchievements.count}} یافت شد <br><br><br>
+
+	<ul>
+	{% for Achievement in allAchievements %}
+	<li> <a href="/Achievements/{{Achievement.id}}">{{Achievement.title}}</a> </li>
+	{% endfor%}
+	</ul>
+
+{% else %}
+	موفقیتی یافت نشد
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+class Book
+{
+	string title;
+	int year;
+	float rate;
+}
+
+
+Book GetLastBook(int year)
+{
+	Book *dangle;
+	dangle.year = year ;
+	return dangle;
+}
+
+
+
+int main()
+{
+	Book *harry;
+	harry = new Book;
+	
+	string myTitle;
+	myTitle  =    ;
+	
+	string lastTitle = myTitle ;
+	
+	Book lastBook ;
+	lastBook = GetLastBook(2014);
+	myTitle  = lastBook.title ;
+	
+	int globalRate;
+	int r = harry->rate
+	globalRate = (lastBook.rate * r ) * 100 ;
+}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% if theOutput %}
+	
+	<h2> &nbsp&nbsp {{theOutput.title}} </h2>
+	<img src="{{theOutput.picture_small.url}}" height="100px" width="100px"  style="float:right;"/>
+	<div id="emad" style="margin-right:8em;">
+		<br/>پلتفرم : &nbsp&nbsp {{theOutput.platrform}}
+		<br/>رهبر تیم: &nbsp&nbsp {{theOutput.teamLeader}}
+		<br/>اعضای تیم: &nbsp&nbsp {{theOutput.teamMembers}}
+	</div>
+	<p style="margin-right:1em;"> 
+		{{ theOutput.text }} 
+		<br/>
+		{% if theOutput.binaryFile %}
+			<a href="{{theOutput.binaryFile.url}}">دانلود</a>
+		{% else %}
+			(امکان دانلود ندارد)
+		{% endif %}
+		<br/><br/><br/>
+		<a href="/Outputs">بازگشت به خروجی های مرکز</a>
+	</p>
+	
+	<hr>
+	<h4>تصاویری از یازی:</h4	>
+	
+	{% if theOutput.picture1 %}
+		<img src="{{theOutput.picture1.url}}" height="400px" width="450px" />
+	{% else %}
+		با عرض پوزش، تصویری یافت نشد.
+	{% endif %}	
+	
+	{% if theOutput.picture2 %}
+		<img src="{{theOutput.picture2.url}}" height="400px" width="450px" />
+	{% endif %}	
+	
+	{% if theOutput.picture3 %}
+		<img src="{{theOutput.picture3.url}}" height="400px" width="450px" />
+	{% endif %}	
+	
+	{#<p align="left"> {{theOutput.date}} </p>#}
+	
+	<br/>
+	<a href="/Outputs">بازگشت به خروجی های مرکز</a>
+{% else %}
+خبر یافت نشد
+{% endif %}
+
+{% endblock %}

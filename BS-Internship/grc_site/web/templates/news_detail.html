@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% if theNews %}
+	
+	<h2> {{theNews.title}} </h2>
+
+	<p style="margin-right:1em;"> 
+			{{ theNews.text }} 
+	</p>
+
+	 {# <p align="left"> {{theNews.date}} </p> #}
+	
+	<br>
+	<a href="/News"> بازگشت به اخبار </a>
+{% else %}
+خبر یافت نشد
+{% endif %}
+
+{% endblock %}

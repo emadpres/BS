@@ -1,0 +1,46 @@
+#include "OurPlayer.h"
+#include "OthelloBoard.h"
+#include "MainTasks.cpp"
+#include <QDateTime>
+
+OurPlayer::OurPlayer(OthelloBoard* board,STATE turn, int depth):OthelloPlayer(board,turn)
+{
+	qsrand((int)QDateTime::currentDateTime().toTime_t());
+	ourTurn=turn;
+	this->depth=depth;
+	position = new Position(turn);	
+}
+
+QString OurPlayer::getName()
+{
+	return "Our Player!";
+}
+
+QList<QString> OurPlayer::getAuthors()
+{
+	return QList<QString>() <<"EA & PJ";
+}
+
+QPair<int,int> OurPlayer::nextPlay()
+{
+	OthelloAbstractBoard abstractBoard = board->getState();
+	//BOARD board=board->getState();
+	
+	position->turn=ourTurn;
+	
+	if (ourTurn==WHITE)
+		position->remainingMoves--;
+
+
+	position->key = 0;
+	//later move this part to posiO
+		position->remainingMoves--;
+	else //if ourTurn==BLACK
+		position->remainingMoves+=2;
+		
+	//cout << "best move here: \n" << bestMove.x << "\n" << " and\n "<< bestMove.y << "\n"; 
+   return QPair<int,int>(bestMove.x,bestMove.y);//bestMove.x,bestMove.y);
+
+}
+
+

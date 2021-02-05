@@ -1,0 +1,649 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+
+
+  <title>Inside Reversi/Othello</title>
+  <link rev="made" href="mailto:t_wolf@tiscalinet.ch">
+  <link rel="stylesheet" href="index_files/tw.css" type="text/css">
+  <meta name="description" content="Interactive Game: Play Reversi (Othello) against a Java applet">
+  <meta name="keywords" content="game, reversi, othello, java, applet, model, view, control, alpha-beta search, pruning, transposition table, iterative deepening, quiescence search, minmax, strategy, board games, observer">
+</head><body bgcolor="#fffff4">
+
+<table class="title" border="0" cellpadding="5" cellspacing="0" width="100%">
+<tbody><tr>
+  <td valign="top">
+    <h1>The Anatomy of a Game Program</h1>
+  </td>
+  <td align="right" valign="top">
+    <a href="http://home.datacomm.ch/t_wolf/tw/misc/reversi/index.html"><img src="index_files/up_page.jpg" alt="Reversi Applet" border="0" width="82" height="21"></a>
+    <a href="http://home.datacomm.ch/t_wolf/tw/misc/reversi/html/tuning.html"><img src="index_files/next_page.jpg" alt="Speed Tuning" border="0" width="82" height="21"></a>
+  </td>
+</tr>
+</tbody></table>
+
+<hr>
+<!--======================================================================-->
+
+<p>
+There are many Reversi (or Othello) games on the web. How do these applets
+work? I don't mean the graphics stuff - every Java programmer knows how to
+handle this aspect, since most applets have a graphical interface. But how
+to write a program that plays a game? On this page, we'll examine some of
+the general concepts of game programming and also some of the difficulties
+peculiar to the game of Reversi.
+</p>
+
+<hr>
+<!--======================================================================-->
+
+<p><strong>Other Pages on my Reversi Applet</strong></p>
+
+<dl>
+  <dt><a href="http://home.datacomm.ch/t_wolf/tw/misc/reversi/html/tuning.html">Speed-Tuning the Applet.</a>
+  </dt><dt><a href="http://home.datacomm.ch/t_wolf/tw/misc/reversi/html/othello_games.html">Some Games the Applet played.</a>
+  </dt><dt><a href="http://home.datacomm.ch/t_wolf/tw/misc/reversi/html/othello_hist.html">The Version History of the Applet.</a>
+  </dt><dt><a href="http://home.datacomm.ch/t_wolf/tw/misc/reversi/index.html">The Applet!</a>
+</dt></dl>
+
+<hr>
+<!--======================================================================-->
+
+<h2>Looking Ahead</h2>
+
+<p>
+To determine the best move, the applet has to look ahead. If you have ever
+played a strategy game, you know this principle very well: "If I make this
+move, and he makes that move, I can win by making <em>this</em> move. But what
+if he makes <em>that</em> move? ..."
+</p>
+
+<h3>Introduction to Evaluation Functions</h3>
+
+<p>
+A game program proceeds exactly in the same manner. But there are a few
+technical difficulties. How do <em>you</em> know that a certain position in
+the game is "good" for you? You have some evaluation of a position, but
+"some" is not good enough for a program: we need to be able to formulate
+a clear-cut criterion for the quality of a position that we can express in
+the rigid framework of a programming language. Such <em>evaluation
+functions</em> depend on the nature of the game - one for chess differs of
+course from one for Reversi, which again is different than one for, say,
+Five-in-a-Row.
+</p>
+<p>
+A common way to view evaluation functions is to encode our estimate of the
+quality of a position in a number. The higher the number we get from our
+evaluation, the better a position is for the program. The lower the number,
+the better the game goes for our opponent. Usually, one designs evaluation
+functions such that they return positive values when things are going well
+for the program, and negative numbers if the opponent is winning. Zero
+indicates a balance of power.
+</p>
+<p>
+We'll discuss various evaluation functions for Reversi
+<a href="#Eval">below</a>.
+</p>
+
+<h3>MiniMax Search</h3>
+
+<p>
+Assume for the time being that we have an evaluation function at our disposal.
+We then can use a simple technique called "MiniMax Search" to look ahead.
+MiniMax search is called thusly because when we try to determine the best
+move, we always consider the best moves of each player. And since the
+evaluation function returns positive values for the program's moves and
+negative values for the opponent's moves, we have to consider alternatingly
+the maximum and the minimum of the evaluation function's results.
+</p>
+<p>
+At some point, we have to stop looking ahead - simply because even in a simple
+game like Reversi, there are far too many possibilities to consider. We just
+cannot look ahead from the first move until the end of the game. Therefore,
+we need to limit the <em>search depth</em> of our look-ahead. When we have
+reached the last level, which is called the <em>horizon</em> because we can't
+look beyond it, we use the evaluation function to find out whether the
+position we arrived at is good. Finally, we get a game tree like the one below:
+</p>
+<pre>                                   Top
+                                    |
+                    +---------------+----------------+
+                    |                                |
+                    A                                B              (0) MAX
+         +----------+---------+           +----------+----------+
+         a                    b           c                     d   (1) MIN
+    +----+----+          +----+----+ +----+----+                |
+    A    B    C          D         E F         G                H   (2) MAX
+
+</pre>
+<p>
+This figure shows the game tree resulting from a 2-move look-ahead. On the
+lowest level (2), we just call the evaluation function to find out which of
+the moves A to C, D and E, F and G, and H, is the best. We take the maximum
+of these evaluations as the evaluation for moves <code>a</code>, <code>b</code>,
+<code>c</code>, and <code>d</code> on level one. One that level, we now take the
+minimum of these values as the evaluation for moves A and B on level 0. On
+the top level, we again take the maximum and then we execute the chosen move.
+</p>
+
+<h3>The Negamax Framework</h3>
+
+<p>
+In the above Minimax procedure, we alternatingly have to take the minimum or
+the maximum of the values returned for successor positions. This makes
+programming a Minimax procedure a little cumbersome: we have to distinguish
+the two cases explicitly.
+</p>
+<p>
+For programming a Minimax search, the <em>Negamax</em> approach is more
+comfortable. Instead of always evaluating the position from the computer's
+point of view (as we do in Minimax), we now evaluate it always from the
+<em>point of view of the player who is to move next!</em> The opponent's
+value for the same position then becomes simply the negative of that player's
+value.
+</p>
+<p>
+The main advantage of this approach is that we can get rid of the two different
+cases. We don't have to distinguish between MIN and MAX levels anymore, instead,
+we always take the maximum, but we negate the position evaluation on each level.
+The two variants are equivalent since taking the minimum of positive values
+yields the same as taking the maximum of the same values, negated.
+</p>
+<p>
+Consider the values 3, 5, 6, and 10: on a MIN-level, we choose 3. Now we always
+maximize, but we negate values, so we're in fact dealing with the values -3,
+-5, -6, and -10: the largest one is -3. In both cases, we've chosen the same
+position.
+</p>
+
+<h3>Alpha-Beta Search</h3>
+
+<p>
+Alpha-Beta search is a refinement of MiniMax search that allows us to prune
+the game tree: if we find that it isn't worth continuing examining moves in
+a certain position, we backtrack immediately.
+</p>
+<p>
+  <em>Description of Alpha-Beta search still missing...</em>
+</p>
+
+<h4>Improvements of the basic Alpha-Beta Algorithm</h4>
+
+<p>
+<em>
+NegaScout (i.e. minimum window search), outcome search, MT-algorithms.
+Description still missing.
+</em>
+</p>
+
+<h3>The Horizon Effect and Quiescence Search</h3>
+
+<p>
+We already mentioned the "horizon" above: it's the last level in the search
+tree. Sometimes, it happens that a game program plays rather bad simply because
+it cannot look ahead far enough. A shallow look-ahead may be sufficient in
+peaceful positions, but there are others, in particular during attacks, where a
+correct evaluation of the situation is only possible by looking ahead until
+we again reach a quite position.
+</p>
+<p>
+If the program stops looking ahead at its normal lowest level in the game tree,
+it may get a very wrong evaluation of such positions, which may easily make it
+lose the whole game. This is the so-called "horizon effect". To avoid it, one
+has to dynamically increase the search depth in these situations.
+</p>
+<p>
+Quiescence search does exactly that: if the program recognizes a move as an
+attack, it extends the game tree at that branch until it can evaluate its
+actions and reactions during the attack, i.e. until a situation is reached in
+which neither side has an imminent threat.
+</p>
+<p>
+The horizon effect can be seen best in my applet on level "Easy": the applet
+sometimes plays on a so-called X-square (a square diagonally adjacent to a
+corner) and then lose this corner after another three or four moves. On the
+higher levels, it doesn't do that. This is a result of my approximate
+implementation of quiescence search, which works well on higher levels but
+is too simplistic on level "Easy". On this level, the applet only considers
+its own immediate possible moves, it doesn't look ahead to also consider
+possible answers of its opponent. Therefore it cannot foresee the loss of the
+corner unless it is lost immediately.
+</p>
+
+<h3>Transposition Tables</h3>
+
+<p>
+  <em>Decsription still missing...</em>
+</p>
+
+<h3>Dealing with Time Constraints</h3>
+
+<p>
+  <em>Explanation of iterative deepening still to be written...</em>
+</p>
+<p>
+Note that limiting the Java applet exactly to at most <em>n</em> seconds for
+its looking ahead would require that interrupting tasks worked in the JDK. As
+it doesn't, the best we can do is check the elapsed time on each round of
+iterative deepening, and return the best move found so far if our time's up.
+</p>
+<p>
+This approach can be improved slightly by also checking the timeout on every
+level in the game tree (i.e. at each position) and stopping evaluation if the
+time is up. That's the way I implemented it in the applet.
+</p>
+<p>
+The endgame is played perfectly, so in the last 8 or 10 moves, depending on
+the "strength" setting (i.e. depth of look-ahead), the applet doesn't care
+about timeouts. Since endgame evaluation is much faster than earlier in the
+game (simpler evaluation function, less possible moves on each additional
+level), this is barely noticeable.
+</p>
+
+<h3>"Learning"</h3>
+
+<p>
+My applet does not "learn".
+</p>
+<p>
+  <em>Description still in the works. Keywords: retrograde analysis, genetic
+  algorithms, game library</em>
+</p>
+
+<hr>
+<!--======================================================================-->
+
+<h2>My Implementation of Reversi</h2>
+
+<p>
+In this section, we'll discuss the choices made for my
+<a href="http://home.datacomm.ch/t_wolf/tw/misc/reversi/index.html">Java applet</a>. As game engine, it uses Alpha-Beta
+search with a zero-window technique (the so-called "NegaScout" algorithm) and
+a transposition table. Except when in the endgame it uses iterative deepening.
+</p>
+
+<h3>Ordering Moves</h3>
+
+<p>
+Hey, waiter...! No, it's not that.
+</p>
+<p>
+In Alpha-Beta search, the order in which the moves are tried is crucial,
+especially when the zero-window technique is used. Trying the better moves
+first will create a lot more cut-offs than an arbitrary order. Therefore we
+not only need an evaluation function for positions, we also need to find some
+ordering criterion for possible moves.
+</p>
+<p><a name="Prio">In</a>
+my reversi applet, I chose a mainly static order function, given by a table
+that contains high positive values for the corners, negative values for the
+adjacent fields, and other positive values for all other fields. If a move is
+to be played to a certain field, its value in the table gives the preference
+of that move - the higher the value, the better the move is (probably). The
+values for the corners and the adjacent fields are updated from the
+<a href="#Edge">edge table</a>, all other entries are static. The fields
+diagonally adjacent to a corner always get the negative value of the
+corresponding corner.
+</p>
+<p>
+This table is used to sort the moves. Moves with a high value in the table are
+tried first. The table guarantees that corner moves come first, while moves
+to adjacent squares, especially those that are diagonally adjacent, come last.
+</p>
+
+<h3>Quiescence Search</h3>
+
+<p>
+In Reversi, there are quite a few threats. My applet considers only the most
+obvious ones: forced moves (i.e. there is only one move), corner moves and
+moves to a square adjacent to a corner. Due to computational restrictions, it
+doesn't look ahead until it finds a quiet position, instead, it just increases
+the tree depth by one level for each threatening move. While this isn't exactly
+a correct implementation of quiescence search, it already improves the program
+considerably.
+</p>
+
+<h3><a name="Eval">The Evaluation Function</a></h3>
+
+<p>
+Many Reversi programs don't play great - in fact, most of the Reversi applets
+I had found on the web were easy to beat. I think that this is due to the
+lousy evaluation function they use.
+</p>
+<p>
+Simple Reversi programs just use the number of pieces of the color they play
+on the board as an indicator for the quality of a position. This <em>greedy</em>
+evaluation function is derived from the final goal of the game: the player who
+has the most pieces wins. But this only makes sense if you really can look
+ahead until the end of the game - which is only feasible in the last 10 to 18
+moves (depending on the performance of your computer). If you can't do that,
+this greedy function will mislead your program. If you have a lot of pieces
+in any given position except at the end, this doesn't mean anything: a few
+moves by your opponent, and in the end, the situation may well be totally
+reversed.
+</p>
+<p>
+A better criterion for determining a position is to count the number of moves
+a player can make: the <em>mobility</em> is decisive in Reversi! If you only
+have a few moves, it's likely that your opponent can play such that you are
+forced to make bad moves. Therefore, if your mobility is high, the position
+is better for you than if it's low.
+</p>
+<p>
+Using simple mobility as the evaluation function still gives a disappontingly
+weak program. The program still plays too often "on the outside", when it would
+be better to have its own pieces towards the center of the position. This can
+be expressed by also considering <em>potential mobility</em>. Potential mobility
+can be estimated by simply counting all the opponent's pieces that are adjacent
+to an empty field.
+</p>
+<p>
+<a name="Edge">It</a>
+turns out that the combination of these two values makes the program play
+much better, though it still plays very badly. We have to take a look at a
+peculiar phase in an Reversi game: the edge fight. Very often, the situation
+along an edge - even if the corners aren't taken yet - can be decisive for the
+outcome of a game. What to do? Including all edge moves in the set of "critical
+moves" leading to a quiescence search is not feasible - the program would run
+far too slow, because we'd get ridiculously deep game trees.
+</p>
+<p>
+I decided to precompute a table of evaluation values for all 6561
+(3<sup>8</sup>) possible situations along an edge. Actually, I should also
+have included the squares diagonally adjacent to the corners, but that would
+have given a table of 59049 (3<sup>10</sup>) entries, which I deemed a bit
+large for a simple Java applet.
+</p>
+<p>
+This table is precomputed by starting with all possible positions and then playing
+a one-dimensional Reversi game (allowing passes at any move) to the
+end. The resulting percentage of victories for a given starting position
+determines that edge configuration's value.
+</p>
+<p>
+Now with this improvement, the program already plays quite well. Just
+sometimes it would play onto a square diagonally adjacent to a corner when
+this subsequently made it lose that corner. To cure that, I biased the
+priority table (see <a href="#Prio">above</a>) against such moves. In addition,
+I also incorporated the number of occupied corners in the evaluation function.
+Generally (though there are exceptions!!), it is good to move to a corner. The
+program therefore calculates part of the evaluation function from the ratio of
+the numbers of corners owned by itself and its opponent.
+</p>
+<p>
+With these four components:
+</p>
+<ul>
+  <li> Mobility
+  </li><li> Potential mobility
+  </li><li> Edge table
+  </li><li> Corner ratio
+</li></ul>
+<p>
+as the evaluation function, the resulting program is quite hard to beat. (As
+you can witness by <a href="http://home.datacomm.ch/t_wolf/tw/misc/reversi/index.html">playing a game</a>!) Actually, the
+applet doesn't use mobility and potential mobility directly since these values
+are not symmetric. (Black and White can have very different values for the
+same position, and these values usually are not their negative.) Therefore,
+I use the difference in mobility as the criterion: this value is
+<em>stable</em> for a given position.
+</p>
+
+<h3>Other Concepts of Reversi</h3>
+
+<p>
+There are a couple of other Reversi-concepts that I didn't implement.
+</p>
+<dl>
+  <dt><strong>Avoiding Edges</strong>
+  </dt><dd>
+    <p>
+      Good Reversi players often will try not to play an edge move. Why?
+      The reason is that edge moves interact with the pieces on the
+      adjacent edges, turning more pieces and thus creating opportunities
+      for the opponent. My Reversi applet has no notion of this.
+    </p>
+
+  </dd><dt><strong>Access</strong>
+  </dt><dd>
+    <p>
+      Having access to a certain region on the board is important. If we
+      cannot access a region, our opponent can. A player can for instance
+      lose access because all the edge discs in that area are his own.
+      I don't think it's necessary to deal with access explicitly: the
+      potential mobility already should take care of that.
+    </p>
+
+  </dd><dt><strong>Parity</strong>
+  </dt><dd>
+    <p>
+      Parity is especially important in corner regions. A player can lose
+      parity if s/he loses access to a region of an odd number of fields.
+      This may prove a disadvantage later on because players set pieces
+      alternatingly, so the player might be forced to make a bad move.
+    </p>
+</dd></dl>
+<p>
+The applet also lacks an opening library, and its perfect endgame play is
+a bit shallow: due to the performance limitations of interpreted Java, only
+the last 8 to 10 moves are computed fully.
+</p>
+<p>
+The absence of an opening library doesn't seem to do too much harm. Simple
+mobility already is sufficient to avoid the parallel opening: the applet only
+plays the perpendicular or the diagonal opening.
+</p>
+
+<h3>Things to do</h3>
+
+<ul>
+  <li>Improve the evaluation function further...
+  </li><li>Implement a time limit for the whole game instead of one for each move.
+</li></ul>
+
+<hr>
+<!--======================================================================-->
+
+<h2>Some Literature References</h2>
+
+<p>
+Strategy games at one time received a lot of attention from the AI community.
+(Recently, this interest seems to have decreased somewhat, maybe due to the
+appearance of brute-force game playing computers like Deep Blue for chess.)
+It is no surprise that there is a vast literature and theory on strategy
+(zero-sum) games. Still, most of these deal with chess or checkers. On Reversi
+(or Othello), I found only a few:
+</p>
+<blockquote>
+  Kierulf, Anders: <strong>Smart Game Board: a Workbench for Game-Playing
+  Programs, with Go and Othello as Case Studies</strong>, <em>Ph.D. Thesis
+  No. 9135, Dept. of Computer Science, ETH Zürich, Switzerland</em>, 1990
+
+<dl><dd> Has an extensive bibliography on other papers on Go or Othello; the
+         author is the creator of the two Othello programs <em>Brand</em> and
+         <em>Peer Gynt</em>.
+</dd></dl>
+</blockquote>
+
+<blockquote>
+  <a href="http://www.neci.nj.nec.com/homepages/mic/mic.html">Buro, M.</a>:
+  <strong>
+  <a href="http://www.neci.nj.nec.com/homepages/mic/ps/mics_dis.ps.Z">Techniken
+  für die Bewertung von Spielsituationen anhand von
+  Beispielen</a></strong>, <em>Ph.D. Thesis, Fachbereich 17 -
+  Mathematik/Informatik, Universität Paderborn, Germany</em>, 1994
+
+<dl><dd> Written in german, but very interesting: the author is the creator of
+         <a href="http://www.neci.nj.nec.com/homepages/mic/log.html">Logistello</a>,
+         one of the best Othello programs of the world.  Unfortunately
+         most of the advanced techniques to speed up the search of the game
+         tree he describes are only applicable at search depths that are well
+         beyond what a Java applet can ever hope to achieve. It also seems
+         that his mobility approximation only yields plausible results at
+         higher search depths - for a shallow search, this approximation
+         sometimes misjudges positions  completely, making the applet play
+         very poorly.
+</dd></dl>
+</blockquote>
+
+<blockquote>
+  <a href="http://www.isi.edu/soar/rosenbloom/.personal.html">Rosenbloom,
+  Paul S.</a>: <strong>A World-Championship-Level Othello
+  Program</strong>, in Levy, David (Ed.), <em>Computer Games, Vol. II</em>,
+  Springer 1988, pp. 365 - 405.
+
+<dl><dd> Describes the Othello program IAGO.
+</dd></dl>
+</blockquote>
+
+<blockquote>
+  Lee, K.; Mahajan, S.: <strong>The Development of a World Class Othello
+  Program</strong>, <em>Artificial Intelligence <strong>43</strong> (1990),</em>
+  pp. 21 - 36.
+
+<dl><dd> Describes the Othello program BILL, a "successor" of IAGO. (I consider
+         BILL as a direct descendant of IAGO since its evaluation function is
+         based on very much the same concepts. The only significant addition
+         was the use of Bayesian learning for the feature combination.)
+</dd></dl>
+</blockquote>
+
+<p>
+A general reference on strategy games is
+</p>
+<blockquote>
+  <a href="http://www.cs.ualberta.ca/%7Etony/">Marsland, T.A.</a>:
+  <strong>Computer Chess Methods</strong>, in Shapiro (Ed.),
+  <em>Encyclopedia of Artificial Intelligence</em>, Wiley &amp; Sons, 1987, pp.
+  159 - 171
+</blockquote>
+<p>
+Some basic references on Alpha-beta pruning are
+</p>
+<blockquote>
+  Knuth, D.E.; Moore, R. W: <strong>An Analysis of Alpha-Beta Pruning</strong>,
+  <em>Artificial Intelligence <strong>6</strong>(4)</em>, North Holland
+  Publishing Company, 1975, pp. 293 - 326
+</blockquote>
+
+<blockquote>
+  <a href="http://www.uni-paderborn.de/pc2/people/homes/ar/index.htm">Reinefeld,
+  A.</a>;
+  <a href="http://www.cs.ualberta.ca/%7Ejonathan/">Schaeffer, J.</a>;
+  Marsland, T.A.:
+  <strong>Information Acquisition in Minimal Window Search</strong>,
+  <em>Proceedings of the 9th International Joint Conference on Artificial
+  Intelligence, Vol. 2</em>, Los Angeles, CA, USA, 1985, pp. 1040 - 1043
+</blockquote>
+
+<blockquote>
+  Marsland, T.A.:
+  <strong>Relative Efficiency of Alpha-Beta Implementations</strong>,
+  <em>Proceedings of the 8th International Joint Conference on Artificial
+  Intelligence, Vol. 2</em>, Karlsruhe, Germany, 1983, pp. 763 - 766
+</blockquote>
+<p>
+A recent, new approach is described in
+</p>
+<blockquote>
+  <a href="http://theory.lcs.mit.edu/%7Eplaat/">Plaat, A.</a>; Schaeffer, J.;
+  Pijls, W.; de Bruin, A.:
+  <strong><a href="http://theory.lcs.mit.edu/%7Eplaat/tr9418.ps.gz">A New
+  Paradigm for Minimax Search</a></strong>, <em>Technical Report TR 94-18,
+  Dept. of Computing Science, University of Alberta, Edmonton, Alberta,
+  Canada</em>, Dec. 1994
+</blockquote>
+<p>
+(Basically, they found out that doing repeated minimum-window searches instead
+of an alpha-beta search may yield slightly better search times in some cases.
+Their MTD algorithm comprises a whole class of other, well-known algorithms:
+SSS*, DUAL*, C*, ...)
+</p>
+<p>
+More references on Othello have been
+<a href="http://www.io.com/%7Ergatliff/othello/bib3.html">collected</a> by
+Robert Gatliff.
+</p>
+
+<hr>
+<!--======================================================================-->
+
+<h2>Other Games</h2>
+
+<dl>
+  <dt><strong>Chess</strong>
+  </dt><dd><a href="http://www.ibm.com/Stretch/EOS/dbo.html">Deep Blue</a> plays
+      Grandmaster-level chess, but for the time being (1996), world-champion
+      Gary Kasparov still can beat it in a
+      <a href="http://www.tcc.net/chess/DBlue/kblue.html">match</a> setting.
+      A
+      <a href="http://www.chess.ibm.com/home/html/b.html">rematch</a> in 1997
+      with a much improved version of Deep Blue ended 3.5 - 2.5 in favor of
+      the computer.
+      <br><br>
+
+  </dd><dt><strong>Checkers</strong>
+  </dt><dd>I really should look this up, but if I remember correctly, there was
+      a program for checkers (about 1989) which easily and repeatedly beat
+      the human world champion. It seems that the program I remember is
+      called <a href="http://web.cs.ualberta.ca/%7Echinook/">Chinook</a>.
+      <br><br>
+
+  </dd><dt><strong>Nine Men's Morris (Mühle)</strong>
+  </dt><dd>Has been shown to be a draw if both sides play perfectly by
+      <a href="http://nobi.ethz.ch/ralph/ralph.html">Ralph Gasser</a> from
+      ETH Zürich. (On his page, you'll also find links to his articles
+      on this result.)
+      <br><br>
+
+  </dd><dt><strong>Five-In-a-Row (Go-Moku, Go-Bang, Renju)</strong>
+  </dt><dd>Usually played on a Go board (19 x 19). There's a very nice Java
+      implementation by
+      <a href="http://flowserv.teco.uni-karlsruhe.de/crew/krebs/JavaBang/JavaBang.html">Andreas Krebs</a>.
+      <br><br>
+
+  </dd><dt><strong>Go</strong>
+  </dt><dd>As far as I know, computer programs still are easily beat even by
+      mediocre human players. One of the most severe problems for Go
+      programs is the high branching factor: at each level, there are
+      about 30 moves to consider (compared to about 15 for chess and maybe
+      8 for Othello). This means that Go programs cannot look ahead that
+      far, which severly limits their playing strength.
+      <br><br>
+
+  </dd><dt><strong>Hex (Hexomania)</strong>
+  </dt><dd>Has been proven a win for the first player, unfortunately with a
+      non-constructive proof, i.e., we still don't know <em>how</em> the
+      first player can always win... The game's state space explodes so
+      fast that standard look-ahead techniques are not good enough.
+      More information can be found on
+      <a href="http://lglwww.epfl.ch/%7Ejkienzle/Hexomania.html">Jörg
+      Kienzle's page</a>, he has written a nice implementation of the game
+      for Macintosh computers.
+      <br><br>
+
+</dd></dl>
+
+<hr>
+<!--======================================================================-->
+<table class="footer" border="0" cellpadding="5" cellspacing="0" width="100%">
+<tbody><tr>
+  <td>
+    <a href="http://home.datacomm.ch/t_wolf/index.html">
+    <img src="index_files/home_page.jpg" alt="Home Page" border="0" width="82" height="22">
+    </a>
+  </td>
+  <td align="left" width="100%">
+       <font size="-1">Copyright © 2000 by
+       <a href="mailto:t_wolf@tiscalinet.ch">Thomas Wolf</a>. All rights
+       reserved.
+       </font>
+       <br>
+       <font size="-1">TW, Aug 02, 2000</font>
+  </td>
+</tr>
+</tbody></table>
+
+</body></html>

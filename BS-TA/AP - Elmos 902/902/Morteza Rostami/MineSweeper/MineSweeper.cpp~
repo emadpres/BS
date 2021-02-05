@@ -1,0 +1,7 @@
+#include </home/emancipator/MineSweeper/lib/GF.hpp>
+
+int main()
+{
+	MainMenu();
+	return 0;
+}

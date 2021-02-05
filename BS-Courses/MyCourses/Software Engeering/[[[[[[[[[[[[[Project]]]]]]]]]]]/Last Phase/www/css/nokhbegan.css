@@ -1,0 +1,276 @@
+body         { 
+font:11px Tahoma;
+background: #fff url('images/bkg.jpg') repeat-x
+}
+
+td {font:11px Tahoma;}
+
+div#matn {
+font:11px Tahoma;
+direction:rtl;
+line-height:20px;
+padding:5px;
+text-align:justify
+}
+
+a {
+font:11px Tahoma;
+text-decoration: none
+}
+
+a:link, a:visited {color: #36C;}
+a:hover {color: #FF5B24;}
+a:active {color: #f00;}
+
+div#logined_menu {
+font:11px Tahoma;
+direction:rtl;
+margin:6px 2px 4px 0;
+text-align:right
+}
+
+div#logined_menu span#unvisited {
+font:bold 11px Arial;
+color:#c30
+}
+
+div#logined_menu span#visited {
+font:bold 11px Arial;
+color:#000
+}
+
+div#alert_msg {
+font:bold 12px Tahoma;
+line-height:20px;
+direction:rtl;
+text-align:justify;
+width:500px;
+padding:10px;
+margin:10px;
+background-color:#ff0;
+border:3px double #cc3300;
+}
+
+td#title {
+font:bold 11px Tahoma;
+background-color:#E0E0E0;
+text-align:center
+}
+
+input,textarea,select {
+font:11px Tahoma;
+color: #36c; 
+border: 1px solid #36c; 
+background-color: #F3F7FC
+}
+
+.checkbox {
+border: 0px solid #3366CC; 
+background-color: Transparent
+}
+
+input.but {
+font:11px Tahoma;
+color: #fff; 
+border: 1px groove #9CB5E7; 
+background-color: #36c;
+padding:0 2px 3px 2px
+}
+
+input#b_but {
+font:11px Tahoma;
+color: #fff; 
+border: 1px groove #36c; 
+background-color: #36c;
+padding:0 2px 3px 2px
+}
+
+input#r_but {
+font:11px Tahoma;
+color: #fff; 
+border: 1px groove #600; 
+background-color: #c30; 
+padding:0 2px 3px 2px
+}
+
+input#y_but {
+font:11px Tahoma;
+color: #000; 
+border: 1px groove #fc0; 
+background-color: #ff0; 
+padding:0 0 1px 0
+}
+
+input.error, select.error, textarea.error  {
+border: 1px solid #F00;
+background-color: #FFFCE2;
+background: url('images/warning_obj.gif')  left 50% no-repeat;
+padding-left:16px
+}
+
+input:focus, select:focus, textarea:focus {
+border: 1px solid red;
+background-color:#EFEFEF;
+}
+
+div#preview_inv {
+border:1px solid #666;
+position:absolute;
+width:800px;
+height:auto;
+left:100px;
+padding:10px;
+background-color:#666
+}
+
+div#form_output_msg 
+{
+border:1px solid #666;
+position:absolute;
+width:500px;
+height:300px;
+left:300px;
+padding:10px;
+background-color:#f0f0f0
+}
+
+div#form_output_msg  div#into{
+font:bold 12px Tahoma;
+color:#c30;
+direction:rtl;
+text-align:center;
+}
+
+div#loading_msg {
+background-color:#f0f0f0;
+font:bold 11px Tahoma;
+position:absolute;
+color: #C30;
+left:400px;
+direction:rtl
+}
+
+div#menu_top {
+background-image:url('images/bg_menu.jpg');
+margin-bottom:1px;
+padding:10px 0;
+direction:rtl
+}
+
+div#menu_top a, div#menu_top a:link, div#menu_top a:visited{
+font:bold 11px tahoma;
+color:#fff;
+padding:1px 9px 3px 9px;
+border-left:1px solid #00ffff;
+text-decoration:none
+}
+
+div#menu_top a:hover{
+color:#004080;
+text-decoration:underline;
+}
+
+div#menu_mng {
+background-image:url('images/bg_copyright.jpg');
+margin-top:1px; margin-bottom:1px;
+padding:8px 0;
+text-align:right;
+direction:rtl
+}
+
+div#menu_mng a, div#menu_mng a:link, div#menu_mng a:visited {
+font:bold 12px tahoma;
+color:#cf3;
+text-decoration:none
+}
+
+div#menu_mng a:hover{
+color:#000040;
+text-decoration:underline;
+}
+
+div#fp_title {
+font:bold 16px tahoma;
+color:#069;
+padding:5px;
+direction:rtl;
+text-align:justify
+}
+
+div#fp_title span {
+font:11px tahoma;
+color:#000;
+line-height:20px
+}
+
+div#onvan {
+font:bold 12px tahoma;
+color:#c30;
+padding:5px;
+direction:rtl;
+text-align:right
+}
+
+div#copyright {
+font:10px tahoma;
+color:#bedcf8;
+background-image:url('images/bg_copyright.jpg');
+background-repeat:no-repeat;
+padding:25px;
+direction:rtl;
+text-align:center
+}
+
+input#naghs_sty {background-color: #f00}
+
+div#login_msg_sty {
+padding:2px 0 4px 0;
+font:bold;
+background:#ddd;
+color:#c30;
+direction:rtl;
+text-align:center
+}
+
+div#login_msg_sty_oth {
+background:#ddd;
+direction:rtl;
+text-align:center
+}
+
+div.pg_nav {	
+    padding: 10px;
+    font-size: 12px;
+    height: 2em;
+}
+
+div.pg_nav a {
+    display: block;
+    float: left;        
+    padding: 3px 5px 3px 5px;
+    border: solid 1px #06c;
+    margin-right: 3px;
+    color: #06c;
+}
+
+
+div.pg_nav span.a {
+	text-align:center;
+    display: block;	
+    float: left;        
+    padding: 3px 5px 3px 5px;
+    border: solid 1px #06c;
+    margin-right: 3px;
+    background-color: #06c;
+    color: #fff;
+}
+
+div.pg_nav span:hover.a {
+    display: block;	
+    float: left;        
+    padding: 3px 5px 3px 5px;
+    border: solid 1px #666;
+    margin-right: 3px;
+    background-color: #eee;
+    color: #666;
+}

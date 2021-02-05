@@ -1,0 +1,24 @@
+String
+	inputing
+		with space
+		whith specific form
+	number/chars ( floating,long )
+	editing text
+		appending
+		take some part
+		omiting
+		replacing
+	searching
+		with regular expression
+Greedy algorithms
+Dynamic programming
+Divide and Conqure
+	geometric
+Graph
+	Search
+	MST
+	Shprtest patt
+		jahatdar
+		weighted
+		new custom !!? :-S
+	

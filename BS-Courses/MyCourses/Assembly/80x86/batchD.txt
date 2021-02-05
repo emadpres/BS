@@ -1,0 +1,4 @@
+ml /c /coff io.asm
+ml /c /coff /Fl /Zi example.asm
+
+link /debug /subsystem:console /entry:start /out:a.exe example.obj io.obj kernel32.lib

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+{% if allOutputs %}
+تعداد دستاوردها : {{ allOutputs.count}} یافت شد
+	<br><br><br>
+	{% for output in allOutputs %}
+		<img src="{{output.picture_small.url}}" height="100px" width="100px"  style="float:right;"/>
+		<h3>&nbsp&nbsp{{ output.title }} </h3>
+		<p style="margin-right:1em;"> 
+			&nbsp&nbsp&nbsp{{ output.summary }} 
+			&nbsp&nbsp&nbsp <a href="/Outputs/{{output.id}}">بیشتر...</a> </li> <br>
+		</p>
+		
+		<hr>
+		<hr>
+	{% endfor%}
+{% else %}
+	دستاوردی یافت نشد
+{% endif %}
+
+{% endblock %}

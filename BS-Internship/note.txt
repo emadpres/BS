@@ -1,0 +1,48 @@
+Start Here ..
+python --version
+python setup.py install (admin)
+( python django-admin.py -> python C:\Python27\Scripts\django-admin.py )
+------------------------ Start Project (Site)
+cd ProjectFolder
+python django-admin.py startproject mySite
+cd ProjectFolder/mySite ( where 'manage.py' exist)
+python manage.py runserver
+[Project]/[Project]/setting.py => setup "database"
+python manage.py syncdb
+------------------------
+------------------------ Start App (WWW and Pages)
+cd ProjectFolder/mySite
+python manage.py startapp web
+Template <--> View <--> Model
+---------------- 1. Models ( Database - Backbone )
+[Project]/[App]/models.py
+setting.py => setup "installed App" => Active [App]
+python manage.py syncdb
+python manage.py shell
+setting.py => setup "installed App" => Active Admin App
+[Project]/[App]/admin.py ( register app in admin )
+http://127.0.0.1:8000/admin/
+[Project]/[App]/admin.py ( Customizing Forms )
+---------------- 2. View
+[Project]/[Project]/URL.py
+[Project]/[App]/Views.py
+---------------- 3. Template ( End-user side - HTML)
+[Project]/[App]/template/*.html
+---------------- Some Extra EA-Point
+Access external file in template ( /static/ )
+Upload Picture
+
+
+------------------
+
+Jalali Date:
+1. Download setuptools-1.1.5
+2. python ez_setup.py
+// now you have easy_install
+3. install "django-jalali-master"  => python setup.py
+( https://github.com/slashmili/django-jalali )
+// you have jalali date calender
+4.my project modals=>
+	from django_jalali.db import models as jmodels
+5. pythin manage.py syncdb => it should give no error
+6. date =  jmodels.jDateField()

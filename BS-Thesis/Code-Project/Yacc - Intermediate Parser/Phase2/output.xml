@@ -1,0 +1,378 @@
+<Root>
+    <TypeInheritance>
+        <Group id="1">
+            <bool size="0"/>
+            <int size="1"/>
+            <float size="2"/>
+        </Group>
+        <Group id="2">
+            <string size="0"/>
+        </Group>
+        <Group id="3">
+            <Wood size="0"/>
+            <BIGH size="1"/>
+        </Group>
+    </TypeInheritance>
+    <GlobalType count="3">
+        <Wood>
+            <Field count="0"/>
+            <Function count="0"/>
+        </Wood>
+        <Book>
+            <Field count="2">
+                <Type baseType="string" array="-1">title</Type>
+                <Type baseType="int" array="-1">year</Type>
+            </Field>
+            <Function count="1">
+                <Function name="Read">
+                    <Returns count="1">
+                        <Type baseType="void" array="-1"/>
+                    </Returns>
+                    <Param count="1">
+                        <Type baseType="int" array="-1">times</Type>
+                    </Param>
+                    <Body/>
+                </Function>
+            </Function>
+        </Book>
+        <BIGH>
+            <Field count="0"/>
+            <Function count="0"/>
+        </BIGH>
+    </GlobalType>
+    <GlobalVar count="8">
+        <Type baseType="int" array="-1">a</Type>
+        <Type baseType="int" array="-1">b</Type>
+        <Type baseType="int" array="-1">c</Type>
+        <Type baseType="float" array="-1">d</Type>
+        <Type baseType="float" array="-1">e</Type>
+        <Type baseType="float" array="-1">f</Type>
+        <Type baseType="int" array="-1">g</Type>
+        <Type baseType="int" array="-1">h</Type>
+    </GlobalVar>
+    <GlobalFunction count="6">
+        <Function name="swap">
+            <Returns count="1">
+                <Type baseType="void" array="-1"/>
+            </Returns>
+            <Param count="0"/>
+            <Body>
+                <Assert baseType="int" array="-1">emad</Assert>
+            </Body>
+        </Function>
+        <Function name="fib">
+            <Returns count="1">
+                <Type baseType="int" array="-1"/>
+            </Returns>
+            <Param count="1">
+                <Type baseType="int" array="-1">n</Type>
+            </Param>
+            <Body>
+                <Type baseType="int" array="-1">__fib</Type>
+                <Assignment>
+                    <Left>q</Left>
+                    <Right count="2">
+                        <Primary source="var">n</Primary>
+                        <Primary source="data">
+                            <Type baseType="string" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>__fib</Left>
+                    <Right count="1">
+                        <Primary source="data">
+                            <Type baseType="float" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>a</Left>
+                    <Right count="2">
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                        <Primary source="data">
+                            <Type baseType="Book" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left count="0"/>
+                    <Right count="1">
+                        <Primary source="call">
+                            <Call name="fi4b" argCount="0"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>__fib</Left>
+                    <Right count="1">
+                        <Primary source="call">
+                            <Call name="fibOO" argCount="1">
+                                <Primary source="var">nkk</Primary>
+                            </Call>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Return/>
+            </Body>
+        </Function>
+        <Function name="proc1">
+            <Returns count="1">
+                <Type baseType="void" array="-1"/>
+            </Returns>
+            <Param count="1">
+                <Type baseType="int" array="-1">pr</Type>
+            </Param>
+            <Body>
+                <Type baseType="int" array="-1">s1</Type>
+                <Type baseType="int" array="-1">s2</Type>
+                <Type baseType="float" array="-1">s3</Type>
+                <Type baseType="float" array="-1">s4</Type>
+                <Assignment>
+                    <Left>s1</Left>
+                    <Right count="2">
+                        <Primary source="var">s1</Primary>
+                        <Primary source="var">s2</Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>s3</Left>
+                    <Right count="2">
+                        <Primary source="var">s1</Primary>
+                        <Primary source="var">s2</Primary>
+                    </Right>
+                </Assignment>
+            </Body>
+        </Function>
+        <Function name="func1">
+            <Returns count="1">
+                <Type baseType="int" array="-1"/>
+            </Returns>
+            <Param count="3">
+                <Type baseType="int" array="-1">x</Type>
+                <Type baseType="int" array="-1">y</Type>
+                <Type baseType="float" array="-1">z</Type>
+            </Param>
+            <Body>
+                <Type baseType="int" array="-1">__func1</Type>
+                <Type baseType="int" array="-1">i</Type>
+                <Type baseType="int" array="-1">j</Type>
+                <Type baseType="int" array="-1">l</Type>
+                <Type baseType="int" array="-1">m</Type>
+                <Type baseType="float" array="-1">k</Type>
+                <Assignment>
+                    <Left>oo</Left>
+                    <Right count="1">
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>m</Left>
+                    <Right count="1">
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>i</Left>
+                    <Right count="1">
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>j</Left>
+                    <Right count="1">
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>j</Left>
+                    <Right count="2">
+                        <Primary source="var">j</Primary>
+                        <Primary source="var">i</Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>k</Left>
+                    <Right count="1">
+                        <Primary source="var">j</Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>i</Left>
+                    <Right count="2">
+                        <Primary source="var">i</Primary>
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>m</Left>
+                    <Right count="2">
+                        <Primary source="var">l</Primary>
+                        <Primary source="var">m</Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>m</Left>
+                    <Right count="2">
+                        <Primary source="var">l</Primary>
+                        <Primary source="var">m</Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>m</Left>
+                    <Right count="2">
+                        <Primary source="var">l</Primary>
+                        <Primary source="var">m</Primary>
+                    </Right>
+                </Assignment>
+                <Return>__func1</Return>
+            </Body>
+        </Function>
+        <Function name="func2">
+            <Returns count="1">
+                <Type baseType="float" array="-1"/>
+            </Returns>
+            <Param count="1">
+                <Type baseType="int" array="-1">a</Type>
+            </Param>
+            <Body>
+                <Type baseType="float" array="-1">__func2</Type>
+                <Type baseType="int" array="-1">n</Type>
+                <Type baseType="int" array="-1">o</Type>
+                <Type baseType="float" array="-1">p</Type>
+                <Type baseType="float" array="-1">q</Type>
+                <Assignment>
+                    <Left>p</Left>
+                    <Right count="2">
+                        <Primary source="var">a</Primary>
+                        <Primary source="var">q</Primary>
+                    </Right>
+                </Assignment>
+                <Return>__func2</Return>
+            </Body>
+        </Function>
+        <Function name="main">
+            <Returns count="1">
+                <Type baseType="void" array="-1"/>
+            </Returns>
+            <Param count="0"/>
+            <Body>
+                <Assignment>
+                    <Left>a</Left>
+                    <Right count="1">
+                        <Primary source="call">
+                            <Call name="func1" argCount="3">
+                                <Primary source="data">
+                                    <Type baseType="int" array="-1"/>
+                                </Primary>
+                                <Primary source="data">
+                                    <Type baseType="int" array="-1"/>
+                                </Primary>
+                                <Primary source="data">
+                                    <Type baseType="float" array="-1"/>
+                                </Primary>
+                            </Call>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left count="0"/>
+                    <Right count="1">
+                        <Primary source="call">
+                            <Call name="proc1" argCount="1">
+                                <Primary source="data">
+                                    <Type baseType="int" array="-1"/>
+                                </Primary>
+                            </Call>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>a</Left>
+                    <Right count="1">
+                        <Primary source="call">
+                            <Call name="proc1" argCount="1">
+                                <Primary source="data">
+                                    <Type baseType="int" array="-1"/>
+                                </Primary>
+                            </Call>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>b</Left>
+                    <Right count="2">
+                        <Primary source="var">a</Primary>
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>c</Left>
+                    <Right count="2">
+                        <Primary source="var">b</Primary>
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>e</Left>
+                    <Right count="2">
+                        <Primary source="data">
+                            <Type baseType="float" array="-1"/>
+                        </Primary>
+                        <Primary source="data">
+                            <Type baseType="int" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left count="0"/>
+                    <Right count="1">
+                        <Primary source="call">
+                            <Call name="proc1" argCount="1">
+                                <Primary source="var">a</Primary>
+                            </Call>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>h</Left>
+                    <Right count="1">
+                        <Primary source="var">c</Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>a</Left>
+                    <Right count="2">
+                        <Primary source="var">a</Primary>
+                        <Primary source="data">
+                            <Type baseType="float" array="-1"/>
+                        </Primary>
+                    </Right>
+                </Assignment>
+                <Assignment>
+                    <Left>d</Left>
+                    <Right count="2">
+                        <Primary source="var">c</Primary>
+                        <Primary source="var">b</Primary>
+                    </Right>
+                </Assignment>
+            </Body>
+        </Function>
+    </GlobalFunction>
+</Root>

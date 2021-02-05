@@ -1,0 +1,1136 @@
+   0  $accept : Program $end
+
+   1  Program : DeclarationList
+
+   2  DeclarationList : Declaration DeclarationList
+   3                  |
+
+   4  $$1 :
+
+   5  Declaration : $$1 FunctionDeclaration
+
+   6  $$2 :
+
+   7  Declaration : $$2 TypeDeclaration
+
+   8  $$3 :
+
+   9  Declaration : $$3 VariableDeclaration
+
+  10  TypeDeclaration : S_TYPE ID OptionalSuperclass '{' MemberDeclarationList '}' ';'
+
+  11  OptionalSuperclass : ':' ID
+  12                     |
+
+  13  MemberDeclarationList : MemberDeclaration MemberDeclarationList
+  14                        |
+
+  15  MemberDeclaration : VariableDeclaration
+  16                    | FunctionDeclaration
+
+  17  FunctionDeclaration : S_FUNCTION FunctionType FunctionName '(' OptionalParameterList ')' Block
+
+  18  FunctionName : S_MAIN
+  19               | ID
+
+  20  FunctionType : S_VOID
+  21               | TypeName
+
+  22  OptionalParameterList : Parameter MoreParameters
+  23                        |
+
+  24  Parameter : TypeName Variable
+
+  25  MoreParameters : ',' Parameter MoreParameters
+  26                 |
+
+  27  Block : '{' DeclarationOrStatementList '}'
+
+  28  DeclarationOrStatementList : DeclarationOrStatement DeclarationOrStatementList
+  29                             |
+
+  30  TypeName : PrimitiveType
+  31           | ID
+
+  32  PrimitiveType : S_INT
+  33                | S_BOOL
+  34                | S_FLOAT
+  35                | S_STRING
+
+  36  VariableDeclaration : S_VAR TypeName RestOfVariableDeclaration
+
+  37  RestOfVariableDeclaration : Variable MoreVariables ';'
+
+  38  OptionalPointer : '*' OptionalPointer
+  39                  |
+
+  40  Dimensions : '[' NUM ']' Dimensions
+  41             |
+
+  42  Variable : OptionalPointer ID Dimensions
+
+  43  MoreVariables : ',' Variable MoreVariables
+  44                |
+
+  45  MoreExpressions : ',' Expression MoreExpressions
+  46                  |
+
+  47  OptionalExpression : Expression
+  48                     |
+
+  49  Expression : Primary MoreOperand
+
+  50  MoreOperand : '*' Primary
+  51              |
+
+  52  Primary : ID MorePrimary
+  53          | NUM
+  54          | S_TRUE
+  55          | S_FALSE
+  56          | S_TEXT
+
+  57  MorePrimary : ArrayAccess
+  58              | FieldAccess
+  59              | FunctionCall
+  60              |
+
+  61  ArrayAccess : '[' Expression ']' MorePrimary
+
+  62  FieldAccess : '.' ID MorePrimary
+
+  63  FunctionCall : '(' OptionalArgumentList ')' MorePrimary
+
+  64  OptionalArgumentList : Expression MoreExpressions
+  65                       |
+
+  66  DeclarationOrStatement : VariableDeclaration
+  67                         | KeywordStatement
+  68                         | OtherStatement
+
+  69  KeywordStatement : Jump
+
+  70  Jump : S_RETURN OptionalExpression ';'
+
+  71  OtherStatement : ID MorePrimary RestOfExpressionStatement
+
+  72  RestOfExpressionStatement : OptionalAssignment ';'
+
+  73  OptionalAssignment : '=' Expression
+  74                     |
+
+state 0
+	$accept : . Program $end  (0)
+	DeclarationList : .  (3)
+	$$1 : .  (4)
+	$$2 : .  (6)
+	$$3 : .  (8)
+
+	$end  reduce 3
+	S_TYPE  reduce 6
+	S_VAR  reduce 8
+	S_FUNCTION  reduce 4
+
+	Program  goto 1
+	DeclarationList  goto 2
+	Declaration  goto 3
+	$$1  goto 4
+	$$2  goto 5
+	$$3  goto 6
+
+
+state 1
+	$accept : Program . $end  (0)
+
+	$end  accept
+
+
+state 2
+	Program : DeclarationList .  (1)
+
+	.  reduce 1
+
+
+state 3
+	DeclarationList : Declaration . DeclarationList  (2)
+	DeclarationList : .  (3)
+	$$1 : .  (4)
+	$$2 : .  (6)
+	$$3 : .  (8)
+
+	$end  reduce 3
+	S_TYPE  reduce 6
+	S_VAR  reduce 8
+	S_FUNCTION  reduce 4
+
+	DeclarationList  goto 7
+	Declaration  goto 3
+	$$1  goto 4
+	$$2  goto 5
+	$$3  goto 6
+
+
+state 4
+	Declaration : $$1 . FunctionDeclaration  (5)
+
+	S_FUNCTION  shift 8
+	.  error
+
+	FunctionDeclaration  goto 9
+
+
+state 5
+	Declaration : $$2 . TypeDeclaration  (7)
+
+	S_TYPE  shift 10
+	.  error
+
+	TypeDeclaration  goto 11
+
+
+state 6
+	Declaration : $$3 . VariableDeclaration  (9)
+
+	S_VAR  shift 12
+	.  error
+
+	VariableDeclaration  goto 13
+
+
+state 7
+	DeclarationList : Declaration DeclarationList .  (2)
+
+	.  reduce 2
+
+
+state 8
+	FunctionDeclaration : S_FUNCTION . FunctionType FunctionName '(' OptionalParameterList ')' Block  (17)
+
+	ID  shift 14
+	S_VOID  shift 15
+	S_BOOL  shift 16
+	S_INT  shift 17
+	S_FLOAT  shift 18
+	S_STRING  shift 19
+	.  error
+
+	FunctionType  goto 20
+	TypeName  goto 21
+	PrimitiveType  goto 22
+
+
+state 9
+	Declaration : $$1 FunctionDeclaration .  (5)
+
+	.  reduce 5
+
+
+state 10
+	TypeDeclaration : S_TYPE . ID OptionalSuperclass '{' MemberDeclarationList '}' ';'  (10)
+
+	ID  shift 23
+	.  error
+
+
+state 11
+	Declaration : $$2 TypeDeclaration .  (7)
+
+	.  reduce 7
+
+
+state 12
+	VariableDeclaration : S_VAR . TypeName RestOfVariableDeclaration  (36)
+
+	ID  shift 14
+	S_BOOL  shift 16
+	S_INT  shift 17
+	S_FLOAT  shift 18
+	S_STRING  shift 19
+	.  error
+
+	TypeName  goto 24
+	PrimitiveType  goto 22
+
+
+state 13
+	Declaration : $$3 VariableDeclaration .  (9)
+
+	.  reduce 9
+
+
+state 14
+	TypeName : ID .  (31)
+
+	.  reduce 31
+
+
+state 15
+	FunctionType : S_VOID .  (20)
+
+	.  reduce 20
+
+
+state 16
+	PrimitiveType : S_BOOL .  (33)
+
+	.  reduce 33
+
+
+state 17
+	PrimitiveType : S_INT .  (32)
+
+	.  reduce 32
+
+
+state 18
+	PrimitiveType : S_FLOAT .  (34)
+
+	.  reduce 34
+
+
+state 19
+	PrimitiveType : S_STRING .  (35)
+
+	.  reduce 35
+
+
+state 20
+	FunctionDeclaration : S_FUNCTION FunctionType . FunctionName '(' OptionalParameterList ')' Block  (17)
+
+	ID  shift 25
+	S_MAIN  shift 26
+	.  error
+
+	FunctionName  goto 27
+
+
+state 21
+	FunctionType : TypeName .  (21)
+
+	.  reduce 21
+
+
+state 22
+	TypeName : PrimitiveType .  (30)
+
+	.  reduce 30
+
+
+state 23
+	TypeDeclaration : S_TYPE ID . OptionalSuperclass '{' MemberDeclarationList '}' ';'  (10)
+	OptionalSuperclass : .  (12)
+
+	':'  shift 28
+	'{'  reduce 12
+
+	OptionalSuperclass  goto 29
+
+
+state 24
+	VariableDeclaration : S_VAR TypeName . RestOfVariableDeclaration  (36)
+	OptionalPointer : .  (39)
+
+	'*'  shift 30
+	ID  reduce 39
+
+	Variable  goto 31
+	RestOfVariableDeclaration  goto 32
+	OptionalPointer  goto 33
+
+
+state 25
+	FunctionName : ID .  (19)
+
+	.  reduce 19
+
+
+state 26
+	FunctionName : S_MAIN .  (18)
+
+	.  reduce 18
+
+
+state 27
+	FunctionDeclaration : S_FUNCTION FunctionType FunctionName . '(' OptionalParameterList ')' Block  (17)
+
+	'('  shift 34
+	.  error
+
+
+state 28
+	OptionalSuperclass : ':' . ID  (11)
+
+	ID  shift 35
+	.  error
+
+
+state 29
+	TypeDeclaration : S_TYPE ID OptionalSuperclass . '{' MemberDeclarationList '}' ';'  (10)
+
+	'{'  shift 36
+	.  error
+
+
+state 30
+	OptionalPointer : '*' . OptionalPointer  (38)
+	OptionalPointer : .  (39)
+
+	'*'  shift 30
+	ID  reduce 39
+
+	OptionalPointer  goto 37
+
+
+state 31
+	RestOfVariableDeclaration : Variable . MoreVariables ';'  (37)
+	MoreVariables : .  (44)
+
+	','  shift 38
+	';'  reduce 44
+
+	MoreVariables  goto 39
+
+
+state 32
+	VariableDeclaration : S_VAR TypeName RestOfVariableDeclaration .  (36)
+
+	.  reduce 36
+
+
+state 33
+	Variable : OptionalPointer . ID Dimensions  (42)
+
+	ID  shift 40
+	.  error
+
+
+state 34
+	FunctionDeclaration : S_FUNCTION FunctionType FunctionName '(' . OptionalParameterList ')' Block  (17)
+	OptionalParameterList : .  (23)
+
+	ID  shift 14
+	S_BOOL  shift 16
+	S_INT  shift 17
+	S_FLOAT  shift 18
+	S_STRING  shift 19
+	')'  reduce 23
+
+	OptionalParameterList  goto 41
+	TypeName  goto 42
+	Parameter  goto 43
+	PrimitiveType  goto 22
+
+
+state 35
+	OptionalSuperclass : ':' ID .  (11)
+
+	.  reduce 11
+
+
+state 36
+	TypeDeclaration : S_TYPE ID OptionalSuperclass '{' . MemberDeclarationList '}' ';'  (10)
+	MemberDeclarationList : .  (14)
+
+	S_VAR  shift 12
+	S_FUNCTION  shift 8
+	'}'  reduce 14
+
+	FunctionDeclaration  goto 44
+	VariableDeclaration  goto 45
+	MemberDeclarationList  goto 46
+	MemberDeclaration  goto 47
+
+
+state 37
+	OptionalPointer : '*' OptionalPointer .  (38)
+
+	.  reduce 38
+
+
+state 38
+	MoreVariables : ',' . Variable MoreVariables  (43)
+	OptionalPointer : .  (39)
+
+	'*'  shift 30
+	ID  reduce 39
+
+	Variable  goto 48
+	OptionalPointer  goto 33
+
+
+state 39
+	RestOfVariableDeclaration : Variable MoreVariables . ';'  (37)
+
+	';'  shift 49
+	.  error
+
+
+state 40
+	Variable : OptionalPointer ID . Dimensions  (42)
+	Dimensions : .  (41)
+
+	'['  shift 50
+	';'  reduce 41
+	')'  reduce 41
+	','  reduce 41
+
+	Dimensions  goto 51
+
+
+state 41
+	FunctionDeclaration : S_FUNCTION FunctionType FunctionName '(' OptionalParameterList . ')' Block  (17)
+
+	')'  shift 52
+	.  error
+
+
+state 42
+	Parameter : TypeName . Variable  (24)
+	OptionalPointer : .  (39)
+
+	'*'  shift 30
+	ID  reduce 39
+
+	Variable  goto 53
+	OptionalPointer  goto 33
+
+
+state 43
+	OptionalParameterList : Parameter . MoreParameters  (22)
+	MoreParameters : .  (26)
+
+	','  shift 54
+	')'  reduce 26
+
+	MoreParameters  goto 55
+
+
+state 44
+	MemberDeclaration : FunctionDeclaration .  (16)
+
+	.  reduce 16
+
+
+state 45
+	MemberDeclaration : VariableDeclaration .  (15)
+
+	.  reduce 15
+
+
+state 46
+	TypeDeclaration : S_TYPE ID OptionalSuperclass '{' MemberDeclarationList . '}' ';'  (10)
+
+	'}'  shift 56
+	.  error
+
+
+state 47
+	MemberDeclarationList : MemberDeclaration . MemberDeclarationList  (13)
+	MemberDeclarationList : .  (14)
+
+	S_VAR  shift 12
+	S_FUNCTION  shift 8
+	'}'  reduce 14
+
+	FunctionDeclaration  goto 44
+	VariableDeclaration  goto 45
+	MemberDeclarationList  goto 57
+	MemberDeclaration  goto 47
+
+
+state 48
+	MoreVariables : ',' Variable . MoreVariables  (43)
+	MoreVariables : .  (44)
+
+	','  shift 38
+	';'  reduce 44
+
+	MoreVariables  goto 58
+
+
+state 49
+	RestOfVariableDeclaration : Variable MoreVariables ';' .  (37)
+
+	.  reduce 37
+
+
+state 50
+	Dimensions : '[' . NUM ']' Dimensions  (40)
+
+	NUM  shift 59
+	.  error
+
+
+state 51
+	Variable : OptionalPointer ID Dimensions .  (42)
+
+	.  reduce 42
+
+
+state 52
+	FunctionDeclaration : S_FUNCTION FunctionType FunctionName '(' OptionalParameterList ')' . Block  (17)
+
+	'{'  shift 60
+	.  error
+
+	Block  goto 61
+
+
+state 53
+	Parameter : TypeName Variable .  (24)
+
+	.  reduce 24
+
+
+state 54
+	MoreParameters : ',' . Parameter MoreParameters  (25)
+
+	ID  shift 14
+	S_BOOL  shift 16
+	S_INT  shift 17
+	S_FLOAT  shift 18
+	S_STRING  shift 19
+	.  error
+
+	TypeName  goto 42
+	Parameter  goto 62
+	PrimitiveType  goto 22
+
+
+state 55
+	OptionalParameterList : Parameter MoreParameters .  (22)
+
+	.  reduce 22
+
+
+state 56
+	TypeDeclaration : S_TYPE ID OptionalSuperclass '{' MemberDeclarationList '}' . ';'  (10)
+
+	';'  shift 63
+	.  error
+
+
+state 57
+	MemberDeclarationList : MemberDeclaration MemberDeclarationList .  (13)
+
+	.  reduce 13
+
+
+state 58
+	MoreVariables : ',' Variable MoreVariables .  (43)
+
+	.  reduce 43
+
+
+state 59
+	Dimensions : '[' NUM . ']' Dimensions  (40)
+
+	']'  shift 64
+	.  error
+
+
+state 60
+	Block : '{' . DeclarationOrStatementList '}'  (27)
+	DeclarationOrStatementList : .  (29)
+
+	ID  shift 65
+	S_RETURN  shift 66
+	S_VAR  shift 12
+	'}'  reduce 29
+
+	VariableDeclaration  goto 67
+	DeclarationOrStatementList  goto 68
+	DeclarationOrStatement  goto 69
+	KeywordStatement  goto 70
+	OtherStatement  goto 71
+	Jump  goto 72
+
+
+state 61
+	FunctionDeclaration : S_FUNCTION FunctionType FunctionName '(' OptionalParameterList ')' Block .  (17)
+
+	.  reduce 17
+
+
+state 62
+	MoreParameters : ',' Parameter . MoreParameters  (25)
+	MoreParameters : .  (26)
+
+	','  shift 54
+	')'  reduce 26
+
+	MoreParameters  goto 73
+
+
+state 63
+	TypeDeclaration : S_TYPE ID OptionalSuperclass '{' MemberDeclarationList '}' ';' .  (10)
+
+	.  reduce 10
+
+
+state 64
+	Dimensions : '[' NUM ']' . Dimensions  (40)
+	Dimensions : .  (41)
+
+	'['  shift 50
+	';'  reduce 41
+	')'  reduce 41
+	','  reduce 41
+
+	Dimensions  goto 74
+
+
+state 65
+	OtherStatement : ID . MorePrimary RestOfExpressionStatement  (71)
+	MorePrimary : .  (60)
+
+	'('  shift 75
+	'['  shift 76
+	'.'  shift 77
+	';'  reduce 60
+	'='  reduce 60
+
+	MorePrimary  goto 78
+	ArrayAccess  goto 79
+	FieldAccess  goto 80
+	FunctionCall  goto 81
+
+
+state 66
+	Jump : S_RETURN . OptionalExpression ';'  (70)
+	OptionalExpression : .  (48)
+
+	ID  shift 82
+	NUM  shift 83
+	S_TEXT  shift 84
+	S_TRUE  shift 85
+	S_FALSE  shift 86
+	';'  reduce 48
+
+	Expression  goto 87
+	OptionalExpression  goto 88
+	Primary  goto 89
+
+
+state 67
+	DeclarationOrStatement : VariableDeclaration .  (66)
+
+	.  reduce 66
+
+
+state 68
+	Block : '{' DeclarationOrStatementList . '}'  (27)
+
+	'}'  shift 90
+	.  error
+
+
+state 69
+	DeclarationOrStatementList : DeclarationOrStatement . DeclarationOrStatementList  (28)
+	DeclarationOrStatementList : .  (29)
+
+	ID  shift 65
+	S_RETURN  shift 66
+	S_VAR  shift 12
+	'}'  reduce 29
+
+	VariableDeclaration  goto 67
+	DeclarationOrStatementList  goto 91
+	DeclarationOrStatement  goto 69
+	KeywordStatement  goto 70
+	OtherStatement  goto 71
+	Jump  goto 72
+
+
+state 70
+	DeclarationOrStatement : KeywordStatement .  (67)
+
+	.  reduce 67
+
+
+state 71
+	DeclarationOrStatement : OtherStatement .  (68)
+
+	.  reduce 68
+
+
+state 72
+	KeywordStatement : Jump .  (69)
+
+	.  reduce 69
+
+
+state 73
+	MoreParameters : ',' Parameter MoreParameters .  (25)
+
+	.  reduce 25
+
+
+state 74
+	Dimensions : '[' NUM ']' Dimensions .  (40)
+
+	.  reduce 40
+
+
+state 75
+	FunctionCall : '(' . OptionalArgumentList ')' MorePrimary  (63)
+	OptionalArgumentList : .  (65)
+
+	ID  shift 82
+	NUM  shift 83
+	S_TEXT  shift 84
+	S_TRUE  shift 85
+	S_FALSE  shift 86
+	')'  reduce 65
+
+	Expression  goto 92
+	Primary  goto 89
+	OptionalArgumentList  goto 93
+
+
+state 76
+	ArrayAccess : '[' . Expression ']' MorePrimary  (61)
+
+	ID  shift 82
+	NUM  shift 83
+	S_TEXT  shift 84
+	S_TRUE  shift 85
+	S_FALSE  shift 86
+	.  error
+
+	Expression  goto 94
+	Primary  goto 89
+
+
+state 77
+	FieldAccess : '.' . ID MorePrimary  (62)
+
+	ID  shift 95
+	.  error
+
+
+state 78
+	OtherStatement : ID MorePrimary . RestOfExpressionStatement  (71)
+	OptionalAssignment : .  (74)
+
+	'='  shift 96
+	';'  reduce 74
+
+	RestOfExpressionStatement  goto 97
+	OptionalAssignment  goto 98
+
+
+state 79
+	MorePrimary : ArrayAccess .  (57)
+
+	.  reduce 57
+
+
+state 80
+	MorePrimary : FieldAccess .  (58)
+
+	.  reduce 58
+
+
+state 81
+	MorePrimary : FunctionCall .  (59)
+
+	.  reduce 59
+
+
+state 82
+	Primary : ID . MorePrimary  (52)
+	MorePrimary : .  (60)
+
+	'('  shift 75
+	'['  shift 76
+	'.'  shift 77
+	';'  reduce 60
+	')'  reduce 60
+	','  reduce 60
+	'*'  reduce 60
+	']'  reduce 60
+
+	MorePrimary  goto 99
+	ArrayAccess  goto 79
+	FieldAccess  goto 80
+	FunctionCall  goto 81
+
+
+state 83
+	Primary : NUM .  (53)
+
+	.  reduce 53
+
+
+state 84
+	Primary : S_TEXT .  (56)
+
+	.  reduce 56
+
+
+state 85
+	Primary : S_TRUE .  (54)
+
+	.  reduce 54
+
+
+state 86
+	Primary : S_FALSE .  (55)
+
+	.  reduce 55
+
+
+state 87
+	OptionalExpression : Expression .  (47)
+
+	.  reduce 47
+
+
+state 88
+	Jump : S_RETURN OptionalExpression . ';'  (70)
+
+	';'  shift 100
+	.  error
+
+
+state 89
+	Expression : Primary . MoreOperand  (49)
+	MoreOperand : .  (51)
+
+	'*'  shift 101
+	';'  reduce 51
+	')'  reduce 51
+	','  reduce 51
+	']'  reduce 51
+
+	MoreOperand  goto 102
+
+
+state 90
+	Block : '{' DeclarationOrStatementList '}' .  (27)
+
+	.  reduce 27
+
+
+state 91
+	DeclarationOrStatementList : DeclarationOrStatement DeclarationOrStatementList .  (28)
+
+	.  reduce 28
+
+
+state 92
+	OptionalArgumentList : Expression . MoreExpressions  (64)
+	MoreExpressions : .  (46)
+
+	','  shift 103
+	')'  reduce 46
+
+	MoreExpressions  goto 104
+
+
+state 93
+	FunctionCall : '(' OptionalArgumentList . ')' MorePrimary  (63)
+
+	')'  shift 105
+	.  error
+
+
+state 94
+	ArrayAccess : '[' Expression . ']' MorePrimary  (61)
+
+	']'  shift 106
+	.  error
+
+
+state 95
+	FieldAccess : '.' ID . MorePrimary  (62)
+	MorePrimary : .  (60)
+
+	'('  shift 75
+	'['  shift 76
+	'.'  shift 77
+	';'  reduce 60
+	')'  reduce 60
+	','  reduce 60
+	'*'  reduce 60
+	']'  reduce 60
+	'='  reduce 60
+
+	MorePrimary  goto 107
+	ArrayAccess  goto 79
+	FieldAccess  goto 80
+	FunctionCall  goto 81
+
+
+state 96
+	OptionalAssignment : '=' . Expression  (73)
+
+	ID  shift 82
+	NUM  shift 83
+	S_TEXT  shift 84
+	S_TRUE  shift 85
+	S_FALSE  shift 86
+	.  error
+
+	Expression  goto 108
+	Primary  goto 89
+
+
+state 97
+	OtherStatement : ID MorePrimary RestOfExpressionStatement .  (71)
+
+	.  reduce 71
+
+
+state 98
+	RestOfExpressionStatement : OptionalAssignment . ';'  (72)
+
+	';'  shift 109
+	.  error
+
+
+state 99
+	Primary : ID MorePrimary .  (52)
+
+	.  reduce 52
+
+
+state 100
+	Jump : S_RETURN OptionalExpression ';' .  (70)
+
+	.  reduce 70
+
+
+state 101
+	MoreOperand : '*' . Primary  (50)
+
+	ID  shift 82
+	NUM  shift 83
+	S_TEXT  shift 84
+	S_TRUE  shift 85
+	S_FALSE  shift 86
+	.  error
+
+	Primary  goto 110
+
+
+state 102
+	Expression : Primary MoreOperand .  (49)
+
+	.  reduce 49
+
+
+state 103
+	MoreExpressions : ',' . Expression MoreExpressions  (45)
+
+	ID  shift 82
+	NUM  shift 83
+	S_TEXT  shift 84
+	S_TRUE  shift 85
+	S_FALSE  shift 86
+	.  error
+
+	Expression  goto 111
+	Primary  goto 89
+
+
+state 104
+	OptionalArgumentList : Expression MoreExpressions .  (64)
+
+	.  reduce 64
+
+
+state 105
+	FunctionCall : '(' OptionalArgumentList ')' . MorePrimary  (63)
+	MorePrimary : .  (60)
+
+	'('  shift 75
+	'['  shift 76
+	'.'  shift 77
+	';'  reduce 60
+	')'  reduce 60
+	','  reduce 60
+	'*'  reduce 60
+	']'  reduce 60
+	'='  reduce 60
+
+	MorePrimary  goto 112
+	ArrayAccess  goto 79
+	FieldAccess  goto 80
+	FunctionCall  goto 81
+
+
+state 106
+	ArrayAccess : '[' Expression ']' . MorePrimary  (61)
+	MorePrimary : .  (60)
+
+	'('  shift 75
+	'['  shift 76
+	'.'  shift 77
+	';'  reduce 60
+	')'  reduce 60
+	','  reduce 60
+	'*'  reduce 60
+	']'  reduce 60
+	'='  reduce 60
+
+	MorePrimary  goto 113
+	ArrayAccess  goto 79
+	FieldAccess  goto 80
+	FunctionCall  goto 81
+
+
+state 107
+	FieldAccess : '.' ID MorePrimary .  (62)
+
+	.  reduce 62
+
+
+state 108
+	OptionalAssignment : '=' Expression .  (73)
+
+	.  reduce 73
+
+
+state 109
+	RestOfExpressionStatement : OptionalAssignment ';' .  (72)
+
+	.  reduce 72
+
+
+state 110
+	MoreOperand : '*' Primary .  (50)
+
+	.  reduce 50
+
+
+state 111
+	MoreExpressions : ',' Expression . MoreExpressions  (45)
+	MoreExpressions : .  (46)
+
+	','  shift 103
+	')'  reduce 46
+
+	MoreExpressions  goto 114
+
+
+state 112
+	FunctionCall : '(' OptionalArgumentList ')' MorePrimary .  (63)
+
+	.  reduce 63
+
+
+state 113
+	ArrayAccess : '[' Expression ']' MorePrimary .  (61)
+
+	.  reduce 61
+
+
+state 114
+	MoreExpressions : ',' Expression MoreExpressions .  (45)
+
+	.  reduce 45
+
+
+30 terminals, 43 nonterminals
+75 grammar rules, 115 states
