@@ -1,0 +1,60 @@
+# 
+# Purpose:   Contains IP address information for all active 
+#            interfaces in the current network model.
+#            (created by exporting this information from the model.)
+# 
+
+# Node Name: Campus Network.Router4
+#  Iface Name            IP Address       Subnet Mask      Connected Link
+#  ----------            ---------------  ---------------  ----------------
+   IF0                      192.0.0.1        255.255.255.0    Campus Network.Router4 <-> Router3
+   IF1                      192.0.1.1        255.255.255.0    Campus Network.Router1 <-> Router4
+   IF8                      192.0.2.1        255.255.255.0    Campus Network.node_1 <-> Router4
+
+
+# Node Name: Campus Network.node_1
+#  Iface Name            IP Address       Subnet Mask      Connected Link
+#  ----------            ---------------  ---------------  ----------------
+   IF0                      192.0.2.2        255.255.255.0    Campus Network.node_1 <-> Router4
+
+
+# Node Name: Campus Network.Router3
+#  Iface Name            IP Address       Subnet Mask      Connected Link
+#  ----------            ---------------  ---------------  ----------------
+   IF0                      192.0.0.2        255.255.255.0    Campus Network.Router4 <-> Router3
+   IF1                      192.0.3.1        255.255.255.0    Campus Network.Router3 <-> Router2
+   IF8                      192.0.4.1        255.255.255.0    Campus Network.node_3 <-> Router3
+
+
+# Node Name: Campus Network.node_3
+#  Iface Name            IP Address       Subnet Mask      Connected Link
+#  ----------            ---------------  ---------------  ----------------
+   IF0                      192.0.4.2        255.255.255.0    Campus Network.node_3 <-> Router3
+
+
+# Node Name: Campus Network.Router2
+#  Iface Name            IP Address       Subnet Mask      Connected Link
+#  ----------            ---------------  ---------------  ----------------
+   IF0                      192.0.5.1        255.255.255.0    Campus Network.Router1 <-> Router2
+   IF1                      192.0.3.2        255.255.255.0    Campus Network.Router3 <-> Router2
+   IF8                      192.0.6.1        255.255.255.0    Campus Network.node_5 <-> Router2
+
+
+# Node Name: Campus Network.node_5
+#  Iface Name            IP Address       Subnet Mask      Connected Link
+#  ----------            ---------------  ---------------  ----------------
+   IF0                      192.0.6.2        255.255.255.0    Campus Network.node_5 <-> Router2
+
+
+# Node Name: Campus Network.Router1
+#  Iface Name            IP Address       Subnet Mask      Connected Link
+#  ----------            ---------------  ---------------  ----------------
+   IF0                      192.0.5.2        255.255.255.0    Campus Network.Router1 <-> Router2
+   IF1                      192.0.1.2        255.255.255.0    Campus Network.Router1 <-> Router4
+   IF8                      192.0.7.1        255.255.255.0    Campus Network.node_7 <-> Router1
+
+
+# Node Name: Campus Network.node_7
+#  Iface Name            IP Address       Subnet Mask      Connected Link
+#  ----------            ---------------  ---------------  ----------------
+   IF0                      192.0.7.2        255.255.255.0    Campus Network.node_7 <-> Router1

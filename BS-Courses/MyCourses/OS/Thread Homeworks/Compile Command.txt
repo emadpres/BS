@@ -1,2 +1,0 @@
-g++/gcc -pthread file.c/cpp -o outName
-

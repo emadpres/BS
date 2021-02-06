@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0033)http://www.fierz.ch/strategy3.htm -->
+<HTML><HEAD><TITLE>basics of strategy game programming: part IV - endgame databases</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.16385">
+<META name=FORMATTER content="Arachnophilia 3.2"></HEAD>
+<BODY leftMargin=0 topMargin=0 bgColor=#ffffff text=#000000>
+<TABLE border=0 cellSpacing=0 cellPadding=20 width="100%" bgColor=#000000>
+  <TBODY>
+  <TR>
+    <TD><FONT color=#bbbbbb size=6 face=Ventura><B>Strategy Game 
+      Programming</B> </FONT></TD>
+    <TD align=right><FONT color=#ff0000 size=6 face=Ventura><B>Endgame 
+      Databases</B> </FONT></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=20 width="100%" bgColor=#ffffff>
+  <TBODY>
+  <TR>
+    <TD>
+      <H3>Endgame Databases</H3>
+      <H4>Introduction</H4>Endgame databases play a major role in some strategy 
+      games, such as Nine Men's Morris, Awari or Checkers (the first of which 
+      was solved thanks to endgame databases). In other games, they are less 
+      important (e.g. Chess) while in some games they are irrelevant/impossible 
+      to compute (Connect 4, Othello, Go). Perhaps you noticed the differences 
+      in these games? Endgame databases can generally only be computed for games 
+      where only few pieces remain on the board. The exact number of pieces 
+      which can still be handled depends on the complexity of the game. For 
+      games in which the number of pieces decreases as the game progresses, 
+      endgame databases might be useful. For games where the number of pieces 
+      increases or remains constant, endgame databases cannot be computed 
+      (unless the game is really simple). Whether or not the endgame databases 
+      are relevant will depend on the game. For example, in chess, there are 
+      endgame databases available with up to 6 pieces on the board, e.g. king, 
+      rook and pawn vs. king rook and pawn. This kind of endgame (and others 
+      with at most 6 pieces) occur rather infrequently in practice, and 
+      therefore the databases have no real impact on playing strength. In 
+      checkers (the Anglosaxon version), endgame databases up to 8 pieces are 
+      available, while the 10 piece database has been computed. Together with 
+      the rule that captures must be executed, this means that a lot of checkers 
+      games trade down into endgame database positions very quickly. The endgame 
+      databases make a huge difference in playing strength in checkers. Solving 
+      games completely often also requires endgame databases - a combination of 
+      a forward-search from the starting position together with an endgame 
+      database can then be used to solve the game. This was the approach taken 
+      by Gasser for Nine Men's Morris, and also the approach that the Chinook 
+      team is currently using in their effort to solve checkers. 
+      <P>
+      <H4>Different types of endgame databases</H4>Endgame databases come in 
+      different flavors. They all know whether a given position in the database 
+      is a win, loss or draw. If that is all the database contains, it is called 
+      a WLD-database (by me, at least). If the database contains information on 
+      how long it will take until the game is over, it is called a 
+      distance-to-mate (DTM) database. If it contains only the information on 
+      how long it will take until a conversion into another database takes 
+      place, it is called a distance-to-conversion (DTC) database. The WLD 
+      database has the problem that even though a program may be in a winning 
+      position, it might not be able to actually win the game. After all, all 
+      the database tells it is that it has a win, and it also tells it which 
+      moves conserve the win. But some win-conserving moves may increase the 
+      distance to mate, and the program cannot easily decide which of these 
+      win-conserving moves to make. DTM databases are obviously better in this 
+      respect, since you just make the win-conserving move with the lowest DTM 
+      associated. DTC databases also solve the problem of winning a won 
+      position, however the program might take longer than necessary to do so. 
+      You may wonder why anybody would use WLD at all. The reason is simple: 
+      storing WLD information only needs much less space, and larger portions of 
+      the database can be kept in memory, if the database size is larger than 
+      the amount of memory of the computer (which is typically the case). 
+      Accessing the database on the harddisk is not really an option, as the 
+      disk is <B>very slow</B> compared to memory. 
+      <H4>Constructing endgame databases</H4>Endgame database construction is a 
+      fairly simple process, with many details involved which are not important 
+      for the understanding of the process. The basic technique is known as 
+      <B>retrograde analysis</B>, it was invented or at least first used 
+      seriously by Ken Thompson AFAIK. Here's how it works: Let's say you want 
+      to solve the endgame King+Rook vs King. You start out with an <B>index 
+      function</B>, which returns a number for every possible King+Rook vs King 
+      position. The index function also needs an inverse, mapping the number X 
+      back to a position. Ideally, the index function maps all N possible legal 
+      positions with King+Rook vs King to the numbers 0...N-1. If this is the 
+      case, we speak of <B>gapless</B> indexing. Alternatively, the index 
+      function maps the legal positions to the numbers 0...M-1, with M &gt; N - 
+      we call this <B>gapped</B> indexing. Gapped indexing is often simpler, 
+      because it is easier to construct a gapped indexing function than a 
+      gapless function. The memory requirements for the retrograde analysis 
+      algorithm are proportional to the maximum index number, so if you produce 
+      a gapped index function with M &gt;&gt; N, then you are wasting a lot of 
+      memory. <BR>Once we have an index function, the retrograde analysis 
+      algorithm does the following: 
+      <OL>
+        <LI>Initialization: Generate two arrays of length N for the position 
+        values (WIN/LOSS/DRAW) and the DTC. Set all position values to UNKNOWN. 
+        Set all DTC counters to zero. As you can see, you need 4 distinct values 
+        for the position values, the array needs a data type with 4 possible 
+        values (2 bits). That doesn't exist of course, so you need to handle 
+        that yourself. 
+        <LI>Mate pass: For all positions, check whether it's a mate - if yes, 
+        set the value of that position to a LOSS - the side to move has lost. If 
+        the game allows for stalemate, check that too and set the values to 
+        DRAW. Increment the DTC counter for all positions with value UNKNOWN. 
+        <LI>For every position with value UNKNOWN, generate all successor 
+        positions and look at their values. If any of the successors has value 
+        LOSS, set the current position to WIN. If all successors have the value 
+        WIN, set the value to LOSS. If you pass through all positions without 
+        being able to set any value to WIN or LOSS, skip to step 5. 
+        <LI>Increment the DTC counter for all positions with value UNKNOWN and 
+        go back to step 3. 
+        <LI>Change the value to DRAW for all positions with value UNKNOWN. The 
+        algorithm has terminated. </LI></OL>The algorithm is obviously guaranteed 
+      to terminate. In step 3, you would be accessing databases with fewer 
+      stones if a capture occurred. Obviously, you cannot generate a database 
+      such as King + Rook vs. King + Knight without having a database for King + 
+      Rook vs. King alone - you need to have all databases that you might 
+      exchange into. If you only want to build a WLD database, forget about the 
+      DTC counter. If you want to build a DTM database, you need to track the 
+      DTM over conversions too. There are a number of optimizations to the above 
+      algorithm, but I don't want to discuss them - the basic algorithm is nice 
+      and simple and clean, why destroy that? :-) <BR>Now that you see the 
+      algorithm, you can understand why it is called retrograde - it works 
+      backward from all known positions, e.g. mates and conversions to lower 
+      databases, one half-move for every pass through steps 3+4. For example, 
+      look at the position: white King on g3, black King on h1, white Rook on 
+      a2, black to move. In the mate pass, the algorithm detects that the 
+      position wK g3, wR a1, bK g1, black to move, is a mate, and sets the value 
+      to LOSS. For our current position, it detects nothing at all. In the first 
+      pass of the main loop, it generates all moves for the position wK g3, bK 
+      g1, wR a2 and finds that the position after Rb2-b1 is a LOSS, and 
+      according to the rulse, it can set this position to a WIN. Next, it 
+      generates all successors of the position with the black king on h1 and 
+      sees that all successor positions are WINs (there is only one). So it sets 
+      this position to a LOSS, and that is the correct value. 
+      <H4>The index function</H4>The index function is necessary for this 
+      algorithm, because you cannot store the whole position and its value for 
+      all positions - the value only needs two bits, while the whole position 
+      needs lots of memory to describe. You would be wasting an enormous amount 
+      of memory if you stored the whole position. Using the index function, you 
+      have an implicit position representation in a single number, and instead 
+      of saving that number along with the value, you can also save the memory 
+      for the number and save the value at the index of an array corresponding 
+      to this number. But how can you find an index function with the required 
+      properties? It seems like quite a task! In fact, there is a simple way of 
+      constructing an index function that is always applicable. For an endgame 
+      with distinct pieces (e.g. white King, Rook, black King), it is very 
+      simple: You number the squares of the board from 0...63 somehow and write 
+      <BR><BR><CODE>index = wK_index + 64*wR_index + 64*64*bK_index; 
+      </CODE><BR><BR>This function has the desired property of transforming a 
+      position into a number, it is invertible (wK_index = index%64, wR_index = 
+      (index/64)%64 etc.) but it produces some illegal positions (e.g. with 
+      pieces on the same square, or kings next to each other). It also doesn't 
+      make use of the board symmetry. These details can be adressed, but I don't 
+      want to bother about them here. What if there is more than one piece of 
+      one kind, e.g. with king + 2 rooks vs king? I could write 
+      <BR><BR><CODE>index = wK_index + 64*wR1_index + 64*64*wR2_index + 
+      64*64*64*bK_index; </CODE><BR><BR>That would work, but it's stupid, 
+      because a position with rook #1 on square X and rook #2 on square Y is the 
+      same as rook #2 on square X and rook #1 on square Y. We would be using 
+      twice as many indexes as necessary! To solve this problem, we use the 
+      combinatorial expression for the number of ways of putting 2 identical 
+      things on 64 places: from some math class you should know that there are N 
+      = 64*63/2 ways of doing so. So we write: <BR><BR><CODE>index = wK_index + 
+      64*combinedindex + 64*N*bk_index; </CODE><BR><BR>All that remains is to 
+      compute the "combined rook index" which is this number between 
+      0...(64*63/2)-1 from the individual positions of the rooks. Call these 
+      numbers r1 and r2, with r1&lt;r2 (This is where we gain the factor 2!). 
+      Then <BR><BR><CODE>combinedindex = bicoef(r1,1) + bicoef(r2,2); 
+      </CODE><BR><BR>where bicoef(x,y) denotes the binomial coefficient of x and 
+      y (x&gt;y), given by x!*y!/(x-y)! This form of combined index can be 
+      produced for any number of pieces. The inversion of this is a bit more 
+      complicated. If a combined index is given for k pieces on n squares, we 
+      have to find its "constituents" with a sequential search: since the last 
+      term of the combined index is always the largest, we compute bicoef(i,k) 
+      for i=n-1, n-2, ... until it is smaller than the combinedindex. Once we 
+      find i, we know that a piece is on square i, and subract this bicoef(i,k) 
+      from the combinedindex. Then we continue with bicoef(j,k-1) for 
+      j=i-1,i-2,... - since we already know that j&lt;i by construction of the 
+      index function. 
+      <H4>Compression</H4>Once you start building databases, you will quickly 
+      notice that you can build <B>huge</B> databases. For example, the 8-piece 
+      checkers database needs about 40GB of disk space in uncompressed form. If 
+      you want to use this on a computer with something like 1GB of ram, you 
+      need to compress it. The standard method of compressing such a database is 
+      run-length encoding (RLE): when you look at the array of values that the 
+      retrograde analysis has produced, it will look something like this: 
+      <BR><BR><CODE>....WWWBWWLLDBDBDDDWLBLLLWWBDDD... </CODE><BR><BR>where WLDB 
+      stands for win/loss/draw/broken. Broken means that this position is 
+      impossible, which happens with gapped indexing, or in chess with positions 
+      where the side not to move is in check. To compress this, we first notice 
+      that we can do anything we want with the broken indices - they are not 
+      used, so we set them in such a way that the resulting sequence is best 
+      compressible: <BR><BR><CODE>....WWWWWWLLDDDDDDDWLLLLLWWDDDD... 
+      </CODE><BR><BR>Run-length encoding now stores pairs of values and 
+      run-lengths: this example transforms to <BR><BR><CODE>(W,6) (L,2) (D,7) 
+      (W,1) (L,5) (W,2) (D,4) </CODE><BR><BR>If the runs are really long (I 
+      didn't have the patience to make an example with looooong runs!), then 
+      this type of compression works really well. The checkers 8-piece endgame 
+      database is reduced to about 4GB, a compression of a factor 10. 
+      <H4>Accessing databases in the search</H4>Once you have compressed your 
+      database, you also need to write an on-the-fly decompressor which finds 
+      the value for a given position. As if that wasn't enough, you'll have to 
+      write your own memory management for your database if it is too large to 
+      fit into your ram. You won't want windows (or any other OS) to handle your 
+      database, because this is supposed to be high-performance! The general way 
+      of handling this is to divide the compressed database in chunks of X KB, 
+      and to load an entire chunk at once if you decide you need to know the 
+      value of a certain position. It doesn't matter whether you read 1 Byte or 
+      1KB from your harddisk - the speed limitation comes from the seek time of 
+      the disk, not its transfer speed. Reading an entire chunk at once loads 
+      "similar" positions into the memory - positions that you might need soon. 
+      In general, you will want to use a LRU (least-recently-used) scheme to 
+      decide which chunk should be replaced for the one you are loading. Even 
+      with chunks, harddisks are so dreadfully slow compared to memory that you 
+      cannot in general look up all database positions you might encounter. 
+      Normally you will only do database lookups from disk for positions which 
+      are at least X ply away from the leaves of the search tree, in the last X 
+      ply you will only look up the position's value if it is in memory already. 
+
+      <P>For more information take a look at the paper on <A 
+      href="http://www.cs.ualberta.ca/~jonathan/Papers/Papers/databases.ps">checkers 
+      database construction</A> <BR>Comments and questions are welcome!
+      <HR color=#888888>
+
+      <CENTER>[ <A href="http://www.fierz.ch/">Author homepage</A> | <A 
+      href="http://www.fierz.ch/strategy.htm">Introduction</A> | <A 
+      href="http://www.fierz.ch/strategy1.htm">Part I</A> | <A 
+      href="http://www.fierz.ch/strategy2.htm">Part II</A> | <A 
+      href="http://www.fierz.ch/strategy3.htm">Part III</A> | <A 
+      href="http://www.fierz.ch/strategy4.htm">Part IV</A> | <A 
+      href="http://www.fierz.ch/strategy5.htm">Part V</A> ]
+      <P>Last update: 4th May 2005, using <A 
+      href="http://www.arachnoid.com/"><IMG border=0 alt=arachnoid align=middle 
+      src="basics%20of%20strategy%20game%20programming%20part%20IV%20-%20endgame%20databases_files/arachno.gif"></A> 
+      </CENTER></P></TD></TR></TBODY></TABLE></BODY></HTML>

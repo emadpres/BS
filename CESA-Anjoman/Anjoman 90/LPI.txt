@@ -1,0 +1,24 @@
+LPI- 150$
+----------											0	1	2	3	4	5
+1	sina shafahi											??
+2*	sina soleyman-pour	87522136	0912 5073 255		B				S	
+3 	hamed rezaneJad											??
+4* 	Mohesen abbasi		87522258	0939 1990 237	*		*		*
+5	Alireza Darsi		88			0935 3981 180			B		B	B
+6	Payam Mohajeri		89522237	0912 4836 482			B		B	B
+7 	Sadegh Kazemi					0913 2261 102
+8 	Hosein Rahmati		889									??	
+9	Farbod samsami		88									??
+10	Arash Salehi		88							*	 	*	 	*	*
+11	Ehsan Ahmadi		88521157	0936 1239 975			*	*	*
+12	Setare Beroozi		88522261	0912 6001 389			*		*
+13	Behnaz dashtaki		86521178	0936 5888 105					*	S
+14	Amin fallahi		89521302	0912 2843 039				B	S	*
+15	Furuzan Ghafurian	88521041	0912 4584 843		S		S	B		
+16	Hamidreza Behizadi	89521204	0912 2809 909		B		B		B
+17	Niloofar KarmiAzar	88261133	0912 4540 284		B 			B
+18	Alireza Amoozade	88261175	0935 4835 109		B			B
+19	Ehsan Memari		88618019	0937 6902 540	---> OK
+20 Pooya mahsoori		89 			0937 			B		B		*	*
+21 Mojgan Hashemian		84522035	0912 6779 281	---->OK(s0s0)
+22 Mina dalili ShoaE	84521154	0912 6779 281	---->OK(s0s0)

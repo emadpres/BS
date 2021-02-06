@@ -1,7 +1,0 @@
-Pascal to Java 	...................	OK
-Inserting Tab  	...................	OK
-Symbol Table 	...................	OK ( Enable It in COMP3 with int "SHOW_TABLE=+1" ! but showing table casuse wrong  anwser ! beacause It prevent any delet process on tabel with "{ if(SHOW_TABLE==-1) totalSymbol -= (symbolTable[SP].len+1) ;}")
-Array index	 	...................	OK
-return and using function name as variable to return in pascal ...................	OK
-Free-ing allocated memory...................	COMP5=> BUGGY
-showing Warning about redefination variables or not-declare variables with symbole table(easy work) ...................	Maybe Latter ;)

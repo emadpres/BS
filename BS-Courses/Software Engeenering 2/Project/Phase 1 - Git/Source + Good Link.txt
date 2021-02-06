@@ -1,0 +1,6 @@
+http://www.rubygems.org/gems/git
+http://stackoverflow.com/questions/3073670/ruby-git-g-status-always-fails
+http://gitref.org/remotes/
+http://git.rubyforge.org/
+http://www.techscreencast.com/language/ruby/using-git-in-ruby-applications---scott-chacon-/1431
+http://stackoverflow.com/questions/292357/whats-the-difference-between-git-pull-and-git-fetch

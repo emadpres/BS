@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/pic">
-        <file>qml/add_pic.png</file>
-    </qresource>
-</RCC>

@@ -1,0 +1,547 @@
+Microsoft (R) Macro Assembler Version 6.11		    10/22/10 23:42:15
+io.asm							     Page 1 - 1
+
+
+				; implementation of I/O procedures called by macros in io.obj
+				; flat memory model version
+				; author:  R. Detmer
+				; last revised:  6/98
+
+				.386
+				.MODEL FLAT, syscall
+
+				PUBLIC itoaproc, atoiproc, dtoaproc, atodproc, outproc, inproc
+
+ 00000000			.CODE
+
+				; itoaproc(source, dest)
+				; convert integer (source) to string of 6 characters at given destination address
+ 00000000			itoaproc    PROC   NEAR32
+ 00000000  55			            push   ebp                  ; save base pointer
+ 00000001  8B EC		            mov    ebp, esp             ; establish stack frame
+ 00000003  50			            push   eax                  ; Save registers
+ 00000004  53			            push   ebx                  ;   used by
+ 00000005  51			            push   ecx                  ;   procedure
+ 00000006  52			            push   edx
+ 00000007  57			            push   edi
+ 00000008  66| 9C		            pushf                      ; save flags
+
+ 0000000A  66| 8B 45 0C		            mov    ax, [ebp+12]        ; first parameter (source integer)
+ 0000000E  8B 7D 08		            mov    edi, [ebp+8]        ; second parameter (dest offset)
+ 00000011  66| 3D 8000		ifSpecial:  cmp    ax,8000h            ; special case -32,768?
+ 00000015  75 19		            jne    EndIfSpecial        ; if not, then normal case
+ 00000017  C6 07 2D		            mov    BYTE PTR [edi],'-'  ; manually put in ASCII codes
+ 0000001A  C6 47 01 33		            mov    BYTE PTR [edi+1],'3'  ;   for -32,768
+ 0000001E  C6 47 02 32		            mov    BYTE PTR [edi+2],'2'
+ 00000022  C6 47 03 37		            mov    BYTE PTR [edi+3],'7'
+ 00000026  C6 47 04 36		            mov    BYTE PTR [edi+4],'6'
+ 0000002A  C6 47 05 38		            mov    BYTE PTR [edi+5],'8'
+ 0000002E  EB 36		            jmp    ExitIToA            ; done with special case
+ 00000030			EndIfSpecial:
+
+ 00000030  66| 8B D0		            mov    dx, ax              ; save source number
+
+ 00000033  B0 20		            mov    al,' '              ; put blanks in
+ 00000035  B9 00000005		            mov    ecx,5               ;   first five
+ 0000003A  FC			            cld                        ;   bytes of
+ 0000003B  F3/ AA		            rep stosb                  ;   destination field    
+
+ 0000003D  66| 8B C2		            mov    ax, dx              ; copy source number
+ 00000040  B1 20		            mov    cl,' '              ; default sign (blank for +)
+ 00000042  66| 83 F8 00		IfNeg:      cmp    ax,0                ; check sign of number
+ 00000046  7D 05		            jge    EndIfNeg            ; skip if not negative
+ 00000048  B1 2D		            mov    cl,'-'              ; sign for negative number
+ 0000004A  66| F7 D8		            neg    ax                  ; number in AX now >= 0
+ 0000004D			EndIfNeg:
+
+ 0000004D  66| BB 000A		            mov    bx,10               ; divisor
+
+ 00000051  66| BA 0000		WhileMore:  mov    dx,0                ; extend number to doubleword
+ 00000055  66| F7 F3		            div    bx                  ; divide by 10
+ 00000058  80 C2 30		            add    dl,30h              ; convert remainder to character
+ 0000005B  88 17		            mov    [edi],dl            ; put character in string
+ 0000005D  4F			            dec    edi                 ; move forward to next position
+ 0000005E  66| 83 F8 00		            cmp    ax,0                ; check quotient
+ 00000062  75 ED		            jnz    WhileMore           ; continue if quotient not zero
+
+ 00000064  88 0F		            mov    [edi],cl            ; insert blank or "-" for sign
+
+ 00000066  66| 9D		ExitIToA:   popf                       ; restore flags and registers
+ 00000068  5F			            pop    edi
+ 00000069  5A			            pop    edx
+ 0000006A  59			            pop    ecx
+ 0000006B  5B			            pop    ebx 
+ 0000006C  58			            pop    eax
+ 0000006D  5D			            pop    ebp 
+ 0000006E  C2 0006		            ret    6                   ;exit, discarding parameters
+ 00000071			itoaproc    ENDP
+
+				; dtoaproc(source, dest)
+				; convert double (source) to string of 11 characters at given offset in DS (dest)
+ 00000071			dtoaproc    PROC   NEAR32
+ 00000071  55			            push   ebp                 ; save base pointer
+ 00000072  8B EC		            mov    ebp, esp            ; establish stack frame
+ 00000074  50			            push   eax                 ; Save registers
+ 00000075  53			            push   ebx                 ;   used by
+ 00000076  51			            push   ecx                 ;   procedure
+ 00000077  52			            push   edx
+ 00000078  57			            push   edi
+ 00000079  66| 9C		            pushf                      ; save flags
+
+ 0000007B  8B 45 0C		            mov    eax, [ebp+12]         ; first parameter (source double)
+ 0000007E  8B 7D 08		            mov    edi, [ebp+8]          ; second parameter (dest addr)
+ 00000081  3D 80000000		ifSpecialD: cmp    eax,80000000h       ; special case -2,147,483,648?
+ 00000086  75 2D		            jne    EndIfSpecialD       ; if not, then normal case
+ 00000088  C6 07 2D		            mov    BYTE PTR [edi],'-'   ; manually put in ASCII codes
+ 0000008B  C6 47 01 32		            mov    BYTE PTR [edi+1],'2' ;   for -2,147,483,648
+ 0000008F  C6 47 02 31		            mov    BYTE PTR [edi+2],'1'
+ 00000093  C6 47 03 34		            mov    BYTE PTR [edi+3],'4'
+ 00000097  C6 47 04 37		            mov    BYTE PTR [edi+4],'7'
+ 0000009B  C6 47 05 34		            mov    BYTE PTR [edi+5],'4'
+ 0000009F  C6 47 06 38		            mov    BYTE PTR [edi+6],'8'
+ 000000A3  C6 47 07 33		            mov    BYTE PTR [edi+7],'3'
+ 000000A7  C6 47 08 36		            mov    BYTE PTR [edi+8],'6'
+ 000000AB  C6 47 09 34		            mov    BYTE PTR [edi+9],'4'
+ 000000AF  C6 47 0A 38		            mov    BYTE PTR [edi+10],'8'
+ 000000B3  EB 32		            jmp    ExitDToA            ; done with special case
+ 000000B5			EndIfSpecialD:
+
+ 000000B5  8B D0		            mov    edx, eax            ; save source number
+
+ 000000B7  B0 20		            mov    al,' '              ; put blanks in
+ 000000B9  B9 0000000A		            mov    ecx,10              ;   first ten
+ 000000BE  FC			            cld                        ;   bytes of
+ 000000BF  F3/ AA		            rep stosb                  ;   destination field    
+
+ 000000C1  8B C2		            mov    eax, edx            ; copy source number
+ 000000C3  B1 20		            mov    cl,' '              ; default sign (blank for +)
+ 000000C5  83 F8 00		IfNegD:     cmp    eax,0               ; check sign of number
+ 000000C8  7D 04		            jge    EndIfNegD           ; skip if not negative
+ 000000CA  B1 2D		            mov    cl,'-'              ; sign for negative number
+ 000000CC  F7 D8		            neg    eax                 ; number in EAX now >= 0
+ 000000CE			EndIfNegD:
+
+ 000000CE  BB 0000000A		            mov    ebx,10              ; divisor
+
+ 000000D3  BA 00000000		WhileMoreD: mov    edx,0               ; extend number to doubleword
+ 000000D8  F7 F3		            div    ebx                 ; divide by 10
+ 000000DA  80 C2 30		            add    dl,30h              ; convert remainder to character
+ 000000DD  88 17		            mov    [edi],dl            ; put character in string
+ 000000DF  4F			            dec    edi                 ; move forward to next position
+ 000000E0  83 F8 00		            cmp    eax,0               ; check quotient
+ 000000E3  75 EE		            jnz    WhileMoreD          ; continue if quotient not zero
+
+ 000000E5  88 0F		            mov    [edi],cl            ; insert blank or "-" for sign
+
+ 000000E7  66| 9D		ExitDToA:   popf                       ; restore flags and registers
+ 000000E9  5F			            pop    edi
+ 000000EA  5A			            pop    edx
+ 000000EB  59			            pop    ecx
+ 000000EC  5B			            pop    ebx 
+ 000000ED  58			            pop    eax
+ 000000EE  5D			            pop    ebp 
+ 000000EF  C2 0008		            ret    8                   ;exit, discarding parameters
+ 000000F2			dtoaproc    ENDP
+
+				; atoiproc(source)
+				; Procedure to scan data segment starting at source address, interpreting 
+				; ASCII characters as an integer value which is returned in AX.
+
+				; Leading blanks are skipped.  A leading - or + sign is acceptable.
+				; Digit(s) must immediately follow the sign (if any).
+				; Memory scan is terminated by any non-digit, and the address of 
+				; the terminating character is in ESI.
+
+				; The following flags are affected:
+				;   AC is undefined
+				;   PF, SF and ZF reflect sign of number returned in AX.
+				;   CF reset to 0
+				;   OF set to indicate error.  Possible error conditions are:
+				;     - no digits in input
+				;     - value outside range -32,768 to 32,767
+				;   (AX) will be 0 if OF is set.
+
+ 000000F2			atoiproc    PROC   NEAR32
+ 000000F2  55			            push   ebp                 ; save base pointer
+ 000000F3  8B EC		            mov    ebp, esp            ; establish stack frame
+ 000000F5  83 EC 02		            sub    esp, 2              ; local space for sign
+ 000000F8  53			            push   ebx                 ; Save registers
+ 000000F9  51			            push   ecx
+ 000000FA  52			            push   edx
+ 000000FB  66| 9C		            pushf                      ; save flags
+
+ 000000FD  8B 75 08		            mov    esi,[ebp+8]         ; get parameter (source addr)
+
+ 00000100  80 3E 20		WhileBlank: cmp    BYTE PTR [esi],' '  ; space?
+ 00000103  75 03		            jne    EndWhileBlank       ; exit if not
+ 00000105  46			            inc    esi                 ; increment character pointer
+ 00000106  EB F8		            jmp    WhileBlank          ; and try again
+ 00000108			EndWhileBlank:
+
+ 00000108  66| B8 0001		            mov    ax,1                ; default sign multiplier
+ 0000010C  80 3E 2B		IfPlus:     cmp    BYTE PTR [esi],'+'  ; leading + ?
+ 0000010F  74 09		            je     SkipSign            ; if so, skip over
+ 00000111  80 3E 2D		IfMinus:    cmp    BYTE PTR [esi],'-'  ; leading - ?
+ 00000114  75 05		            jne    EndIfSign           ; if not, save default +
+ 00000116  66| B8 FFFF		            mov    ax,-1               ; -1 for minus sign
+ 0000011A  46			SkipSign:   inc    esi                 ; move past sign
+ 0000011B			EndIfSign:
+
+ 0000011B  66| 89 45 FE		            mov    [ebp-2],ax          ; save sign multiplier
+ 0000011F  66| B8 0000		            mov    ax,0                ; number being accumulated
+ 00000123  66| B9 0000		            mov    cx,0                ; count of digits so far
+
+ 00000127  80 3E 30		WhileDigit: cmp    BYTE PTR [esi],'0'  ; compare next character to '0'
+ 0000012A  7C 1B		            jl     EndWhileDigit       ; not a digit if smaller than '0'
+ 0000012C  80 3E 39		            cmp    BYTE PTR [esi],'9'  ; compare to '9'
+ 0000012F  7F 16		            jg     EndWhileDigit       ; not a digit if bigger than '9'
+ 00000131  66| 6B C0 0A		            imul   ax,10               ; multiply old number by 10
+ 00000135  70 28		            jo     overflow            ; exit if product too large
+ 00000137  8A 1E		            mov    bl,[esi]            ; ASCII character to BL
+ 00000139  66| 83 E3 0F		            and    bx,000Fh            ; convert to single-digit integer
+ 0000013D  66| 03 C3		            add    ax,bx               ; add to sum
+ 00000140  72 1D		            jc     overflow            ; exit if sum too large
+ 00000142  66| 41		            inc    cx                  ; increment digit count
+ 00000144  46			            inc    esi                 ; increment character pointer
+ 00000145  EB E0		            jmp    WhileDigit          ; go try next character
+ 00000147			EndWhileDigit:
+
+ 00000147  66| 83 F9 00		            cmp    cx,0                ; no digits?
+ 0000014B  74 12		            jz     overflow            ; if so, set overflow error flag
+
+				; if value is 8000h and sign is '-',  want to return 8000h (-32,768)
+
+ 0000014D  66| 3D 8000		            cmp    ax,8000h            ; 8000h ?
+ 00000151  75 07		            jne    TooBig?
+ 00000153  66| 83 7D FE		            cmp    WORD PTR [ebp-2],-1 ; multiplier -1 ?
+	   FF
+ 00000158  74 1B		            je     ok1                 ; if so, return 8000h
+
+ 0000015A  66| 85 C0		TooBig?:    test   ax,ax               ; check sign flag
+ 0000015D  79 12		            jns    ok                  ; will be set if number > 32,767
+
+ 0000015F  66| 58		overflow:   pop    ax                  ; get flags
+ 00000161  66| 0D 0844		            or     ax,0000100001000100B  ; set overflow, zero & parity flags
+ 00000165  66| 25 FF7E		            and    ax,1111111101111110B  ; reset sign and carry flags
+ 00000169  66| 50		            push   ax                  ; push new flag values
+ 0000016B  66| B8 0000		            mov    ax,0                ; return value of zero
+ 0000016F  EB 0B		            jmp    AToIExit            ; quit
+
+ 00000171  66| F7 6D FE		ok:         imul   WORD PTR [ebp-2]    ; make signed number
+ 00000175  66| 9D		ok1:        popf                       ; get original flags
+ 00000177  66| 85 C0		            test   ax,ax               ; set flags for new number
+ 0000017A  66| 9C		            pushf                      ; save flags
+
+ 0000017C  66| 9D		AToIExit:   popf                       ; get flags
+ 0000017E  5A			            pop    edx                 ; restore registers
+ 0000017F  59			            pop    ecx
+ 00000180  5B			            pop    ebx
+ 00000181  8B E5		            mov    esp, ebp            ; delete local variable space
+ 00000183  5D			            pop    ebp 
+ 00000184  C2 0004		            ret    4                   ; exit, removing parameter
+ 00000187			atoiproc    ENDP
+
+				; atodproc(source)
+				; Procedure to scan data segment starting at source address, interpreting 
+				; ASCII characters as an integer value which is returned in EAX.
+
+				; Leading blanks are skipped.  A leading - or + sign is acceptable.
+				; Digit(s) must immediately follow the sign (if any).
+				; Memory scan is terminated by any non-digit, and the address of 
+				; the terminating character is in ESI.
+
+				; The following flags are affected:
+				;   AC is undefined
+				;   PF, SF and ZF reflect sign of number returned in EAX.
+				;   CF reset to 0
+				;   OF set to indicate error.  Possible error conditions are:
+				;     - no digits in input
+				;     - value outside range -2,147,483,648 to 2,147,483,647
+				;   (EAX) will be 0 if OF is set.
+
+ 00000187			atodproc    PROC   NEAR32
+ 00000187  55			            push   ebp                 ; save base pointer
+ 00000188  8B EC		            mov    ebp, esp            ; establish stack frame
+ 0000018A  83 EC 04		            sub    esp, 4              ; local space for sign
+ 0000018D  53			            push   ebx                 ; Save registers
+ 0000018E  51			            push   ecx
+ 0000018F  52			            push   edx
+ 00000190  66| 9C		            pushf                      ; save flags
+
+ 00000192  8B 75 08		            mov    esi,[ebp+8]         ; get parameter (source addr)
+
+ 00000195  80 3E 20		WhileBlankD:cmp    BYTE PTR [esi],' '  ; space?
+ 00000198  75 03		            jne    EndWhileBlankD      ; exit if not
+ 0000019A  46			            inc    esi                 ; increment character pointer
+ 0000019B  EB F8		            jmp    WhileBlankD         ; and try again
+ 0000019D			EndWhileBlankD:
+
+ 0000019D  B8 00000001		            mov    eax,1               ; default sign multiplier
+ 000001A2  80 3E 2B		IfPlusD:    cmp    BYTE PTR [esi],'+'  ; leading + ?
+ 000001A5  74 0A		            je     SkipSignD           ; if so, skip over
+ 000001A7  80 3E 2D		IfMinusD:   cmp    BYTE PTR [esi],'-'  ; leading - ?
+ 000001AA  75 06		            jne    EndIfSignD          ; if not, save default +
+ 000001AC  B8 FFFFFFFF		            mov    eax,-1              ; -1 for minus sign
+ 000001B1  46			SkipSignD:  inc    esi                 ; move past sign
+ 000001B2			EndIfSignD:
+
+ 000001B2  89 45 FC		            mov    [ebp-4],eax         ; save sign multiplier
+ 000001B5  B8 00000000		            mov    eax,0               ; number being accumulated
+ 000001BA  66| B9 0000		            mov    cx,0                ; count of digits so far
+
+ 000001BE  80 3E 30		WhileDigitD:cmp    BYTE PTR [esi],'0'  ; compare next character to '0'
+ 000001C1  7C 18		            jl     EndWhileDigitD      ; not a digit if smaller than '0'
+ 000001C3  80 3E 39		            cmp    BYTE PTR [esi],'9'  ; compare to '9'
+ 000001C6  7F 13		            jg     EndWhileDigitD      ; not a digit if bigger than '9'
+ 000001C8  6B C0 0A		            imul   eax,10              ; multiply old number by 10
+ 000001CB  70 25		            jo     overflowD           ; exit if product too large
+ 000001CD  8A 1E		            mov    bl,[esi]            ; ASCII character to BL
+ 000001CF  83 E3 0F		            and    ebx,0000000Fh       ; convert to single-digit integer
+ 000001D2  03 C3		            add    eax,ebx             ; add to sum
+ 000001D4  72 1C		            jc     overflowD           ; exit if sum too large
+ 000001D6  66| 41		            inc    cx                  ; increment digit count
+ 000001D8  46			            inc    esi                 ; increment character pointer
+ 000001D9  EB E3		            jmp    WhileDigitD         ; go try next character
+ 000001DB			EndWhileDigitD:
+
+ 000001DB  66| 83 F9 00		            cmp    cx,0                ; no digits?
+ 000001DF  74 11		            jz     overflowD           ; if so, set overflow error flag
+
+				; if value is 80000000h and sign is '-',  want to return 80000000h (-2^32)
+
+ 000001E1  3D 80000000		            cmp    eax,80000000h       ; 80000000h ?
+ 000001E6  75 06		            jne    TooBigD?
+ 000001E8  83 7D FC FF		            cmp    DWORD PTR [ebp-4],-1 ; multiplier -1 ?
+ 000001EC  74 1A		            je     ok1D                ; if so, return 8000h
+
+ 000001EE  85 C0		TooBigD?:   test   eax,eax             ; check sign flag
+ 000001F0  79 13		            jns    okD                 ; will be set if number > 2^32 - 1
+
+ 000001F2  66| 58		overflowD:  pop    ax                  ; get flags
+ 000001F4  66| 0D 0844		            or     ax,0000100001000100B  ; set overflow, zero & parity flags
+ 000001F8  66| 25 FF7E		            and    ax,1111111101111110B  ; reset sign and carry flags
+ 000001FC  66| 50		            push   ax                  ; push new flag values
+ 000001FE  B8 00000000		            mov    eax,0               ; return value of zero
+ 00000203  EB 09		            jmp    AToDExit            ; quit
+
+ 00000205  F7 6D FC		okD:        imul   DWORD PTR [ebp-4]   ; make signed number
+ 00000208  66| 9D		ok1D:       popf                       ; get original flags
+ 0000020A  85 C0		            test   eax,eax             ; set flags for new number
+ 0000020C  66| 9C		            pushf                      ; save flags
+
+ 0000020E  66| 9D		AToDExit:   popf                       ; get flags
+ 00000210  5A			            pop    edx                 ; restore registers
+ 00000211  59			            pop    ecx
+ 00000212  5B			            pop    ebx
+ 00000213  8B E5		            mov    esp, ebp            ; delete local variable space
+ 00000215  5D			            pop    ebp 
+ 00000216  C2 0004		            ret    4                   ; exit, removing parameter
+ 00000219			atodproc    ENDP
+
+				; *************** setup for Win32 I/O ****************
+
+ =-0000000B			STD_OUTPUT EQU -11
+ =-0000000A			STD_INPUT  EQU -10
+
+				GetStdHandle PROTO NEAR32 stdcall,
+				    nStdHandle:DWORD
+
+				ReadFile PROTO NEAR32 stdcall,
+				    hFile:DWORD, lpBuffer:NEAR32, nNumberOfCharsToRead:DWORD,
+				    lpNumberOfBytesRead:NEAR32, lpOverlapped:NEAR32
+
+				WriteFile PROTO NEAR32 stdcall,
+				    hFile:DWORD, lpBuffer:NEAR32, nNumberOfCharsToWrite:DWORD,
+				    lpNumberOfBytesWritten:NEAR32, lpOverlapped:NEAR32
+
+ 00000000			.DATA
+
+ 00000000 00000000		written    DWORD  ?
+ 00000004 00000000		read       DWORD  ?
+ 00000008 00000000		strAddr    DWORD  ?
+ 0000000C 00000000		strLength  DWORD  ?
+ 00000010 00000000		hStdOut    DWORD  ?
+ 00000014 00000000		hStdIn     DWORD  ?
+
+ 00000219			.CODE
+
+				; outproc(source)
+				; Procedure to display null-terminated string
+				; No registers are changed; flags are not affected.
+
+ 00000219			outproc     PROC   NEAR32
+ 00000219  55			            push   ebp                 ; save base pointer
+ 0000021A  8B EC		            mov    ebp, esp            ; establish stack frame
+ 0000021C  60			            pushad
+ 0000021D  9C			            pushfd                     ; save flags
+
+ 0000021E  8B 75 08		            mov    esi,[ebp+8]         ; source address
+ 00000221  89 35 00000008 R	            mov    strAddr, esi
+
+				; find string length
+ 00000227  C7 05 0000000C R	            mov    strLength, 0        ; initialize string length
+	   00000000
+ 00000231  80 3E 00		WhileChar:  cmp    BYTE PTR [esi], 0   ; character = null?
+ 00000234  74 09		            jz     EndWhileChar        ; exit if so
+ 00000236  FF 05 0000000C R	            inc    strLength           ; increment character count
+ 0000023C  46			            inc    esi                 ; point at next character
+ 0000023D  EB F2		            jmp    WhileChar
+ 0000023F			EndWhileChar:
+
+				            INVOKE GetStdHandle,       ; get handle for console output
+				              STD_OUTPUT
+ 00000246  A3 00000010 R            mov    hStdOut, eax
+
+				            INVOKE WriteFile,
+				              hStdOut,                 ; file handle for screen
+				              strAddr,                 ; address of string
+				              strLength,               ; length of string
+				              NEAR32 PTR written,      ; bytes written
+				              0                        ; overlapped mode
+
+ 00000269  9D			            popfd                      ; restore flags
+ 0000026A  61			            popad                      ; restore registers
+ 0000026B  5D			            pop    ebp
+ 0000026C  C2 0004		            ret    4                   ;exit, discarding parameter
+ 0000026F			outproc     ENDP
+
+				; inproc(dest,length)
+				; Procedure to input a string from keyboard.
+
+				; The string will be stored at the address given by dest.
+
+				; The length parameter gives the size of the user's buffer.  It is assumed 
+				; that there will be room for the string and a null byte.
+				  
+				; The string will be terminated by a null character (00h).
+
+				; Flags are unchanged.
+
+ 0000026F			inproc      PROC   NEAR32
+ 0000026F  55			            push   ebp                 ; save base pointer
+ 00000270  8B EC		            mov    ebp, esp            ; establish stack frame
+ 00000272  60			            pushad                     ; save all registers
+ 00000273  9C			            pushfd                     ; save flags
+
+				            INVOKE GetStdHandle,       ; get handle for console
+				              STD_INPUT
+ 0000027B  A3 00000014 R	            mov    hStdIn, eax
+
+ 00000280  8B 4D 08		            mov    ecx, [ebp+8]        ; string length
+ 00000283  89 0D 0000000C R	            mov    strLength, ecx
+
+ 00000289  8B 75 0C		            mov    esi, [ebp+12]       ; source address
+ 0000028C  89 35 00000008 R	            mov    strAddr, esi
+
+				            INVOKE ReadFile,
+				              hStdIn,                  ; file handle for keyboard
+				              strAddr,                  ; address of string
+				              strLength,                ; length of string
+				              NEAR32 PTR read,          ; bytes read
+				              0                         ; overlapped mode
+
+ 000002B0  8B 0D 00000004 R	            mov    ecx, read           ; number of bytes read
+ 000002B6  C6 44 31 FE 00	            mov    BYTE PTR [esi+ecx-2],0 ; replace CR/LF by trailing null
+
+
+ 000002BB  9D			            popfd                      ; restore flags
+ 000002BC  61			            popad                      ; restore registers
+ 000002BD  5D			            pop    ebp 
+ 000002BE  C2 0008		            ret    8                   ; exit, discarding parameters
+ 000002C1			inproc      ENDP
+
+				            END
+Microsoft (R) Macro Assembler Version 6.11		    10/22/10 23:42:15
+io.asm							     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000018 DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 000002C1 DWord	  Public  'CODE'	
+
+
+Procedures,  parameters and locals:
+
+                N a m e                 Type     Value    Attr
+
+GetStdHandle . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadFile . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteFile  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+atodproc . . . . . . . . . . . .	P Near	 00000187 _TEXT	Length= 00000092 Public SYSCALL
+  WhileBlankD  . . . . . . . . .	L Near	 00000195 _TEXT	
+  EndWhileBlankD . . . . . . . .	L Near	 0000019D _TEXT	
+  IfPlusD  . . . . . . . . . . .	L Near	 000001A2 _TEXT	
+  IfMinusD . . . . . . . . . . .	L Near	 000001A7 _TEXT	
+  SkipSignD  . . . . . . . . . .	L Near	 000001B1 _TEXT	
+  EndIfSignD . . . . . . . . . .	L Near	 000001B2 _TEXT	
+  WhileDigitD  . . . . . . . . .	L Near	 000001BE _TEXT	
+  EndWhileDigitD . . . . . . . .	L Near	 000001DB _TEXT	
+  TooBigD? . . . . . . . . . . .	L Near	 000001EE _TEXT	
+  overflowD  . . . . . . . . . .	L Near	 000001F2 _TEXT	
+  okD  . . . . . . . . . . . . .	L Near	 00000205 _TEXT	
+  ok1D . . . . . . . . . . . . .	L Near	 00000208 _TEXT	
+  AToDExit . . . . . . . . . . .	L Near	 0000020E _TEXT	
+atoiproc . . . . . . . . . . . .	P Near	 000000F2 _TEXT	Length= 00000095 Public SYSCALL
+  WhileBlank . . . . . . . . . .	L Near	 00000100 _TEXT	
+  EndWhileBlank  . . . . . . . .	L Near	 00000108 _TEXT	
+  IfPlus . . . . . . . . . . . .	L Near	 0000010C _TEXT	
+  IfMinus  . . . . . . . . . . .	L Near	 00000111 _TEXT	
+  SkipSign . . . . . . . . . . .	L Near	 0000011A _TEXT	
+  EndIfSign  . . . . . . . . . .	L Near	 0000011B _TEXT	
+  WhileDigit . . . . . . . . . .	L Near	 00000127 _TEXT	
+  EndWhileDigit  . . . . . . . .	L Near	 00000147 _TEXT	
+  TooBig?  . . . . . . . . . . .	L Near	 0000015A _TEXT	
+  overflow . . . . . . . . . . .	L Near	 0000015F _TEXT	
+  ok . . . . . . . . . . . . . .	L Near	 00000171 _TEXT	
+  ok1  . . . . . . . . . . . . .	L Near	 00000175 _TEXT	
+  AToIExit . . . . . . . . . . .	L Near	 0000017C _TEXT	
+dtoaproc . . . . . . . . . . . .	P Near	 00000071 _TEXT	Length= 00000081 Public SYSCALL
+  ifSpecialD . . . . . . . . . .	L Near	 00000081 _TEXT	
+  EndIfSpecialD  . . . . . . . .	L Near	 000000B5 _TEXT	
+  IfNegD . . . . . . . . . . . .	L Near	 000000C5 _TEXT	
+  EndIfNegD  . . . . . . . . . .	L Near	 000000CE _TEXT	
+  WhileMoreD . . . . . . . . . .	L Near	 000000D3 _TEXT	
+  ExitDToA . . . . . . . . . . .	L Near	 000000E7 _TEXT	
+inproc . . . . . . . . . . . . .	P Near	 0000026F _TEXT	Length= 00000052 Public SYSCALL
+itoaproc . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000071 Public SYSCALL
+  ifSpecial  . . . . . . . . . .	L Near	 00000011 _TEXT	
+  EndIfSpecial . . . . . . . . .	L Near	 00000030 _TEXT	
+  IfNeg  . . . . . . . . . . . .	L Near	 00000042 _TEXT	
+  EndIfNeg . . . . . . . . . . .	L Near	 0000004D _TEXT	
+  WhileMore  . . . . . . . . . .	L Near	 00000051 _TEXT	
+  ExitIToA . . . . . . . . . . .	L Near	 00000066 _TEXT	
+outproc  . . . . . . . . . . . .	P Near	 00000219 _TEXT	Length= 00000056 Public SYSCALL
+  WhileChar  . . . . . . . . . .	L Near	 00000231 _TEXT	
+  EndWhileChar . . . . . . . . .	L Near	 0000023F _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000002h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+STD_INPUT  . . . . . . . . . . .	Number	 -0000000Ah   
+STD_OUTPUT . . . . . . . . . . .	Number	 -0000000Bh   
+hStdIn . . . . . . . . . . . . .	DWord	 00000014 _DATA	
+hStdOut  . . . . . . . . . . . .	DWord	 00000010 _DATA	
+read . . . . . . . . . . . . . .	DWord	 00000004 _DATA	
+strAddr  . . . . . . . . . . . .	DWord	 00000008 _DATA	
+strLength  . . . . . . . . . . .	DWord	 0000000C _DATA	
+written  . . . . . . . . . . . .	DWord	 00000000 _DATA	
+
+	   0 Warnings
+	   0 Errors

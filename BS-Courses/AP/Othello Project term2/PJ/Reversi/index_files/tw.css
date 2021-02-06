@@ -1,0 +1,35 @@
+TABLE.title {
+  background-color: #FFCC66
+}
+
+TD.quote {
+  background-color: #CCCCCC
+}
+
+TABLE.footer {
+  background-color: #FFCC66
+}
+
+TD.hl1 {
+  background-color: #FFFF99
+}
+
+TD.hl2 {
+  background-color: #FFCC66
+}
+
+TD.hl3 {
+  background-color: #FF9933
+}
+
+TH.hl1 {
+  background-color: #FFFF99
+}
+
+TH.hl2 {
+  background-color: #FFCC66
+}
+
+TH.hl3 {
+  background-color: #FF9933
+}

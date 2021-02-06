@@ -1,0 +1,4 @@
+http://web.eecs.utk.edu/~bvz/cs461/notes/flex/
+http://flex.sourceforge.net/manual/Scanner-Options.html
+http://people.cs.aau.dk/~marius/sw/flex/Advanced-Use-of-Flex.html
+http://compilers.iecc.com/comparch/article/95-01-094 (column Number)

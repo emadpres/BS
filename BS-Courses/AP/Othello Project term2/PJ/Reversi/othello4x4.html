@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<meta name="verify-v1" content="ZQKOIEg/jIqkvXRpj0GWrcxk/Fr59Yf+H4146LO3irk=">
+<link rel="stylesheet" type="text/css" href="othello4x4_files/style.css">
+<link rel="stylesheet" type="text/css" href="othello4x4_files/vistamenu.css">
+<link rel="shortcut icon" href="http://ailab.awardspace.com/img/favicon.ico" type="image/x-icon">
+<title>AI Lab - Othello 4x4</title>
+</head><body>
+
+<div id="header">
+<img src="othello4x4_files/logo.png"><h1>Artificial Intelligence Laboratorium</h1>
+</div>
+
+<div id="main-nav">
+<ul>
+<li><a href="http://ailab.awardspace.com/index.html">Home</a></li>
+<li><a href="http://ailab.awardspace.com/hacking.html">Hacking</a></li>
+<li><a href="http://ailab.awardspace.com/websites.html">Websites</a></li>
+<li id="current"><a href="http://ailab.awardspace.com/ai.html">AI</a></li>
+<li><a href="http://ailab.awardspace.com/links.html">Links</a></li>
+<li><a href="http://ailab.awardspace.com/sitemap.html">Sitemap</a></li>
+</ul>
+</div>
+
+<div id="content">
+<br>
+<div id="column">
+<h5>Artificial Intelligence</h5>
+<ul>
+<li><a href="http://ailab.awardspace.com/ai.html">About</a></li>
+<li><a href="http://ailab.awardspace.com/othello4x4.html">Solving Othello 4x4</a></li>
+</ul>
+</div>
+
+
+<p>You are here: &gt; AI &gt; Othello 4x4</p>
+
+<h5>Solving a board game.</h5>
+
+<p>Othello is a simple board game. It is possible to 'solve' the game
+on a small 4x4 board using simple game tree search in less than a
+second on a current machine.</p>
+
+<h5>Solution of Othello 4x4</h5>
+
+<p>I wrote a simple solver for the 4x4 Othello game in C++, using Qt
+(cross-platform development tools and libraries). The solver is about
+200 lines of code. It does not contain any special optimizations.</p>
+
+<p>The result is a win for white, i.e. the second player, with 8 disks more than black. There are 8 variations of the best game:</p><p>
+
+<img src="othello4x4_files/numberedboard.png" alt="4x4 othello board">
+
+</p><pre><code>
+&gt; 4 0 1 8 f 2 c 7 3 b
+  |     |
+  |     2 f 8 3 d c e
+  |
+  1 0 4 8 f 2 c 7 3 b
+  |     |
+  |     2 f 8 3 d c e
+  |
+  e f b d 0 7 c 2 3 1
+  |     |
+  |     7 0 d 3 8 c 4
+  |
+  b f e d 0 7 c 2 3 1
+        |
+        7 0 d 3 8 c 4
+</code></pre>
+
+<h5>References</h5>
+
+<ul>
+<li>Excellent PhD <a href="http://www.yewjin.com/papers/PhDThesisLimYewJin.pdf">thesis (pdf)</a> on game tree search</li>
+<li><a href="http://en.wikipedia.org/wiki/Solved_game">Overview</a> of games that have been 'solved' (@ wikipedia)</li>
+<li><a href="http://ailab.awardspace.com/zip/solver4x4.tar.bz2">Source code (.tar.bz2)</a> of the 4x4 solver, written in C++ using <a href="http://trolltech.com/products/qt">Qt</a>.</li>
+</ul>
+
+<br>
+<br>
+<br>
+</div>
+<div id="footer">
+Mr. AI &nbsp;&nbsp;&nbsp; Tuesday, 02nd September, 2008 &nbsp;&nbsp;&nbsp; 563</div>
+</body></html>

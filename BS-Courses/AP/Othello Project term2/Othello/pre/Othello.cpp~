@@ -1,0 +1,15 @@
+int Turn_Unit(bool change)
+{
+	static int turn = WHITE; //this variable saves the turn, WHITE starts the game
+ 
+	if (change) // if change == true change the turn
+		switch(turn)
+		{
+			case WHITE:
+				turn = BLACK;
+				break;
+			case BLACK:
+				turn = WHITE;
+		}
+	return turn;	
+}

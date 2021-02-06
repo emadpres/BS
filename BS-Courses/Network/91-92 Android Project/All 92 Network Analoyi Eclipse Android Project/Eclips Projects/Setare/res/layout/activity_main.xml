@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF88CC88" >
+
+    <RadioGroup
+        android:id="@+id/second_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <RadioButton
+            android:id="@+id/second_radio_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:checked="true"
+            android:text="client" />
+
+        <RadioButton
+            android:id="@+id/second_radio_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="server" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/second_radio_group" >
+
+        <Button
+            android:id="@+id/second_start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/second_play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Play" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/second_packet_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/second_radio_group"
+        android:layout_margin="5dp"
+        android:text="Packet Size:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/packet_SIZE_TEXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_radio_group"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/second_packet_text"
+        android:text="2000"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/second_File_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_packet_text"
+        android:layout_margin="10dp"
+        android:hint="Request File Name"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/second_File_Name"
+        android:layout_margin="5dp"
+        android:fillViewport="true" >
+
+        <TextView
+            android:id="@+id/second_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:text="LOG.."
+            android:textColor="#F000"
+            android:textSize="15sp" />
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/second_error_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/second_radio_group"
+        android:layout_alignLeft="@+id/packet_SIZE_TEXT"
+        android:layout_margin="5dp"
+        android:text="Error"
+        android:textSize="18sp" />
+
+</RelativeLayout>
