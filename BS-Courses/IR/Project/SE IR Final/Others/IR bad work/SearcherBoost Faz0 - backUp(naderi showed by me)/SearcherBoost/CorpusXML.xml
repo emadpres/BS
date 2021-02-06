@@ -1,0 +1,6485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="8">
+<GROUP class_id="0" tracking_level="0" version="0">
+	<count>538</count>
+	<item_version>0</item_version>
+	<item class_id="1" tracking_level="0" version="0">
+		<first>&apos;caus</first>
+		<second class_id="2" tracking_level="0" version="0">
+			<first>1</first>
+			<second class_id="3" tracking_level="1" version="0" object_id="_0">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>&apos;ti</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_1">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>aa</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_2">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>aaaaah</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_3">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>actual</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_4">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>afraid</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_5">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>africa</first>
+		<second>
+			<first>11</first>
+			<second class_id_reference="3" object_id="_6">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>11</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>afureru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_7">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ageru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_8">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ago</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_9">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ah</first>
+		<second>
+			<first>17</first>
+			<second class_id_reference="3" object_id="_10">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>7</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_11">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>10</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ahhh</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_12">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ahmagh</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_13">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_14">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ahn</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_15">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ain&apos;t</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_16">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>air</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_17">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>aitai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_18">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>allllllright</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_19">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>am</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_20">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>anata</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_21">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>anawa</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_22">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>6</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>angel</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_23">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>angela</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_24">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>angri</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_25">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>anytim</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_26">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>apart</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_27">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>apolog</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_28">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>appear</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_29">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ashita</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_30">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ask</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_31">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>atashi</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_32">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ato</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_33">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>babi</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_34">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>6</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>balloon</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_35">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>banner</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_36">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>battl</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_37">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>beast</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_38">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>beauti</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_39">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>beautifulli</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_40">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>bed</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_41">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>beerbust</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_42">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>beg</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_43">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>begin</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_44">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_45">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>begun</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_46">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>believ</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_47">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_48">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_49">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>best</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_50">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>better</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_51">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>bi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_52">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>big</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_53">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>bit</first>
+		<second>
+			<first>25</first>
+			<second class_id_reference="3" object_id="_54">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>25</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>bitch</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_55">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>blood</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_56">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>bodi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_57">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>boi</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_58">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_59">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>bow</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_60">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>boyaiteita</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_61">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>brother</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_62">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>buddi</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_63">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>bunge</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_64">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>burn</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_65">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>bye</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_66">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>6</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>came</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_67">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_68">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>can&apos;t</first>
+		<second>
+			<first>11</first>
+			<second class_id_reference="3" object_id="_69">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_70">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_71">
+						<CDocFreqmDoc>3</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_72">
+							<CDocFreqmDoc>1</CDocFreqmDoc>
+							<CDocFreqmFreq>5</CDocFreqmFreq>
+							<CDocFreqmNext class_id_reference="3" object_id="_73">
+								<CDocFreqmDoc>0</CDocFreqmDoc>
+								<CDocFreqmFreq>2</CDocFreqmFreq>
+								<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+							</CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>car</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_74">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>care</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_75">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>caus</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_76">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>chanc</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_77">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>cheap</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_78">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>chest</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_79">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>choos</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_80">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>choru</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_81">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>clap</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_82">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>close</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_83">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>closer</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_84">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>cold</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_85">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>com</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_86">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>come</first>
+		<second>
+			<first>9</first>
+			<second class_id_reference="3" object_id="_87">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_88">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_89">
+						<CDocFreqmDoc>1</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_90">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>4</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>comet</first>
+		<second>
+			<first>7</first>
+			<second class_id_reference="3" object_id="_91">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>7</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>compadr</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_92">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>complain</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_93">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>conclus</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_94">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>conjur</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_95">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>consid</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_96">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>conslus</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_97">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>continu</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_98">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>corner</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_99">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>couldn&apos;t</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_100">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>crack</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_101">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>creat</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_102">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>crime</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_103">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dai</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_104">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_105">
+					<CDocFreqmDoc>4</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dakara</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_106">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dakedo</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_107">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dare</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_108">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dark</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_109">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>death</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_110">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>deep</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_111">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_112">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>deepest</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_113">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>definit</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_114">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dekinai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_115">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>demo</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_116">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>demon</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_117">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>deru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_118">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>design</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_119">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>destini</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_120">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>di</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_121">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_122">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>didn&apos;t</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_123">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>die</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_124">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>6</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>digga</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_125">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>disgrac</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_126">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>django</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_127">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>doin&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_128">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>don&apos;t</first>
+		<second>
+			<first>9</first>
+			<second class_id_reference="3" object_id="_129">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_130">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_131">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>6</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>donna</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_132">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>don’t</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_133">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>doo</first>
+		<second>
+			<first>10</first>
+			<second class_id_reference="3" object_id="_134">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>10</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dooo</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_135">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>doot</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_136">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>doth</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_137">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dream</first>
+		<second>
+			<first>12</first>
+			<second class_id_reference="3" object_id="_138">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_139">
+					<CDocFreqmDoc>1</CDocFreqmDoc>
+					<CDocFreqmFreq>11</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dreamchild</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_140">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dreamland</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_141">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>drift</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_142">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>du</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_143">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dump</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_144">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>dust</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_145">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ear</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_146">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>easi</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_147">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_148">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_149">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>eat</first>
+		<second>
+			<first>7</first>
+			<second class_id_reference="3" object_id="_150">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_151">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>6</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>egao</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_152">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>eh</first>
+		<second>
+			<first>36</first>
+			<second class_id_reference="3" object_id="_153">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>36</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ei</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_154">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>end</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_155">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>erica</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_156">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>error</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_157">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>especi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_158">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>even</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_159">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>everybodi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_160">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>everybody&apos;</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_161">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>6</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>everyone’</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_162">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>expect</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_163">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ey</first>
+		<second>
+			<first>7</first>
+			<second class_id_reference="3" object_id="_164">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_165">
+					<CDocFreqmDoc>4</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_166">
+						<CDocFreqmDoc>1</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_167">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>4</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>face</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_168">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fade</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_169">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fairyland</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_170">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fall</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_171">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_172">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fantasi</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_173">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>far</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_174">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fate</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_175">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fear</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_176">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_177">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>feed</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_178">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>feel</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_179">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_180">
+					<CDocFreqmDoc>1</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fell</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_181">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fifti</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_182">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fight</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_183">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fill</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_184">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fligu</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_185">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fligugibu</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_186">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fligugigbu</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_187">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fligugigugi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_188">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>flilibili</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_189">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>flirtin&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_190">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fly</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_191">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_192">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_193">
+						<CDocFreqmDoc>2</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>forev</first>
+		<second>
+			<first>11</first>
+			<second class_id_reference="3" object_id="_194">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>7</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_195">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>4</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fountain</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_196">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>friba</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_197">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>friend</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_198">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_199">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fuck</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_200">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_201">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>4</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fuckin&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_202">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>fun</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_203">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_204">
+					<CDocFreqmDoc>1</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>furasu</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_205">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>futt</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_206">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ga</first>
+		<second>
+			<first>10</first>
+			<second class_id_reference="3" object_id="_207">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>10</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>gentlemen</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_208">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>get</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_209">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>gettin&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_210">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ghost</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_211">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>gi</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_212">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>gin</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_213">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>girl</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_214">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_215">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>glow</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_216">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>god</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_217">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_218">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_219">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>goe</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_220">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>gonna</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_221">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_222">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_223">
+						<CDocFreqmDoc>1</CDocFreqmDoc>
+						<CDocFreqmFreq>4</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>good</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_224">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_225">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_226">
+						<CDocFreqmDoc>3</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_227">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>1</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>got</first>
+		<second>
+			<first>7</first>
+			<second class_id_reference="3" object_id="_228">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_229">
+					<CDocFreqmDoc>4</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_230">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>3</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>gotta</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_231">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_232">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>7</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>grant</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_233">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>grass</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_234">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>grave</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_235">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>greatest</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_236">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>6</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ground</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_237">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>grow</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_238">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>guitar</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_239">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hahaha</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_240">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hajiket</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_241">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hallelujah</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_242">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hand</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_243">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_244">
+					<CDocFreqmDoc>1</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>happen</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_245">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hard</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_246">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hate</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_247">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>head</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_248">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_249">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>heard</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_250">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>heart</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_251">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>heater</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_252">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>heaven</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_253">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hell</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_254">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hesit</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_255">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hide</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_256">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hikari</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_257">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hit&apos;n&apos;hid</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_258">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hitchhikin&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_259">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hitori</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_260">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hoshi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_261">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>houkiboshi</first>
+		<second>
+			<first>7</first>
+			<second class_id_reference="3" object_id="_262">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>7</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>hurt</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_263">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>i&apos;d</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_264">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_265">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>i&apos;ll</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_266">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_267">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_268">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>i&apos;m</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_269">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_270">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>5</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_271">
+						<CDocFreqmDoc>1</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>i&apos;v</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_272">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>iku</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_273">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>illus</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_274">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ima</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_275">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>iru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_276">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>isn’t</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_277">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>isshun</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_278">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>it</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_279">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>it&apos;</first>
+		<second>
+			<first>20</first>
+			<second class_id_reference="3" object_id="_280">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_281">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_282">
+						<CDocFreqmDoc>2</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_283">
+							<CDocFreqmDoc>1</CDocFreqmDoc>
+							<CDocFreqmFreq>4</CDocFreqmFreq>
+							<CDocFreqmNext class_id_reference="3" object_id="_284">
+								<CDocFreqmDoc>0</CDocFreqmDoc>
+								<CDocFreqmFreq>12</CDocFreqmFreq>
+								<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+							</CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>itaku</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_285">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>itsumo</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_286">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>itta</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_287">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>it’</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_288">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_289">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>iyada</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_290">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>i’ll</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_291">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>jessica</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_292">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>juic</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_293">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>jump</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_294">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_295">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>just</first>
+		<second>
+			<first>9</first>
+			<second class_id_reference="3" object_id="_296">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_297">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_298">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>4</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kagayakitai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_299">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kakenuk</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_300">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kanarazu</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_301">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kanashii</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_302">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kangaeru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_303">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kara</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_304">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kedo</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_305">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kickin</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_306">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kiet</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_307">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kill</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_308">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kind</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_309">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kirei</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_310">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kite</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_311">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kitto</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_312">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>knew</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_313">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>know</first>
+		<second>
+			<first>9</first>
+			<second class_id_reference="3" object_id="_314">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_315">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_316">
+						<CDocFreqmDoc>2</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_317">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>6</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ko</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_318">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>koto</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_319">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kowarenai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_320">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>kyle</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_321">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ladder</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_322">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ladi</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_323">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_324">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>languag</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_325">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>laugh</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_326">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>left</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_327">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>let</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_328">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>let&apos;</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_329">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_330">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>let’</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_331">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>life</first>
+		<second>
+			<first>19</first>
+			<second class_id_reference="3" object_id="_332">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_333">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>14</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_334">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>light</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_335">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>like</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_336">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_337">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_338">
+						<CDocFreqmDoc>3</CDocFreqmDoc>
+						<CDocFreqmFreq>5</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_339">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>1</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>line</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_340">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>liquor</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_341">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>listen</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_342">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_343">
+					<CDocFreqmDoc>1</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>littl</first>
+		<second>
+			<first>30</first>
+			<second class_id_reference="3" object_id="_344">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>25</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_345">
+					<CDocFreqmDoc>1</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_346">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>4</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>live</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_347">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_348">
+					<CDocFreqmDoc>1</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_349">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>lonesom</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_350">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>long</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_351">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_352">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_353">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>3</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>look</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_354">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_355">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_356">
+						<CDocFreqmDoc>3</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_357">
+							<CDocFreqmDoc>1</CDocFreqmDoc>
+							<CDocFreqmFreq>3</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>lookin&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_358">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>lord</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_359">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>love</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_360">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_361">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>lovin&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_362">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>lucif</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_363">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>lyric</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_364">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_365">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_366">
+						<CDocFreqmDoc>4</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_367">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>1</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ma</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_368">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>magic</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_369">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>make</first>
+		<second>
+			<first>13</first>
+			<second class_id_reference="3" object_id="_370">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_371">
+					<CDocFreqmDoc>4</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_372">
+						<CDocFreqmDoc>3</CDocFreqmDoc>
+						<CDocFreqmFreq>3</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_373">
+							<CDocFreqmDoc>1</CDocFreqmDoc>
+							<CDocFreqmFreq>1</CDocFreqmFreq>
+							<CDocFreqmNext class_id_reference="3" object_id="_374">
+								<CDocFreqmDoc>0</CDocFreqmDoc>
+								<CDocFreqmFreq>5</CDocFreqmFreq>
+								<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+							</CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mamamana</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_375">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mambo</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_376">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>man</first>
+		<second>
+			<first>9</first>
+			<second class_id_reference="3" object_id="_377">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_378">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_379">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mari</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_380">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>matter</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_381">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_382">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>megur</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_383">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>men</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_384">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mene</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_385">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>miag</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_386">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>middl</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_387">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mina</first>
+		<second>
+			<first>17</first>
+			<second class_id_reference="3" object_id="_388">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>17</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>miru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_389">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>misbehav</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_390">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mita</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_391">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mo</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_392">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>moment</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_393">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_394">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>monica</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_395">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>moon</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_396">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>moshi</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_397">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mother</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_398">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>motherfuck</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_399">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>motto</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_400">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_401">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mud</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_402">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>mune</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_403">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>nai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_404">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>nanika</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_405">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>naraba</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_406">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>nareru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_407">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>nareta</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_408">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>naru</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_409">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ne</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_410">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>need</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_411">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>needless</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_412">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>new</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_413">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_414">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ni</first>
+		<second>
+			<first>11</first>
+			<second class_id_reference="3" object_id="_415">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>11</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>night</first>
+		<second>
+			<first>7</first>
+			<second class_id_reference="3" object_id="_416">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_417">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_418">
+						<CDocFreqmDoc>3</CDocFreqmDoc>
+						<CDocFreqmFreq>3</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>nois</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_419">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>oboeteru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_420">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>occur</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_421">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>oh</first>
+		<second>
+			<first>18</first>
+			<second class_id_reference="3" object_id="_422">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_423">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>4</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_424">
+						<CDocFreqmDoc>2</CDocFreqmDoc>
+						<CDocFreqmFreq>12</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ohhh</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_425">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>okai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_426">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>old</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_427">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>omoi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_428">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>omou</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_429">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ooh</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_430">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>oooh</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_431">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>opinion</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_432">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>overflow</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_433">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>pamela</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_434">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>park</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_435">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>pass</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_436">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>pave</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_437">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>peac</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_438">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_439">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>peculiar</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_440">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>peopl</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_441">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>perchanc</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_442">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>perfect</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_443">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>pick</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_444">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>piec</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_445">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_446">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>place</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_447">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_448">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>plai</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_449">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>playin</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_450">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>pleadin</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_451">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>poor</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_452">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>por</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_453">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>possibl</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_454">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>prai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_455">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>present</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_456">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>preserv</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_457">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>pressure’</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_458">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>pronounc</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_459">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>queen</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_460">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>quit</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_461">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rabbit&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_462">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rain</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_463">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rais</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_464">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>reach</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_465">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>readi</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_466">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>realiz</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_467">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>realli</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_468">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_469">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_470">
+						<CDocFreqmDoc>0</CDocFreqmDoc>
+						<CDocFreqmFreq>3</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rememb</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_471">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_472">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>repeat</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_473">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>repossess</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_474">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rest</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_475">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rich</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_476">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ride</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_477">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>right</first>
+		<second>
+			<first>10</first>
+			<second class_id_reference="3" object_id="_478">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_479">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>4</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_480">
+						<CDocFreqmDoc>3</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_481">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>3</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rip</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_482">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rita</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_483">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>road</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_484">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rock</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_485">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_486">
+					<CDocFreqmDoc>4</CDocFreqmDoc>
+					<CDocFreqmFreq>7</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>rubber</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_487">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>run</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_488">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sacrebleu</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_489">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sad</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_490">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>saddl</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_491">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sai</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_492">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_493">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>said</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_494">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_495">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_496">
+						<CDocFreqmDoc>2</CDocFreqmDoc>
+						<CDocFreqmFreq>1</CDocFreqmFreq>
+						<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sandra</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_497">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sang</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_498">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>saw</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_499">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>second</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_500">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>set</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_501">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>shake</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_502">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>shakira</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_503">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>she&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_504">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>shika</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_505">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>shimatta</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_506">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>shine</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_507">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_508">
+					<CDocFreqmDoc>5</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>shini</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_509">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>shiver</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_510">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>shoutin</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_511">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sight</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_512">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>simultani</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_513">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sin</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_514">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sing</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_515">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>singl</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_516">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sky</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_517">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>7</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_518">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sleepi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_519">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sleepin&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_520">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>smile</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_521">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_522">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>snort</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_523">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>soba</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_524">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>soldier</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_525">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>solo</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_526">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>somebodi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_527">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>song</first>
+		<second>
+			<first>12</first>
+			<second class_id_reference="3" object_id="_528">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>12</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sora</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_529">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sore</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_530">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>soul</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_531">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_532">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sound</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_533">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_534">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>southafrican</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_535">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sparkl</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_536">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>spill</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_537">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sport</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_538">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sprai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_539">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>stab</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_540">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>stai</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_541">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_542">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>star</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_543">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>start</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_544">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>step</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_545">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>stop</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_546">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>store</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_547">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>stori</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_548">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>street</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_549">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>strong</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_550">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_551">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>stun</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_552">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sudden</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_553">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>suffer</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_554">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sugu</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_555">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>suki</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_556">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sun</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_557">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_558">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>superstiti</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_559">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sure</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_560">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>surpris</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_561">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sweeter</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_562">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>sweetslyr</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_563">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tail</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_564">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_565">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>talk</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_566">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tatakatteru</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_567">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tear</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_568">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tenaci</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_569">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>terashi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_570">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>that&apos;</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_571">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>there&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_572">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>they&apos;r</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_573">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>thigh</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_574">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>thing</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_575">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>think</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_576">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_577">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>thorugh</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_578">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>thought</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_579">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>thousand</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_580">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>till</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_581">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>time</first>
+		<second>
+			<first>16</first>
+			<second class_id_reference="3" object_id="_582">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_583">
+					<CDocFreqmDoc>6</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_584">
+						<CDocFreqmDoc>5</CDocFreqmDoc>
+						<CDocFreqmFreq>8</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_585">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>6</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tina</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_586">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>toast</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_587">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tobenai</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_588">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>today’</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_589">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>todo</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_590">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>todoku</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_591">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>toki</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_592">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tomorrow</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_593">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tond</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_594">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tonight</first>
+		<second>
+			<first>4</first>
+			<second class_id_reference="3" object_id="_595">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>took</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_596">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>touch</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_597">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>trap</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_598">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>travel</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_599">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tribut</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_600">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>5</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>true</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_601">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_602">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>trumpet</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_603">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>try</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_604">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tsamina</first>
+		<second>
+			<first>17</first>
+			<second class_id_reference="3" object_id="_605">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>17</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tsuyoi</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_606">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tu</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_607">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>tuga</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_608">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>twice</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_609">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>uh</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_610">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>unbreak</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_611">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>unnatur</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_612">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>vamo</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_613">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>vanish</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_614">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ventur</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_615">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wa</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_616">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>6</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wai</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_617">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_618">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wait</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_619">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>waka</first>
+		<second>
+			<first>16</first>
+			<second class_id_reference="3" object_id="_620">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>16</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>walk</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_621">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wanna</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_622">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_623">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>want</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_624">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_625">
+					<CDocFreqmDoc>3</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_626">
+						<CDocFreqmDoc>2</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_627">
+							<CDocFreqmDoc>0</CDocFreqmDoc>
+							<CDocFreqmFreq>1</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>watch</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_628">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_629">
+					<CDocFreqmDoc>2</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wavin</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_630">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>we&apos;r</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_631">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>weak</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_632">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wed</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_633">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>week</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_634">
+				<CDocFreqmDoc>3</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wene</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_635">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>went</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_636">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>we’ll</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_637">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>we’r</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_638">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_639">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>what&apos;</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_640">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>whip</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_641">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>whisper</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_642">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>whoah</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_643">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wind</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_644">
+				<CDocFreqmDoc>1</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wise</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_645">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wish</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_646">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_647">
+					<CDocFreqmDoc>1</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>woman</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_648">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>word</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_649">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>world</first>
+		<second>
+			<first>32</first>
+			<second class_id_reference="3" object_id="_650">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>8</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_651">
+					<CDocFreqmDoc>4</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id_reference="3" object_id="_652">
+						<CDocFreqmDoc>2</CDocFreqmDoc>
+						<CDocFreqmFreq>2</CDocFreqmFreq>
+						<CDocFreqmNext class_id_reference="3" object_id="_653">
+							<CDocFreqmDoc>1</CDocFreqmDoc>
+							<CDocFreqmFreq>21</CDocFreqmFreq>
+							<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+						</CDocFreqmNext>
+					</CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>world&apos;</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_654">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>worst</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_655">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>wrong</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_656">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>www</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_657">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>yango</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_658">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>ye</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_659">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>yeah</first>
+		<second>
+			<first>5</first>
+			<second class_id_reference="3" object_id="_660">
+				<CDocFreqmDoc>2</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_661">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>3</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>year</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_662">
+				<CDocFreqmDoc>6</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>yo</first>
+		<second>
+			<first>6</first>
+			<second class_id_reference="3" object_id="_663">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>4</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_664">
+					<CDocFreqmDoc>4</CDocFreqmDoc>
+					<CDocFreqmFreq>2</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>you&apos;r</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_665">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>young</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_666">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id_reference="3" object_id="_667">
+					<CDocFreqmDoc>0</CDocFreqmDoc>
+					<CDocFreqmFreq>1</CDocFreqmFreq>
+					<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+				</CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>younha</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_668">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>youni</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_669">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>your</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_670">
+				<CDocFreqmDoc>4</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>youth</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_671">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>you’r</first>
+		<second>
+			<first>2</first>
+			<second class_id_reference="3" object_id="_672">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>2</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>yozora</first>
+		<second>
+			<first>3</first>
+			<second class_id_reference="3" object_id="_673">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>3</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>zagalewa</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_674">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>zangalewa</first>
+		<second>
+			<first>8</first>
+			<second class_id_reference="3" object_id="_675">
+				<CDocFreqmDoc>5</CDocFreqmDoc>
+				<CDocFreqmFreq>8</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>zutto</first>
+		<second>
+			<first>1</first>
+			<second class_id_reference="3" object_id="_676">
+				<CDocFreqmDoc>7</CDocFreqmDoc>
+				<CDocFreqmFreq>1</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+	<item>
+		<first>’caus</first>
+		<second>
+			<first>10</first>
+			<second class_id_reference="3" object_id="_677">
+				<CDocFreqmDoc>0</CDocFreqmDoc>
+				<CDocFreqmFreq>10</CDocFreqmFreq>
+				<CDocFreqmNext class_id="-1"></CDocFreqmNext>
+			</second>
+		</second>
+	</item>
+</GROUP>
